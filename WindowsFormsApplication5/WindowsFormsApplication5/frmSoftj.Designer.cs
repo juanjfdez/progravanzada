@@ -187,6 +187,7 @@
             // 
             // sqlconexion
             // 
+            this.sqlconexion.ConnectionString = "Data Source=JUAN-PC\\SQLEXPRESS;Initial Catalog=PROYECTO;User ID=sa;Password=1234";
             this.sqlconexion.FireInfoMessageEventOnUserErrors = false;
             // 
             // frmSoftj
