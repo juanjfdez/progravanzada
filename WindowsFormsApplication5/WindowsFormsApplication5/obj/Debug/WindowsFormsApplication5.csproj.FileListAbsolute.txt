@@ -1,0 +1,15 @@
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.pdb
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Properties.Resources.resources
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.csproj.GenerateResource.Cache
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.exe
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.pdb
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmSoftj.resources
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ABC.exe
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ABC.pdb
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmClientes.resources
+C:\Documents and Settings\Administrador\Escritorio\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.exe
+C:\Documents and Settings\Administrador\Escritorio\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.pdb
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.exe
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.pdb

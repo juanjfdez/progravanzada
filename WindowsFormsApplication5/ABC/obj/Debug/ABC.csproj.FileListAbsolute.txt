@@ -1,0 +1,8 @@
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\bin\Debug\ABC.exe
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\bin\Debug\ABC.pdb
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\obj\Debug\ABC.Properties.Resources.resources
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\obj\Debug\ABC.csproj.GenerateResource.Cache
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\obj\Debug\ABC.exe
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\obj\Debug\ABC.pdb
+C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\obj\Debug\ABC.frmABC.resources

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication5", "WindowsFormsApplication5\WindowsFormsApplication5.csproj", "{E8503E5A-B72A-4E9B-8E0A-DD031F7A3DAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABC", "ABC\ABC.csproj", "{6B10B0EB-8B89-4FE8-9B12-3870B66803DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8503E5A-B72A-4E9B-8E0A-DD031F7A3DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8503E5A-B72A-4E9B-8E0A-DD031F7A3DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8503E5A-B72A-4E9B-8E0A-DD031F7A3DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8503E5A-B72A-4E9B-8E0A-DD031F7A3DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B10B0EB-8B89-4FE8-9B12-3870B66803DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B10B0EB-8B89-4FE8-9B12-3870B66803DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B10B0EB-8B89-4FE8-9B12-3870B66803DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B10B0EB-8B89-4FE8-9B12-3870B66803DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
