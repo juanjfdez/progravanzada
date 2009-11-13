@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using Microsoft.Office;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,6 +14,9 @@ namespace ABC
 {
     public partial class frmABC : Form
     {
+        SqlCommand querynuevo = new SqlCommand();
+        SqlCommand querybuscar = new SqlCommand();
+        SqlCommand querymod = new SqlCommand();
         public frmABC()
         {
             InitializeComponent();
