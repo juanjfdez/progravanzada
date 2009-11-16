@@ -69,6 +69,7 @@
             this.txtFechaD = new System.Windows.Forms.DateTimePicker();
             this.cbSi = new System.Windows.Forms.CheckBox();
             this.chNo = new System.Windows.Forms.CheckBox();
+            this.btnEmpresaN = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
@@ -80,6 +81,7 @@
             // 
             // tbNuevo
             // 
+            this.tbNuevo.Controls.Add(this.btnEmpresaN);
             this.tbNuevo.Controls.Add(this.chNo);
             this.tbNuevo.Controls.Add(this.cbSi);
             this.tbNuevo.Controls.Add(this.txtFechaD);
@@ -144,6 +146,7 @@
             this.tbNuevo.Controls.SetChildIndex(this.txtFechaD, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbSi, 0);
             this.tbNuevo.Controls.SetChildIndex(this.chNo, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.btnEmpresaN, 0);
             // 
             // tbModificar
             // 
@@ -151,7 +154,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(442, 20);
+            this.btnGuardar.Location = new System.Drawing.Point(497, 20);
             // 
             // label1
             // 
@@ -453,7 +456,7 @@
             this.cbbSalida.Size = new System.Drawing.Size(92, 21);
             this.cbbSalida.TabIndex = 18;
             this.cbbSalida.Text = "Salida";
-             // 
+            // 
             // txtSalario
             // 
             this.txtSalario.Location = new System.Drawing.Point(77, 202);
@@ -577,11 +580,20 @@
             this.chNo.Text = "No";
             this.chNo.UseVisualStyleBackColor = true;
             // 
+            // btnEmpresaN
+            // 
+            this.btnEmpresaN.Location = new System.Drawing.Point(378, 88);
+            this.btnEmpresaN.Name = "btnEmpresaN";
+            this.btnEmpresaN.Size = new System.Drawing.Size(75, 23);
+            this.btnEmpresaN.TabIndex = 33;
+            this.btnEmpresaN.Text = "Nueva";
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 548);
+            this.ControlBox = true;
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmClientes";
@@ -636,5 +648,6 @@
         private System.Windows.Forms.TextBox txtDireccionEmpresa;
         private System.Windows.Forms.TextBox txtPuestoJefe;
         private System.Windows.Forms.TextBox txtJefe;
+        private DevExpress.XtraEditors.SimpleButton btnEmpresaN;
     }
 }

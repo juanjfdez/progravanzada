@@ -6,3 +6,12 @@ C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsAppl
 C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\obj\Debug\ABC.exe
 C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\obj\Debug\ABC.pdb
 C:\Users\venegon\Documents\Visual Studio 2008\Projects\Project1\WindowsFormsApplication5\ABC\obj\Debug\ABC.frmABC.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\ABC\bin\Debug\ABC.exe
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\ABC\bin\Debug\ABC.pdb
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\ABC\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\ABC\obj\Debug\ABC.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\ABC\obj\Debug\ABC.frmABC.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\ABC\obj\Debug\ABC.Properties.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\ABC\obj\Debug\ABC.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\ABC\obj\Debug\ABC.exe
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\ABC\obj\Debug\ABC.pdb

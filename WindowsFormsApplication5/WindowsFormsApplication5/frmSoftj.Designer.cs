@@ -60,7 +60,7 @@
             this.tspCerrarSession});
             this.tsMenu.Location = new System.Drawing.Point(0, 24);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(82, 412);
+            this.tsMenu.Size = new System.Drawing.Size(82, 518);
             this.tsMenu.TabIndex = 2;
             this.tsMenu.Text = "ts";
             this.tsMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsMenu_ItemClicked);
@@ -123,7 +123,7 @@
             this.tspReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspReportes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tspReportes.Name = "tspReportes";
-            this.tspReportes.Size = new System.Drawing.Size(55, 65);
+            this.tspReportes.Size = new System.Drawing.Size(79, 65);
             this.tspReportes.Text = "&Reportes";
             this.tspReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -134,7 +134,7 @@
             this.tspSalir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tspSalir.Name = "tspSalir";
-            this.tspSalir.Size = new System.Drawing.Size(52, 65);
+            this.tspSalir.Size = new System.Drawing.Size(79, 65);
             this.tspSalir.Text = "&Salir";
             this.tspSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tspSalir.Click += new System.EventHandler(this.tspSalir_Click);
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 436);
+            this.ClientSize = new System.Drawing.Size(786, 542);
             this.ControlBox = false;
             this.Controls.Add(this.tsMenu);
             this.Controls.Add(this.menuStrip1);
