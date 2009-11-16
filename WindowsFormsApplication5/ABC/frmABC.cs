@@ -14,9 +14,7 @@ namespace ABC
 {
     public partial class frmABC : Form
     {
-        SqlCommand querynuevo = new SqlCommand();
-        SqlCommand querybuscar = new SqlCommand();
-        SqlCommand querymod = new SqlCommand();
+        
         public frmABC()
         {
             InitializeComponent();

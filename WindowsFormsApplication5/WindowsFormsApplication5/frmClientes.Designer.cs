@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,13 +71,16 @@
             this.cbSi = new System.Windows.Forms.CheckBox();
             this.chNo = new System.Windows.Forms.CheckBox();
             this.btnEmpresaN = new DevExpress.XtraEditors.SimpleButton();
+            this.errorCusClientes = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCusClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
             // 
+            this.xtraTabControl1.SelectedTabPage = this.tbNuevo;
             this.xtraTabControl1.Size = new System.Drawing.Size(794, 504);
             // 
             // tbNuevo
@@ -155,6 +159,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(497, 20);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label1
             // 
@@ -582,11 +587,15 @@
             // 
             // btnEmpresaN
             // 
-            this.btnEmpresaN.Location = new System.Drawing.Point(378, 88);
+            this.btnEmpresaN.Location = new System.Drawing.Point(401, 85);
             this.btnEmpresaN.Name = "btnEmpresaN";
             this.btnEmpresaN.Size = new System.Drawing.Size(75, 23);
             this.btnEmpresaN.TabIndex = 33;
             this.btnEmpresaN.Text = "Nueva";
+            // 
+            // errorCusClientes
+            // 
+            this.errorCusClientes.ContainerControl = this;
             // 
             // frmClientes
             // 
@@ -597,10 +606,12 @@
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmClientes";
+            this.Load += new System.EventHandler(this.frmClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCusClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -649,5 +660,6 @@
         private System.Windows.Forms.TextBox txtPuestoJefe;
         private System.Windows.Forms.TextBox txtJefe;
         private DevExpress.XtraEditors.SimpleButton btnEmpresaN;
+        private System.Windows.Forms.ErrorProvider errorCusClientes;
     }
 }

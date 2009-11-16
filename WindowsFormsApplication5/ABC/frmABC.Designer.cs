@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.queryCliente = new System.Data.SqlClient.SqlCommand();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
@@ -214,6 +215,7 @@
         protected DevExpress.XtraTab.XtraTabPage tbNuevo;
         protected DevExpress.XtraTab.XtraTabPage tbModificar;
         protected System.Windows.Forms.Button btnGuardar;
+        protected System.Data.SqlClient.SqlCommand queryCliente;
     }
 }
 
