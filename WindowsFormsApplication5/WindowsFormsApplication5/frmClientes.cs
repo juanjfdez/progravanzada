@@ -150,7 +150,7 @@ namespace WindowsFormsApplication5
                 queryCliente.Parameters.AddWithValue("@tipo_moneda_sal", cbbTipo.Text);
                 queryCliente.Parameters.AddWithValue("@forma_pago", cbbFormPago.Text);
                 queryCliente.Parameters.AddWithValue("@jornada_in", cbbJornadaInicio.Text);
-                queryCliente.Parameters.AddWithValue("@jordana_out", cbbJornadaFinal.Text);
+                queryCliente.Parameters.AddWithValue("@jornada_out", cbbJornadaFinal.Text);
                 queryCliente.Parameters.AddWithValue("@fecha_in", txtFechaI.Text);
                 queryCliente.Parameters.AddWithValue("@fecha_out", txtFechaD.Text);
                 queryCliente.Parameters.AddWithValue("@puesto_jefe_inmediato", txtPuestoJefe.Text);

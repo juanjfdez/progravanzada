@@ -20,7 +20,19 @@ namespace WindowsFormsApplication5
         {
             InitializeComponent();
         }
-
+        public Boolean AbrirCon()
+        {
+            if (sqlconexion.State != ConnectionState.Open)
+                try
+                {
+                    sqlconexion.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            return sqlconexion.State == ConnectionState.Open;
+        }
         private void tspSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -59,6 +71,11 @@ namespace WindowsFormsApplication5
         private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void frmSoftj_Load(object sender, EventArgs e)
+        {
+            AbrirCon();
         }
     }
 }
