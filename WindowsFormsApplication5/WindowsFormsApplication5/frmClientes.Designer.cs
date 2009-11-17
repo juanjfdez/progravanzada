@@ -42,7 +42,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -65,7 +64,6 @@
             this.cbbJornadaFinal = new System.Windows.Forms.ComboBox();
             this.txtJefe = new System.Windows.Forms.TextBox();
             this.txtPuestoJefe = new System.Windows.Forms.TextBox();
-            this.txtDireccionEmpresa = new System.Windows.Forms.TextBox();
             this.txtFechaI = new System.Windows.Forms.DateTimePicker();
             this.txtFechaD = new System.Windows.Forms.DateTimePicker();
             this.btnEmpresaN = new DevExpress.XtraEditors.SimpleButton();
@@ -93,17 +91,16 @@
             // 
             // tbNuevo
             // 
-            this.tbNuevo.Controls.Add(this.ckdTarjetaSi);
             this.tbNuevo.Controls.Add(this.rdSexo);
+            this.tbNuevo.Controls.Add(this.ckdTarjetaSi);
             this.tbNuevo.Controls.Add(this.ckdTarjetaNo);
             this.tbNuevo.Controls.Add(this.label24);
             this.tbNuevo.Controls.Add(this.txtDireccion);
             this.tbNuevo.Controls.Add(this.label23);
             this.tbNuevo.Controls.Add(this.btnEmpresaN);
+            this.tbNuevo.Controls.Add(this.txtPuestoJefe);
             this.tbNuevo.Controls.Add(this.txtFechaD);
             this.tbNuevo.Controls.Add(this.txtFechaI);
-            this.tbNuevo.Controls.Add(this.txtDireccionEmpresa);
-            this.tbNuevo.Controls.Add(this.txtPuestoJefe);
             this.tbNuevo.Controls.Add(this.txtJefe);
             this.tbNuevo.Controls.Add(this.cbbJornadaFinal);
             this.tbNuevo.Controls.Add(this.cbbJornadaInicio);
@@ -124,17 +121,15 @@
             this.tbNuevo.Controls.Add(this.label17);
             this.tbNuevo.Controls.Add(this.label16);
             this.tbNuevo.Controls.Add(this.label15);
-            this.tbNuevo.Controls.Add(this.label14);
-            this.tbNuevo.Controls.Add(this.label13);
             this.tbNuevo.Controls.Add(this.label12);
-            this.tbNuevo.Controls.Add(this.label11);
+            this.tbNuevo.Controls.Add(this.label13);
             this.tbNuevo.Controls.Add(this.label10);
+            this.tbNuevo.Controls.Add(this.label11);
             this.tbNuevo.Size = new System.Drawing.Size(716, 530);
-            this.tbNuevo.Controls.SetChildIndex(this.label10, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label11, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.label12, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.label10, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label13, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.label14, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.label12, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label15, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label16, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label17, 0);
@@ -155,17 +150,16 @@
             this.tbNuevo.Controls.SetChildIndex(this.cbbJornadaInicio, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbJornadaFinal, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtJefe, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.txtPuestoJefe, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.txtDireccionEmpresa, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtFechaI, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtFechaD, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.txtPuestoJefe, 0);
             this.tbNuevo.Controls.SetChildIndex(this.btnEmpresaN, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label23, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtDireccion, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label24, 0);
             this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaNo, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.rdSexo, 0);
             this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaSi, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.rdSexo, 0);
             this.tbNuevo.Controls.SetChildIndex(this.btnGuardar, 0);
             // 
             // tbModificar
@@ -271,7 +265,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 505);
+            this.label11.Location = new System.Drawing.Point(18, 499);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(112, 13);
             this.label11.TabIndex = 1;
@@ -280,7 +274,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(18, 479);
+            this.label12.Location = new System.Drawing.Point(18, 463);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(100, 13);
             this.label12.TabIndex = 2;
@@ -289,20 +283,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 453);
+            this.label13.Location = new System.Drawing.Point(18, 426);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 3;
             this.label13.Text = "Fecha de Ingreso :";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(7, 421);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(124, 13);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Direccion de la empresa:";
             // 
             // label15
             // 
@@ -561,23 +546,16 @@
             this.txtPuestoJefe.Size = new System.Drawing.Size(295, 20);
             this.txtPuestoJefe.TabIndex = 28;
             // 
-            // txtDireccionEmpresa
-            // 
-            this.txtDireccionEmpresa.Location = new System.Drawing.Point(147, 418);
-            this.txtDireccionEmpresa.Name = "txtDireccionEmpresa";
-            this.txtDireccionEmpresa.Size = new System.Drawing.Size(225, 20);
-            this.txtDireccionEmpresa.TabIndex = 29;
-            // 
             // txtFechaI
             // 
-            this.txtFechaI.Location = new System.Drawing.Point(148, 449);
+            this.txtFechaI.Location = new System.Drawing.Point(149, 422);
             this.txtFechaI.Name = "txtFechaI";
             this.txtFechaI.Size = new System.Drawing.Size(224, 20);
             this.txtFechaI.TabIndex = 30;
             // 
             // txtFechaD
             // 
-            this.txtFechaD.Location = new System.Drawing.Point(148, 475);
+            this.txtFechaD.Location = new System.Drawing.Point(147, 459);
             this.txtFechaD.Name = "txtFechaD";
             this.txtFechaD.Size = new System.Drawing.Size(224, 20);
             this.txtFechaD.TabIndex = 31;
@@ -633,7 +611,7 @@
             // 
             // ckdTarjetaSi
             // 
-            this.ckdTarjetaSi.Location = new System.Drawing.Point(146, 501);
+            this.ckdTarjetaSi.Location = new System.Drawing.Point(147, 496);
             this.ckdTarjetaSi.Name = "ckdTarjetaSi";
             this.ckdTarjetaSi.Properties.Caption = "Si";
             this.ckdTarjetaSi.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style1;
@@ -643,7 +621,7 @@
             // 
             // ckdTarjetaNo
             // 
-            this.ckdTarjetaNo.Location = new System.Drawing.Point(204, 502);
+            this.ckdTarjetaNo.Location = new System.Drawing.Point(205, 496);
             this.ckdTarjetaNo.Name = "ckdTarjetaNo";
             this.ckdTarjetaNo.Properties.Caption = "No";
             this.ckdTarjetaNo.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style1;
@@ -692,7 +670,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -711,7 +688,6 @@
         private System.Windows.Forms.ComboBox cbbFormPago;
         private System.Windows.Forms.DateTimePicker txtFechaD;
         private System.Windows.Forms.DateTimePicker txtFechaI;
-        private System.Windows.Forms.TextBox txtDireccionEmpresa;
         private System.Windows.Forms.TextBox txtPuestoJefe;
         private System.Windows.Forms.TextBox txtJefe;
         private DevExpress.XtraEditors.SimpleButton btnEmpresaN;
