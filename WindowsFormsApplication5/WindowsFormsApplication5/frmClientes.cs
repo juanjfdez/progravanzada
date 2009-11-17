@@ -24,7 +24,7 @@ namespace WindowsFormsApplication5
         {
             bool bandera;
             bandera = true;
-            
+
             // verifica que no este ningun dato en blanco
                 //Nombre
             if (txtNombre.Text == "")
@@ -62,13 +62,13 @@ namespace WindowsFormsApplication5
              else
                 errorCusClientes.SetError(rdSexo,"");
                 //Empresa
-            if (txtEmpresa.Text == "")
+            if (cbbEmpresa.Text == "- Escojer Empresa -")
             {
-                errorCusClientes.SetError(txtEmpresa, "Por favor especifique el nombre de la Empresa");
+                errorCusClientes.SetError(cbbEmpresa, "Por favor especifique el nombre de la Empresa");
                 bandera = false;
             }
             else
-                errorCusClientes.SetError(txtEmpresa, "");
+                errorCusClientes.SetError(cbbEmpresa, "");
 
                 //Puesto
             if (txtPuesto.Text == "")
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication5
                 queryCliente.Parameters.AddWithValue("@Puesto", txtPuesto.Text);
                 queryCliente.Parameters.AddWithValue("@Salario", Convert.ToInt32(txtSalario.Text));
                 queryCliente.Parameters.AddWithValue("@Sexo", rdSexo.Text);
-                queryCliente.Parameters.AddWithValue("@Id_demandado", "1");
+                queryCliente.Parameters.AddWithValue("@Id_demandado", cbbEmpresa.SelectedValue);
                 queryCliente.Parameters.AddWithValue("@hora_in", cbbEntrada.Text);
                 queryCliente.Parameters.AddWithValue("@hora_out", cbbSalida.Text);
                 queryCliente.Parameters.AddWithValue("@jefe_inmediato", txtJefe.Text);
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication5
             // asignacion te errores para la insercion
             errorCusClientes.SetError(txtNombre, "");
             errorCusClientes.SetError(txtDireccion, "");
-            errorCusClientes.SetError(txtEmpresa, "");
+            errorCusClientes.SetError(cbbEmpresa, "");
             errorCusClientes.SetError(txtPuesto, "");
             errorCusClientes.SetError(txtSalario, "");
             errorCusClientes.SetError(txtJefe, "");

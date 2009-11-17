@@ -52,7 +52,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.txtPuesto = new System.Windows.Forms.TextBox();
             this.cbbEntrada = new System.Windows.Forms.ComboBox();
             this.cbbSalida = new System.Windows.Forms.ComboBox();
@@ -116,7 +115,6 @@
             this.tbNuevo.Controls.Add(this.cbbEntrada);
             this.tbNuevo.Controls.Add(this.txtPuesto);
             this.tbNuevo.Controls.Add(this.txtNombre);
-            this.tbNuevo.Controls.Add(this.txtEmpresa);
             this.tbNuevo.Controls.Add(this.label22);
             this.tbNuevo.Controls.Add(this.label20);
             this.tbNuevo.Controls.Add(this.label21);
@@ -142,7 +140,6 @@
             this.tbNuevo.Controls.SetChildIndex(this.label21, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label20, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label22, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.txtEmpresa, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtNombre, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtPuesto, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbEntrada, 0);
@@ -379,13 +376,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(295, 20);
             this.txtNombre.TabIndex = 13;
-            // 
-            // txtEmpresa
-            // 
-            this.txtEmpresa.Location = new System.Drawing.Point(330, 248);
-            this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(295, 20);
-            this.txtEmpresa.TabIndex = 17;
             // 
             // txtPuesto
             // 
@@ -697,7 +687,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.TextBox txtPuesto;
-        private System.Windows.Forms.TextBox txtEmpresa;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cbbTipo;
         private System.Windows.Forms.TextBox txtSalario;
