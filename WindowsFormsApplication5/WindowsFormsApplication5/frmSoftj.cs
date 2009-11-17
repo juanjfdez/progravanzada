@@ -16,6 +16,7 @@ namespace WindowsFormsApplication5
         public frmClientes frmClientes;
         public frmCasos frmCasos;
         public frmUsuarios frmUsuarios;
+        public frmDemandado frmDemandado;
         public frmSoftj()
         {
             InitializeComponent();

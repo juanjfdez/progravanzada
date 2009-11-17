@@ -6,6 +6,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Data.SqlTypes;
 using System.Text;
 using System.Windows.Forms;
 

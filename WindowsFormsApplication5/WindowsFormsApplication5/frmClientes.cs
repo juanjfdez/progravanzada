@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -156,8 +157,6 @@ namespace WindowsFormsApplication5
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter adaptador = new SqlDataAdapter(queryCliente);
-
             Program.frmSoftj.AbrirCon();
             queryCliente.Connection = Program.frmSoftj.sqlconexion;
 
@@ -170,7 +169,8 @@ namespace WindowsFormsApplication5
             errorCusClientes.SetError(txtJefe, "");
             errorCusClientes.SetError(txtPuestoJefe, "");
 
-            //insertacion a empresa combo box
+            
+            
         }
 
         private void ckdTarjetaNo_CheckedChanged(object sender, EventArgs e)
@@ -191,6 +191,30 @@ namespace WindowsFormsApplication5
                 tarjeta_asis = ckdTarjetaSi.Text;
             }
         }
+
+        private void btnEmpresaN_Click(object sender, EventArgs e)
+        {
+            if ((Program.frmSoftj.frmDemandado == null) || (Program.frmSoftj.frmDemandado.IsDisposed))
+            {
+                Program.frmSoftj.frmDemandado = new frmDemandado();
+                Program.frmSoftj.frmDemandado.MdiParent = Program.frmSoftj;
+                Program.frmSoftj.frmDemandado.Show();
+            }
+        }
+
+        private void cbbEmpresa_DropDown(object sender, EventArgs e)
+        {
+            SqlDataAdapter adaptador = new SqlDataAdapter(queryCliente);
+            //insertacion a empresa combo box
+            queryCliente.CommandText = "SELECT * FROM Demandado";
+            dsDatos.Clear();
+            adaptador.Fill(dsDatos);
+            cbbEmpresa.DataSource = dsDatos.Tables[0];
+
+            cbbEmpresa.DisplayMember = "Nombre";
+            cbbEmpresa.ValueMember = "Id_demandado";
+        }
+
 
     }
 

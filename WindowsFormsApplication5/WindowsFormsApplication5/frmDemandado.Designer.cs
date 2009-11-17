@@ -39,6 +39,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomEmp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDirEmp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelEmp.Properties)).BeginInit();
@@ -130,6 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 424);
+            this.ControlBox = true;
             this.Name = "frmDemandado";
             this.Text = "Empresa Demandada";
             this.Load += new System.EventHandler(this.frmDemandado_Load);
@@ -137,6 +139,7 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomEmp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDirEmp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelEmp.Properties)).EndInit();

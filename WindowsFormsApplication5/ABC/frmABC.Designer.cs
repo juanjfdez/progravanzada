@@ -42,6 +42,7 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.queryCliente = new System.Data.SqlClient.SqlCommand();
+            this.dsDatos = new System.Data.DataSet();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
@@ -51,6 +52,7 @@
             this.tbModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -175,12 +177,15 @@
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.Name = "gridView2";
             // 
+            // dsDatos
+            // 
+            this.dsDatos.DataSetName = "NewDataSet";
+            // 
             // frmABC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 521);
-            this.ControlBox = false;
             this.Controls.Add(this.xtraTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmABC";
@@ -196,6 +201,7 @@
             this.tbModificar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,6 +222,7 @@
         protected DevExpress.XtraTab.XtraTabPage tbModificar;
         protected System.Windows.Forms.Button btnGuardar;
         protected System.Data.SqlClient.SqlCommand queryCliente;
+        public System.Data.DataSet dsDatos;
     }
 }
 
