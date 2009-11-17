@@ -60,7 +60,7 @@
             this.cbbSalida = new System.Windows.Forms.ComboBox();
             this.txtSalario = new System.Windows.Forms.TextBox();
             this.cbbTipo = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbbFormPago = new System.Windows.Forms.ComboBox();
             this.cbbJornadaInicio = new System.Windows.Forms.ComboBox();
             this.cbbJornadaFinal = new System.Windows.Forms.ComboBox();
             this.txtJefe = new System.Windows.Forms.TextBox();
@@ -68,26 +68,38 @@
             this.txtDireccionEmpresa = new System.Windows.Forms.TextBox();
             this.txtFechaI = new System.Windows.Forms.DateTimePicker();
             this.txtFechaD = new System.Windows.Forms.DateTimePicker();
-            this.cbSi = new System.Windows.Forms.CheckBox();
-            this.chNo = new System.Windows.Forms.CheckBox();
             this.btnEmpresaN = new DevExpress.XtraEditors.SimpleButton();
             this.errorCusClientes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.rdSexo = new DevExpress.XtraEditors.RadioGroup();
+            this.ckdTarjetaSi = new DevExpress.XtraEditors.CheckEdit();
+            this.ckdTarjetaNo = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorCusClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdSexo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaSi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
             // 
+            this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.SelectedTabPage = this.tbNuevo;
-            this.xtraTabControl1.Size = new System.Drawing.Size(794, 504);
+            this.xtraTabControl1.Size = new System.Drawing.Size(796, 539);
             // 
             // tbNuevo
             // 
+            this.tbNuevo.Controls.Add(this.ckdTarjetaSi);
+            this.tbNuevo.Controls.Add(this.rdSexo);
+            this.tbNuevo.Controls.Add(this.ckdTarjetaNo);
+            this.tbNuevo.Controls.Add(this.label24);
+            this.tbNuevo.Controls.Add(this.txtDireccion);
+            this.tbNuevo.Controls.Add(this.label23);
             this.tbNuevo.Controls.Add(this.btnEmpresaN);
-            this.tbNuevo.Controls.Add(this.chNo);
-            this.tbNuevo.Controls.Add(this.cbSi);
             this.tbNuevo.Controls.Add(this.txtFechaD);
             this.tbNuevo.Controls.Add(this.txtFechaI);
             this.tbNuevo.Controls.Add(this.txtDireccionEmpresa);
@@ -95,7 +107,7 @@
             this.tbNuevo.Controls.Add(this.txtJefe);
             this.tbNuevo.Controls.Add(this.cbbJornadaFinal);
             this.tbNuevo.Controls.Add(this.cbbJornadaInicio);
-            this.tbNuevo.Controls.Add(this.comboBox4);
+            this.tbNuevo.Controls.Add(this.cbbFormPago);
             this.tbNuevo.Controls.Add(this.cbbTipo);
             this.tbNuevo.Controls.Add(this.txtSalario);
             this.tbNuevo.Controls.Add(this.cbbSalida);
@@ -117,8 +129,7 @@
             this.tbNuevo.Controls.Add(this.label12);
             this.tbNuevo.Controls.Add(this.label11);
             this.tbNuevo.Controls.Add(this.label10);
-            this.tbNuevo.Size = new System.Drawing.Size(714, 495);
-            this.tbNuevo.Controls.SetChildIndex(this.btnGuardar, 0);
+            this.tbNuevo.Size = new System.Drawing.Size(716, 530);
             this.tbNuevo.Controls.SetChildIndex(this.label10, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label11, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label12, 0);
@@ -140,7 +151,7 @@
             this.tbNuevo.Controls.SetChildIndex(this.cbbSalida, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtSalario, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbTipo, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.comboBox4, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.cbbFormPago, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbJornadaInicio, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbJornadaFinal, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtJefe, 0);
@@ -148,17 +159,23 @@
             this.tbNuevo.Controls.SetChildIndex(this.txtDireccionEmpresa, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtFechaI, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtFechaD, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.cbSi, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.chNo, 0);
             this.tbNuevo.Controls.SetChildIndex(this.btnEmpresaN, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.label23, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.txtDireccion, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.label24, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaNo, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.rdSexo, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaSi, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.btnGuardar, 0);
             // 
             // tbModificar
             // 
-            this.tbModificar.Size = new System.Drawing.Size(714, 495);
+            this.tbModificar.Size = new System.Drawing.Size(716, 530);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(497, 20);
+            this.btnGuardar.Location = new System.Drawing.Point(560, 74);
+            this.btnGuardar.TabIndex = 34;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label1
@@ -245,7 +262,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 6);
+            this.label10.Location = new System.Drawing.Point(18, 10);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 0;
@@ -254,7 +271,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 469);
+            this.label11.Location = new System.Drawing.Point(18, 505);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(112, 13);
             this.label11.TabIndex = 1;
@@ -263,7 +280,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 443);
+            this.label12.Location = new System.Drawing.Point(18, 479);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(100, 13);
             this.label12.TabIndex = 2;
@@ -272,7 +289,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 415);
+            this.label13.Location = new System.Drawing.Point(18, 453);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 3;
@@ -281,7 +298,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(18, 388);
+            this.label14.Location = new System.Drawing.Point(7, 421);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(124, 13);
             this.label14.TabIndex = 4;
@@ -290,7 +307,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(20, 347);
+            this.label15.Location = new System.Drawing.Point(18, 388);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(46, 13);
             this.label15.TabIndex = 5;
@@ -299,7 +316,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(18, 316);
+            this.label16.Location = new System.Drawing.Point(18, 353);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(82, 13);
             this.label16.TabIndex = 6;
@@ -308,7 +325,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(18, 274);
+            this.label17.Location = new System.Drawing.Point(18, 319);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(101, 13);
             this.label17.TabIndex = 7;
@@ -317,7 +334,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(18, 205);
+            this.label18.Location = new System.Drawing.Point(18, 266);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(45, 13);
             this.label18.TabIndex = 8;
@@ -326,7 +343,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(20, 167);
+            this.label19.Location = new System.Drawing.Point(18, 230);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(47, 13);
             this.label19.TabIndex = 9;
@@ -335,7 +352,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(18, 134);
+            this.label20.Location = new System.Drawing.Point(18, 186);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(46, 13);
             this.label20.TabIndex = 10;
@@ -344,7 +361,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(18, 88);
+            this.label21.Location = new System.Drawing.Point(18, 144);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(54, 13);
             this.label21.TabIndex = 11;
@@ -353,7 +370,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(18, 44);
+            this.label22.Location = new System.Drawing.Point(18, 77);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(55, 13);
             this.label22.TabIndex = 12;
@@ -368,31 +385,31 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(77, 3);
+            this.txtNombre.Location = new System.Drawing.Point(77, 7);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(295, 20);
             this.txtNombre.TabIndex = 13;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(77, 41);
+            this.txtTelefono.Location = new System.Drawing.Point(77, 74);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(295, 20);
-            this.txtTelefono.TabIndex = 14;
+            this.txtTelefono.TabIndex = 15;
             // 
             // txtEmpresa
             // 
-            this.txtEmpresa.Location = new System.Drawing.Point(77, 85);
+            this.txtEmpresa.Location = new System.Drawing.Point(77, 141);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(295, 20);
-            this.txtEmpresa.TabIndex = 15;
+            this.txtEmpresa.TabIndex = 17;
             // 
             // txtPuesto
             // 
-            this.txtPuesto.Location = new System.Drawing.Point(77, 131);
+            this.txtPuesto.Location = new System.Drawing.Point(77, 183);
             this.txtPuesto.Name = "txtPuesto";
             this.txtPuesto.Size = new System.Drawing.Size(295, 20);
-            this.txtPuesto.TabIndex = 16;
+            this.txtPuesto.TabIndex = 19;
             // 
             // cbbEntrada
             // 
@@ -422,10 +439,10 @@
             "22:00",
             "23:00",
             "24:00"});
-            this.cbbEntrada.Location = new System.Drawing.Point(77, 164);
+            this.cbbEntrada.Location = new System.Drawing.Point(77, 227);
             this.cbbEntrada.Name = "cbbEntrada";
             this.cbbEntrada.Size = new System.Drawing.Size(92, 21);
-            this.cbbEntrada.TabIndex = 17;
+            this.cbbEntrada.TabIndex = 20;
             this.cbbEntrada.Text = "Entrada";
             // 
             // cbbSalida
@@ -456,18 +473,18 @@
             "22:00",
             "23:00",
             "24:00"});
-            this.cbbSalida.Location = new System.Drawing.Point(239, 164);
+            this.cbbSalida.Location = new System.Drawing.Point(207, 227);
             this.cbbSalida.Name = "cbbSalida";
             this.cbbSalida.Size = new System.Drawing.Size(92, 21);
-            this.cbbSalida.TabIndex = 18;
+            this.cbbSalida.TabIndex = 21;
             this.cbbSalida.Text = "Salida";
             // 
             // txtSalario
             // 
-            this.txtSalario.Location = new System.Drawing.Point(77, 202);
+            this.txtSalario.Location = new System.Drawing.Point(77, 263);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(100, 20);
-            this.txtSalario.TabIndex = 21;
+            this.txtSalario.TabIndex = 22;
             this.txtSalario.Text = "Cantidad $$";
             // 
             // cbbTipo
@@ -476,25 +493,25 @@
             this.cbbTipo.Items.AddRange(new object[] {
             "m/n",
             "dlls"});
-            this.cbbTipo.Location = new System.Drawing.Point(239, 202);
+            this.cbbTipo.Location = new System.Drawing.Point(207, 263);
             this.cbbTipo.Name = "cbbTipo";
             this.cbbTipo.Size = new System.Drawing.Size(103, 21);
-            this.cbbTipo.TabIndex = 22;
+            this.cbbTipo.TabIndex = 23;
             this.cbbTipo.Text = "Tipo de Moneda";
             // 
-            // comboBox4
+            // cbbFormPago
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cbbFormPago.FormattingEnabled = true;
+            this.cbbFormPago.Items.AddRange(new object[] {
             "Efectivo",
             "Tarjeta",
             "Cheques",
             "Nomina"});
-            this.comboBox4.Location = new System.Drawing.Point(77, 228);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(100, 21);
-            this.comboBox4.TabIndex = 23;
-            this.comboBox4.Text = "Forma de Pago";
+            this.cbbFormPago.Location = new System.Drawing.Point(77, 289);
+            this.cbbFormPago.Name = "cbbFormPago";
+            this.cbbFormPago.Size = new System.Drawing.Size(100, 21);
+            this.cbbFormPago.TabIndex = 24;
+            this.cbbFormPago.Text = "Forma de Pago";
             // 
             // cbbJornadaInicio
             // 
@@ -507,10 +524,10 @@
             "Viernes",
             "Sabado",
             "Domingo"});
-            this.cbbJornadaInicio.Location = new System.Drawing.Point(125, 271);
+            this.cbbJornadaInicio.Location = new System.Drawing.Point(147, 316);
             this.cbbJornadaInicio.Name = "cbbJornadaInicio";
             this.cbbJornadaInicio.Size = new System.Drawing.Size(92, 21);
-            this.cbbJornadaInicio.TabIndex = 24;
+            this.cbbJornadaInicio.TabIndex = 25;
             this.cbbJornadaInicio.Text = "Inicio";
             // 
             // cbbJornadaFinal
@@ -524,84 +541,121 @@
             "Viernes",
             "Sabado",
             "Domingo"});
-            this.cbbJornadaFinal.Location = new System.Drawing.Point(263, 271);
+            this.cbbJornadaFinal.Location = new System.Drawing.Point(260, 316);
             this.cbbJornadaFinal.Name = "cbbJornadaFinal";
             this.cbbJornadaFinal.Size = new System.Drawing.Size(92, 21);
-            this.cbbJornadaFinal.TabIndex = 25;
+            this.cbbJornadaFinal.TabIndex = 26;
             this.cbbJornadaFinal.Text = "Final";
             // 
             // txtJefe
             // 
-            this.txtJefe.Location = new System.Drawing.Point(106, 316);
+            this.txtJefe.Location = new System.Drawing.Point(147, 350);
             this.txtJefe.Name = "txtJefe";
             this.txtJefe.Size = new System.Drawing.Size(267, 20);
-            this.txtJefe.TabIndex = 26;
+            this.txtJefe.TabIndex = 27;
             // 
             // txtPuestoJefe
             // 
-            this.txtPuestoJefe.Location = new System.Drawing.Point(77, 347);
+            this.txtPuestoJefe.Location = new System.Drawing.Point(147, 385);
             this.txtPuestoJefe.Name = "txtPuestoJefe";
             this.txtPuestoJefe.Size = new System.Drawing.Size(295, 20);
-            this.txtPuestoJefe.TabIndex = 27;
+            this.txtPuestoJefe.TabIndex = 28;
             // 
             // txtDireccionEmpresa
             // 
-            this.txtDireccionEmpresa.Location = new System.Drawing.Point(148, 385);
+            this.txtDireccionEmpresa.Location = new System.Drawing.Point(147, 418);
             this.txtDireccionEmpresa.Name = "txtDireccionEmpresa";
             this.txtDireccionEmpresa.Size = new System.Drawing.Size(225, 20);
-            this.txtDireccionEmpresa.TabIndex = 28;
+            this.txtDireccionEmpresa.TabIndex = 29;
             // 
             // txtFechaI
             // 
-            this.txtFechaI.Location = new System.Drawing.Point(148, 415);
+            this.txtFechaI.Location = new System.Drawing.Point(148, 449);
             this.txtFechaI.Name = "txtFechaI";
             this.txtFechaI.Size = new System.Drawing.Size(224, 20);
-            this.txtFechaI.TabIndex = 29;
+            this.txtFechaI.TabIndex = 30;
             // 
             // txtFechaD
             // 
-            this.txtFechaD.Location = new System.Drawing.Point(148, 441);
+            this.txtFechaD.Location = new System.Drawing.Point(148, 475);
             this.txtFechaD.Name = "txtFechaD";
             this.txtFechaD.Size = new System.Drawing.Size(224, 20);
-            this.txtFechaD.TabIndex = 30;
-            // 
-            // cbSi
-            // 
-            this.cbSi.AutoSize = true;
-            this.cbSi.Location = new System.Drawing.Point(148, 469);
-            this.cbSi.Name = "cbSi";
-            this.cbSi.Size = new System.Drawing.Size(35, 17);
-            this.cbSi.TabIndex = 31;
-            this.cbSi.Text = "Si";
-            this.cbSi.UseVisualStyleBackColor = true;
-            // 
-            // chNo
-            // 
-            this.chNo.AutoSize = true;
-            this.chNo.Location = new System.Drawing.Point(239, 469);
-            this.chNo.Name = "chNo";
-            this.chNo.Size = new System.Drawing.Size(40, 17);
-            this.chNo.TabIndex = 32;
-            this.chNo.Text = "No";
-            this.chNo.UseVisualStyleBackColor = true;
+            this.txtFechaD.TabIndex = 31;
             // 
             // btnEmpresaN
             // 
-            this.btnEmpresaN.Location = new System.Drawing.Point(401, 85);
+            this.btnEmpresaN.Location = new System.Drawing.Point(397, 138);
             this.btnEmpresaN.Name = "btnEmpresaN";
             this.btnEmpresaN.Size = new System.Drawing.Size(75, 23);
-            this.btnEmpresaN.TabIndex = 33;
+            this.btnEmpresaN.TabIndex = 18;
             this.btnEmpresaN.Text = "Nueva";
             // 
             // errorCusClientes
             // 
             this.errorCusClientes.ContainerControl = this;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(18, 41);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(55, 13);
+            this.label23.TabIndex = 34;
+            this.label23.Text = "Direccion:";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(78, 38);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(295, 20);
+            this.txtDireccion.TabIndex = 14;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(18, 113);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(34, 13);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "Sexo:";
+            // 
+            // rdSexo
+            // 
+            this.rdSexo.Location = new System.Drawing.Point(77, 105);
+            this.rdSexo.Name = "rdSexo";
+            this.rdSexo.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rdSexo.Properties.Appearance.Options.UseBackColor = true;
+            this.rdSexo.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("M", "Masculino"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("F", "Femenino")});
+            this.rdSexo.Size = new System.Drawing.Size(202, 30);
+            this.rdSexo.TabIndex = 16;
+            // 
+            // ckdTarjetaSi
+            // 
+            this.ckdTarjetaSi.Location = new System.Drawing.Point(146, 501);
+            this.ckdTarjetaSi.Name = "ckdTarjetaSi";
+            this.ckdTarjetaSi.Properties.Caption = "Si";
+            this.ckdTarjetaSi.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style1;
+            this.ckdTarjetaSi.Size = new System.Drawing.Size(52, 22);
+            this.ckdTarjetaSi.TabIndex = 32;
+            this.ckdTarjetaSi.CheckedChanged += new System.EventHandler(this.ckdTarjetaSi_CheckedChanged);
+            // 
+            // ckdTarjetaNo
+            // 
+            this.ckdTarjetaNo.Location = new System.Drawing.Point(204, 502);
+            this.ckdTarjetaNo.Name = "ckdTarjetaNo";
+            this.ckdTarjetaNo.Properties.Caption = "No";
+            this.ckdTarjetaNo.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style1;
+            this.ckdTarjetaNo.Size = new System.Drawing.Size(75, 22);
+            this.ckdTarjetaNo.TabIndex = 33;
+            this.ckdTarjetaNo.CheckedChanged += new System.EventHandler(this.ckdTarjetaNo_CheckedChanged);
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 548);
+            this.ClientSize = new System.Drawing.Size(829, 551);
             this.ControlBox = true;
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -612,6 +666,9 @@
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorCusClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdSexo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaSi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaNo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -651,9 +708,7 @@
         private System.Windows.Forms.ComboBox cbbEntrada;
         private System.Windows.Forms.ComboBox cbbJornadaFinal;
         private System.Windows.Forms.ComboBox cbbJornadaInicio;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.CheckBox chNo;
-        private System.Windows.Forms.CheckBox cbSi;
+        private System.Windows.Forms.ComboBox cbbFormPago;
         private System.Windows.Forms.DateTimePicker txtFechaD;
         private System.Windows.Forms.DateTimePicker txtFechaI;
         private System.Windows.Forms.TextBox txtDireccionEmpresa;
@@ -661,5 +716,11 @@
         private System.Windows.Forms.TextBox txtJefe;
         private DevExpress.XtraEditors.SimpleButton btnEmpresaN;
         private System.Windows.Forms.ErrorProvider errorCusClientes;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private DevExpress.XtraEditors.RadioGroup rdSexo;
+        private DevExpress.XtraEditors.CheckEdit ckdTarjetaSi;
+        private DevExpress.XtraEditors.CheckEdit ckdTarjetaNo;
     }
 }
