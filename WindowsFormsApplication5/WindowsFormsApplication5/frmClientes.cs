@@ -157,7 +157,7 @@ namespace WindowsFormsApplication5
                 queryCliente.Parameters.AddWithValue("@tarjeta_asis", tarjeta_asis);
 
                 //ejecuta query
-                if (queryCliente.ExecuteNonQuery() > 1)
+                if (queryCliente.ExecuteNonQuery() > 0)
                     MessageBox.Show("Cliente agregado");
             }
         }
