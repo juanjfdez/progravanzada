@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Data.Sql;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -123,37 +125,41 @@ namespace WindowsFormsApplication5
                 errorCusClientes.SetError(ckdTarjetaNo, "");
                 errorCusClientes.SetError(ckdTarjetaSi, "");
             }
-            //MessageBox.Show(cbbEntrada.Text);     
-                
-            //INICIO DE INSERCION
-            queryCliente.CommandText = @"EXEC InsertarCliente  
+
+            if (bandera == true)
+            {
+                //INICIO DE INSERCION
+                queryCliente.CommandText = @"EXEC InsertarCliente  
             @Nombre,@Direccion,@Telefono,@Puesto,@Salario,@Sexo,
             @Id_demandado,@hora_in, @hora_out,@jefe_inmediato,
             @tipo_moneda_sal,@forma_pago,@jornada_in,@jornada_out,@fecha_in,
             @fecha_out,@tarjeta_asis,@puesto_jefe_inmediato";
 
-            //PARAMETROS
-            queryCliente.Parameters.Clear();
-            queryCliente.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-            queryCliente.Parameters.AddWithValue("@Direccion", txtDireccion.Text);
-            queryCliente.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
-            queryCliente.Parameters.AddWithValue("@Puesto", txtPuesto.Text);
-            queryCliente.Parameters.AddWithValue("@Salario", Convert.ToInt32(txtSalario.Text));
-            queryCliente.Parameters.AddWithValue("@Sexo",rdSexo.Text);
-            queryCliente.Parameters.AddWithValue("@Id_demandado", "1");
-            queryCliente.Parameters.AddWithValue("@hora_in", cbbEntrada.Text);
-            queryCliente.Parameters.AddWithValue("@hora_out", cbbSalida.Text);
-            queryCliente.Parameters.AddWithValue("@jefe_inmediato", txtJefe.Text);
-            queryCliente.Parameters.AddWithValue("@tipo_moneda_sal", cbbTipo.Text);
-            queryCliente.Parameters.AddWithValue("@forma_pago", cbbFormPago.Text);
-            queryCliente.Parameters.AddWithValue("@jornada_in", cbbJornadaInicio.Text);
-            queryCliente.Parameters.AddWithValue("@jordana_out", cbbJornadaFinal.Text);
-            queryCliente.Parameters.AddWithValue("@fecha_in", txtFechaI.Text);
-            queryCliente.Parameters.AddWithValue("@fecha_out", txtFechaD.Text);
-            queryCliente.Parameters.AddWithValue("@puesto_jefe_inmediato",txtPuestoJefe.Text);
-            queryCliente.Parameters.AddWithValue("@tarjeta_asis", tarjeta_asis);
-            queryCliente.ExecuteNonQuery();
-            MessageBox.Show("Cliente agregado");
+                //PARAMETROS
+                queryCliente.Parameters.Clear();
+                queryCliente.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                queryCliente.Parameters.AddWithValue("@Direccion", txtDireccion.Text);
+                queryCliente.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
+                queryCliente.Parameters.AddWithValue("@Puesto", txtPuesto.Text);
+                queryCliente.Parameters.AddWithValue("@Salario", Convert.ToInt32(txtSalario.Text));
+                queryCliente.Parameters.AddWithValue("@Sexo", rdSexo.Text);
+                queryCliente.Parameters.AddWithValue("@Id_demandado", "1");
+                queryCliente.Parameters.AddWithValue("@hora_in", cbbEntrada.Text);
+                queryCliente.Parameters.AddWithValue("@hora_out", cbbSalida.Text);
+                queryCliente.Parameters.AddWithValue("@jefe_inmediato", txtJefe.Text);
+                queryCliente.Parameters.AddWithValue("@tipo_moneda_sal", cbbTipo.Text);
+                queryCliente.Parameters.AddWithValue("@forma_pago", cbbFormPago.Text);
+                queryCliente.Parameters.AddWithValue("@jornada_in", cbbJornadaInicio.Text);
+                queryCliente.Parameters.AddWithValue("@jordana_out", cbbJornadaFinal.Text);
+                queryCliente.Parameters.AddWithValue("@fecha_in", txtFechaI.Text);
+                queryCliente.Parameters.AddWithValue("@fecha_out", txtFechaD.Text);
+                queryCliente.Parameters.AddWithValue("@puesto_jefe_inmediato", txtPuestoJefe.Text);
+                queryCliente.Parameters.AddWithValue("@tarjeta_asis", tarjeta_asis);
+
+                //ejecuta query
+                if (queryCliente.ExecuteNonQuery() > 1)
+                    MessageBox.Show("Cliente agregado");
+            }
         }
 
         private void frmClientes_Load(object sender, EventArgs e)

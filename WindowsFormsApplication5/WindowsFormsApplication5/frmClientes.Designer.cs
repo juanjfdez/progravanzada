@@ -90,6 +90,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.SelectedTabPage = this.tbNuevo;
             this.xtraTabControl1.Size = new System.Drawing.Size(796, 539);
+            this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
             // 
             // tbNuevo
             // 
