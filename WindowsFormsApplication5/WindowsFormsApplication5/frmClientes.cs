@@ -105,19 +105,11 @@ namespace WindowsFormsApplication5
             else
                 errorCusClientes.SetError(txtPuestoJefe, "");
 
-                //DireccionEmpresa
-            if (txtDireccionEmpresa.Text == "")
-            {
-                errorCusClientes.SetError(txtDireccionEmpresa, "Por favor especifique direccion de la Empresa");
-                bandera = false;
-            }
-            else
-                errorCusClientes.SetError(txtDireccionEmpresa, "");
-
                 //Tarjeta Asistencia
             if ((ckdTarjetaNo.Checked == false) && (ckdTarjetaSi.Checked == false))
             {
-                errorCusClientes.SetError(txtDireccionEmpresa, "Por favor especifique informacion de Tarjeta de Asistencia");
+                errorCusClientes.SetError(ckdTarjetaNo, "Por favor especifique informacion de Tarjeta de Asistencia");
+                errorCusClientes.SetError(ckdTarjetaSi, "Por favor especifique informacion de Tarjeta de Asistencia");
                 bandera = false;
             }
             else
@@ -164,6 +156,9 @@ namespace WindowsFormsApplication5
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
+            SqlDataAdapter adaptador = new SqlDataAdapter(queryCliente);
+
+            Program.frmSoftj.AbrirCon();
             queryCliente.Connection = Program.frmSoftj.sqlconexion;
 
             // asignacion te errores para la insercion
@@ -174,7 +169,8 @@ namespace WindowsFormsApplication5
             errorCusClientes.SetError(txtSalario, "");
             errorCusClientes.SetError(txtJefe, "");
             errorCusClientes.SetError(txtPuestoJefe, "");
-            errorCusClientes.SetError(txtDireccionEmpresa, "");
+
+            //insertacion a empresa combo box
         }
 
         private void ckdTarjetaNo_CheckedChanged(object sender, EventArgs e)

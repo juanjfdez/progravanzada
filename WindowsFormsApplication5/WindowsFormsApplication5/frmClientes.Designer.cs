@@ -52,7 +52,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.txtPuesto = new System.Windows.Forms.TextBox();
             this.cbbEntrada = new System.Windows.Forms.ComboBox();
@@ -74,6 +73,8 @@
             this.rdSexo = new DevExpress.XtraEditors.RadioGroup();
             this.ckdTarjetaSi = new DevExpress.XtraEditors.CheckEdit();
             this.ckdTarjetaNo = new DevExpress.XtraEditors.CheckEdit();
+            this.txtTelefono = new DevExpress.XtraEditors.TextEdit();
+            this.cbbEmpresa = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
@@ -81,6 +82,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rdSexo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaSi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEmpresa.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -94,7 +97,9 @@
             this.tbNuevo.Controls.Add(this.rdSexo);
             this.tbNuevo.Controls.Add(this.ckdTarjetaSi);
             this.tbNuevo.Controls.Add(this.ckdTarjetaNo);
+            this.tbNuevo.Controls.Add(this.cbbEmpresa);
             this.tbNuevo.Controls.Add(this.label24);
+            this.tbNuevo.Controls.Add(this.txtTelefono);
             this.tbNuevo.Controls.Add(this.txtDireccion);
             this.tbNuevo.Controls.Add(this.label23);
             this.tbNuevo.Controls.Add(this.btnEmpresaN);
@@ -111,7 +116,6 @@
             this.tbNuevo.Controls.Add(this.cbbEntrada);
             this.tbNuevo.Controls.Add(this.txtPuesto);
             this.tbNuevo.Controls.Add(this.txtEmpresa);
-            this.tbNuevo.Controls.Add(this.txtTelefono);
             this.tbNuevo.Controls.Add(this.txtNombre);
             this.tbNuevo.Controls.Add(this.label22);
             this.tbNuevo.Controls.Add(this.label21);
@@ -139,7 +143,6 @@
             this.tbNuevo.Controls.SetChildIndex(this.label21, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label22, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtNombre, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.txtTelefono, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtEmpresa, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtPuesto, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbEntrada, 0);
@@ -156,7 +159,9 @@
             this.tbNuevo.Controls.SetChildIndex(this.btnEmpresaN, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label23, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtDireccion, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.txtTelefono, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label24, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.cbbEmpresa, 0);
             this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaNo, 0);
             this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaSi, 0);
             this.tbNuevo.Controls.SetChildIndex(this.rdSexo, 0);
@@ -374,13 +379,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(295, 20);
             this.txtNombre.TabIndex = 13;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(77, 74);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(295, 20);
-            this.txtTelefono.TabIndex = 15;
             // 
             // txtEmpresa
             // 
@@ -629,6 +627,28 @@
             this.ckdTarjetaNo.TabIndex = 33;
             this.ckdTarjetaNo.CheckedChanged += new System.EventHandler(this.ckdTarjetaNo_CheckedChanged);
             // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(77, 74);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTelefono.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTelefono.Properties.Mask.EditMask = "(999)000-00-00";
+            this.txtTelefono.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.txtTelefono.Size = new System.Drawing.Size(296, 20);
+            this.txtTelefono.TabIndex = 37;
+            // 
+            // cbbEmpresa
+            // 
+            this.cbbEmpresa.Location = new System.Drawing.Point(397, 179);
+            this.cbbEmpresa.Name = "cbbEmpresa";
+            this.cbbEmpresa.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbbEmpresa.Properties.Appearance.Options.UseBackColor = true;
+            this.cbbEmpresa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbEmpresa.Size = new System.Drawing.Size(293, 20);
+            this.cbbEmpresa.TabIndex = 38;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,6 +667,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rdSexo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaSi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEmpresa.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -677,7 +699,6 @@
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.TextBox txtPuesto;
         private System.Windows.Forms.TextBox txtEmpresa;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cbbTipo;
         private System.Windows.Forms.TextBox txtSalario;
@@ -698,5 +719,7 @@
         private DevExpress.XtraEditors.RadioGroup rdSexo;
         private DevExpress.XtraEditors.CheckEdit ckdTarjetaSi;
         private DevExpress.XtraEditors.CheckEdit ckdTarjetaNo;
+        private DevExpress.XtraEditors.TextEdit txtTelefono;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbEmpresa;
     }
 }
