@@ -20,14 +20,5 @@ namespace ABC
             InitializeComponent();
         }
 
-        private void tbNuevo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -74,22 +74,28 @@
             this.ckdTarjetaNo = new DevExpress.XtraEditors.CheckEdit();
             this.txtTelefono = new DevExpress.XtraEditors.TextEdit();
             this.cbbEmpresa = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
+            this.gcClinete = new DevExpress.XtraGrid.GridControl();
+            this.gvCliente = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
+            this.tbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorCusClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdSexo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaSi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcClinete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
             // 
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.SelectedTabPage = this.tbNuevo;
-            this.xtraTabControl1.Size = new System.Drawing.Size(796, 539);
+            this.xtraTabControl1.Size = new System.Drawing.Size(890, 539);
             // 
             // tbNuevo
             // 
@@ -127,7 +133,7 @@
             this.tbNuevo.Controls.Add(this.label13);
             this.tbNuevo.Controls.Add(this.label10);
             this.tbNuevo.Controls.Add(this.label11);
-            this.tbNuevo.Size = new System.Drawing.Size(716, 530);
+            this.tbNuevo.Size = new System.Drawing.Size(810, 530);
             this.tbNuevo.Controls.SetChildIndex(this.label11, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label10, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label13, 0);
@@ -166,13 +172,21 @@
             // 
             // tbModificar
             // 
-            this.tbModificar.Size = new System.Drawing.Size(716, 530);
+            this.tbModificar.Size = new System.Drawing.Size(810, 530);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(560, 74);
             this.btnGuardar.TabIndex = 34;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // tbBuscar
+            // 
+            this.tbBuscar.Controls.Add(this.gcClinete);
+            this.tbBuscar.Controls.Add(this.btnBuscar);
+            this.tbBuscar.Size = new System.Drawing.Size(810, 530);
+            this.tbBuscar.Controls.SetChildIndex(this.btnBuscar, 0);
+            this.tbBuscar.Controls.SetChildIndex(this.gcClinete, 0);
             // 
             // label1
             // 
@@ -639,11 +653,39 @@
             this.cbbEmpresa.Text = "- Escojer Empresa -";
             this.cbbEmpresa.DropDown += new System.EventHandler(this.cbbEmpresa_DropDown);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(485, 14);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(107, 45);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // gcClinete
+            // 
+            this.gcClinete.EmbeddedNavigator.Name = "";
+            this.gcClinete.FormsUseDefaultLookAndFeel = false;
+            this.gcClinete.Location = new System.Drawing.Point(3, 79);
+            this.gcClinete.MainView = this.gvCliente;
+            this.gcClinete.Name = "gcClinete";
+            this.gcClinete.Size = new System.Drawing.Size(807, 400);
+            this.gcClinete.TabIndex = 4;
+            this.gcClinete.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvCliente});
+            // 
+            // gvCliente
+            // 
+            this.gvCliente.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gvCliente.GridControl = this.gcClinete;
+            this.gvCliente.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gvCliente.Name = "gvCliente";
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 551);
+            this.ClientSize = new System.Drawing.Size(914, 551);
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Clientes";
@@ -653,11 +695,15 @@
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
+            this.tbBuscar.ResumeLayout(false);
+            this.tbBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorCusClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdSexo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaSi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcClinete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -709,5 +755,8 @@
         private DevExpress.XtraEditors.CheckEdit ckdTarjetaNo;
         private DevExpress.XtraEditors.TextEdit txtTelefono;
         private System.Windows.Forms.ComboBox cbbEmpresa;
+        private DevExpress.XtraGrid.GridControl gcClinete;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvCliente;
+        private DevExpress.XtraEditors.SimpleButton btnBuscar;
     }
 }

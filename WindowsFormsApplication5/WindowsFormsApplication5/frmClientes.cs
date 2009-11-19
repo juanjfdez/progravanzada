@@ -215,6 +215,29 @@ namespace WindowsFormsApplication5
             cbbEmpresa.ValueMember = "Id_demandado";
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dsDatos.Clear();
+            SqlDataAdapter adaptador = new SqlDataAdapter(queryCliente);
+
+            //se hace consulta
+            queryCliente.CommandText = @"SELECT Nombre, Direccion, Telefono, Puesto, Salario, tipo_moneda_sal, forma_pago, Sexo, hora_in, hora_out, jefe_inmediato, puesto_jefe_inmediato, 
+            jornada_in, jornada_out, fecha_in, fecha_out, tarjeta_asis
+            FROM Cliente";
+  
+            //limpia datos del data user
+            dsDatos.Clear();
+
+            //se llena datos en el data user
+            adaptador.Fill(dsDatos);
+
+            //asigna datos al gridcontrol
+            gvCliente.DataSource = dsDatos.Tables[0];
+
+
+
+        }
+
 
     }
 

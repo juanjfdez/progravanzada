@@ -34,24 +34,16 @@
             this.tbBuscar = new DevExpress.XtraTab.XtraTabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridBuscar = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tbModificar = new DevExpress.XtraTab.XtraTabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.queryCliente = new System.Data.SqlClient.SqlCommand();
             this.dsDatos = new System.Data.DataSet();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
             this.tbBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tbModificar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +69,6 @@
             this.tbNuevo.Name = "tbNuevo";
             this.tbNuevo.Size = new System.Drawing.Size(710, 468);
             this.tbNuevo.Text = "&Nuevo";
-            this.tbNuevo.Paint += new System.Windows.Forms.PaintEventHandler(this.tbNuevo_Paint);
             // 
             // btnGuardar
             // 
@@ -95,7 +86,6 @@
             // 
             this.tbBuscar.Controls.Add(this.textBox1);
             this.tbBuscar.Controls.Add(this.label1);
-            this.tbBuscar.Controls.Add(this.gridBuscar);
             this.tbBuscar.Image = global::ABC.Properties.Resources.system_search;
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(710, 468);
@@ -117,28 +107,10 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Buscar :";
             // 
-            // gridBuscar
-            // 
-            this.gridBuscar.EmbeddedNavigator.Name = "";
-            this.gridBuscar.FormsUseDefaultLookAndFeel = false;
-            this.gridBuscar.Location = new System.Drawing.Point(46, 66);
-            this.gridBuscar.MainView = this.gridView1;
-            this.gridBuscar.Name = "gridBuscar";
-            this.gridBuscar.Size = new System.Drawing.Size(432, 276);
-            this.gridBuscar.TabIndex = 0;
-            this.gridBuscar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridBuscar;
-            this.gridView1.Name = "gridView1";
-            // 
             // tbModificar
             // 
             this.tbModificar.Controls.Add(this.textBox2);
             this.tbModificar.Controls.Add(this.label2);
-            this.tbModificar.Controls.Add(this.gridControl1);
             this.tbModificar.Image = global::ABC.Properties.Resources.emblem_unreadable;
             this.tbModificar.Name = "tbModificar";
             this.tbModificar.Size = new System.Drawing.Size(710, 468);
@@ -160,23 +132,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Buscar :";
             // 
-            // gridControl1
-            // 
-            this.gridControl1.EmbeddedNavigator.Name = "";
-            this.gridControl1.FormsUseDefaultLookAndFeel = false;
-            this.gridControl1.Location = new System.Drawing.Point(44, 68);
-            this.gridControl1.MainView = this.gridView2;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(432, 276);
-            this.gridControl1.TabIndex = 3;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.gridControl1;
-            this.gridView2.Name = "gridView2";
-            // 
             // dsDatos
             // 
             this.dsDatos.DataSetName = "NewDataSet";
@@ -195,12 +150,8 @@
             this.tbNuevo.ResumeLayout(false);
             this.tbBuscar.ResumeLayout(false);
             this.tbBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tbModificar.ResumeLayout(false);
             this.tbModificar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.ResumeLayout(false);
 
@@ -208,21 +159,17 @@
 
         #endregion
 
-        private DevExpress.XtraTab.XtraTabPage tbBuscar;
-        private DevExpress.XtraGrid.GridControl gridBuscar;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         protected DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         protected DevExpress.XtraTab.XtraTabPage tbNuevo;
         protected DevExpress.XtraTab.XtraTabPage tbModificar;
         protected System.Windows.Forms.Button btnGuardar;
         protected System.Data.SqlClient.SqlCommand queryCliente;
         public System.Data.DataSet dsDatos;
+        public DevExpress.XtraTab.XtraTabPage tbBuscar;
     }
 }
 
