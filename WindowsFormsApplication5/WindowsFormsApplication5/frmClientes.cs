@@ -232,7 +232,7 @@ namespace WindowsFormsApplication5
             adaptador.Fill(dsDatos);
 
             //asigna datos al gridcontrol
-            gvCliente.DataSource = dsDatos.Tables[0];
+            //gvCliente.DataSource = dsDatos.Tables[0];
 
 
 

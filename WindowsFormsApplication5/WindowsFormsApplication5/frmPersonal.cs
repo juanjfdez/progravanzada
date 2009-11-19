@@ -9,12 +9,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5
 {
-    public partial class frmCasos : ABC.frmABC
+    public partial class frmPersonal : ABC.frmABC
     {
-        public frmCasos()
+        public frmPersonal()
         {
             InitializeComponent();
         }
-        
+
+
     }
 }

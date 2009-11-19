@@ -28,29 +28,29 @@ namespace WindowsFormsApplication5
                 //Nombre
             if (txtNomEmp.Text == "")
             {
-                errorCusDemandado.SetError(txtNomEmp, "Por favor especifique Nombre de la Empresa");
+                error_info.SetError(txtNomEmp, "Por favor especifique Nombre de la Empresa");
                 banderademandado = false;
             }
             else
-                errorCusDemandado.SetError(txtNomEmp, "");
+                error_info.SetError(txtNomEmp, "");
 
             //Direccion
             if (txtDirEmp.Text == "")
             {
-                errorCusDemandado.SetError(txtDirEmp, "Por favor especifique Direccion de la Empresa");
+                error_info.SetError(txtDirEmp, "Por favor especifique Direccion de la Empresa");
                 banderademandado = false;
             }
             else
-                errorCusDemandado.SetError(txtDirEmp, "");
+                error_info.SetError(txtDirEmp, "");
 
             //Telefono
             if (txtTelEmp.Text == "")
             {
-                errorCusDemandado.SetError(txtTelEmp, "Por favor especifique Telefono de la Empresa");
+                error_info.SetError(txtTelEmp, "Por favor especifique Telefono de la Empresa");
                 banderademandado = false;
             }
             else
-                errorCusDemandado.SetError(txtTelEmp, "");
+                error_info.SetError(txtTelEmp, "");
 
             if (banderademandado == true)
             {
@@ -75,9 +75,9 @@ namespace WindowsFormsApplication5
             Program.frmSoftj.AbrirCon();
             queryCliente.Connection = Program.frmSoftj.sqlconexion;
 
-            errorCusDemandado.SetError(txtDirEmp, "");
-            errorCusDemandado.SetError(txtNomEmp, "");
-            errorCusDemandado.SetError(txtTelEmp, "");
+            error_info.SetError(txtDirEmp, "");
+            error_info.SetError(txtNomEmp, "");
+            error_info.SetError(txtTelEmp, "");
         }
 
     }

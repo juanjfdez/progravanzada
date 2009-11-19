@@ -17,6 +17,7 @@ namespace WindowsFormsApplication5
         public frmCasos frmCasos;
         public frmUsuarios frmUsuarios;
         public frmDemandado frmDemandado;
+        public frmPersonal frmPersonal;
         public frmSoftj()
         {
             InitializeComponent();
@@ -59,16 +60,6 @@ namespace WindowsFormsApplication5
             }
         }
 
-        private void tsMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void verticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileHorizontal);
@@ -77,6 +68,17 @@ namespace WindowsFormsApplication5
         private void frmSoftj_Load(object sender, EventArgs e)
         {
             AbrirCon();
+        }
+
+        private void tspPersonal_Click(object sender, EventArgs e)
+        {
+            if ((frmPersonal == null) || (frmPersonal.IsDisposed))
+            {
+                frmPersonal = new frmPersonal();
+                frmPersonal.MdiParent = this;
+                frmPersonal.Show();
+            }
+
         }
     }
 }

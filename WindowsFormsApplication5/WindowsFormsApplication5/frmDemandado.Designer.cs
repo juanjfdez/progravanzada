@@ -28,27 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtNomEmp = new DevExpress.XtraEditors.TextEdit();
             this.txtDirEmp = new DevExpress.XtraEditors.TextEdit();
             this.txtTelEmp = new DevExpress.XtraEditors.TextEdit();
-            this.errorCusDemandado = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomEmp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDirEmp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelEmp.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorCusDemandado)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Size = new System.Drawing.Size(708, 372);
+            this.xtraTabControl1.Size = new System.Drawing.Size(676, 239);
             // 
             // tbNuevo
             // 
@@ -58,7 +56,8 @@
             this.tbNuevo.Controls.Add(this.labelControl3);
             this.tbNuevo.Controls.Add(this.labelControl2);
             this.tbNuevo.Controls.Add(this.labelControl1);
-            this.tbNuevo.Size = new System.Drawing.Size(628, 363);
+            this.tbNuevo.Size = new System.Drawing.Size(596, 230);
+            this.tbNuevo.Controls.SetChildIndex(this.btnLimpiar, 0);
             this.tbNuevo.Controls.SetChildIndex(this.labelControl1, 0);
             this.tbNuevo.Controls.SetChildIndex(this.labelControl2, 0);
             this.tbNuevo.Controls.SetChildIndex(this.btnGuardar, 0);
@@ -69,11 +68,20 @@
             // 
             // tbModificar
             // 
-            this.tbModificar.Size = new System.Drawing.Size(628, 363);
+            this.tbModificar.Size = new System.Drawing.Size(596, 230);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Location = new System.Drawing.Point(422, 27);
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // tbBuscar
+            // 
+            this.tbBuscar.Size = new System.Drawing.Size(596, 230);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(422, 115);
             // 
             // labelControl1
             // 
@@ -122,16 +130,11 @@
             this.txtTelEmp.Size = new System.Drawing.Size(169, 20);
             this.txtTelEmp.TabIndex = 6;
             // 
-            // errorCusDemandado
-            // 
-            this.errorCusDemandado.ContainerControl = this;
-            // 
             // frmDemandado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 424);
-            this.ControlBox = true;
+            this.ClientSize = new System.Drawing.Size(700, 263);
             this.Name = "frmDemandado";
             this.Text = "Empresa Demandada";
             this.Load += new System.EventHandler(this.frmDemandado_Load);
@@ -140,10 +143,10 @@
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomEmp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDirEmp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelEmp.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorCusDemandado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,6 +159,5 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtTelEmp;
         private DevExpress.XtraEditors.TextEdit txtDirEmp;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errorCusDemandado;
     }
 }

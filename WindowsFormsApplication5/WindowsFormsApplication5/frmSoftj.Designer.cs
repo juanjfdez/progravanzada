@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSoftj));
             this.tsMenu = new System.Windows.Forms.ToolStrip();
-            this.tsbAdministrador = new System.Windows.Forms.ToolStripButton();
-            this.tspClientes = new System.Windows.Forms.ToolStripButton();
-            this.tspCasos = new System.Windows.Forms.ToolStripButton();
-            this.tspUsuarios = new System.Windows.Forms.ToolStripButton();
-            this.tspDemandas = new System.Windows.Forms.ToolStripButton();
-            this.tspReportes = new System.Windows.Forms.ToolStripButton();
-            this.tspSalir = new System.Windows.Forms.ToolStripButton();
-            this.tspCerrarSession = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ventanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sqlconexion = new System.Data.SqlClient.SqlConnection();
+            this.tsbAdministrador = new System.Windows.Forms.ToolStripButton();
+            this.tspClientes = new System.Windows.Forms.ToolStripButton();
+            this.tspCasos = new System.Windows.Forms.ToolStripButton();
+            this.tspPersonal = new System.Windows.Forms.ToolStripButton();
+            this.tspDemandas = new System.Windows.Forms.ToolStripButton();
+            this.tspReportes = new System.Windows.Forms.ToolStripButton();
+            this.tspSalir = new System.Windows.Forms.ToolStripButton();
+            this.tspCerrarSession = new System.Windows.Forms.ToolStripButton();
+            this.tspInfo = new System.Windows.Forms.ToolStripButton();
             this.tsMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,17 +55,56 @@
             this.tsbAdministrador,
             this.tspClientes,
             this.tspCasos,
-            this.tspUsuarios,
+            this.tspPersonal,
             this.tspDemandas,
             this.tspReportes,
             this.tspSalir,
-            this.tspCerrarSession});
+            this.tspCerrarSession,
+            this.tspInfo});
             this.tsMenu.Location = new System.Drawing.Point(0, 24);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(82, 518);
+            this.tsMenu.Size = new System.Drawing.Size(82, 626);
             this.tsMenu.TabIndex = 2;
             this.tsMenu.Text = "ts";
-            this.tsMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsMenu_ItemClicked);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ventanasToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.MdiWindowListItem = this.ventanasToolStripMenuItem;
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(786, 24);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ventanasToolStripMenuItem
+            // 
+            this.ventanasToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.ventanasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.horizontalToolStripMenuItem,
+            this.verticalToolStripMenuItem});
+            this.ventanasToolStripMenuItem.Name = "ventanasToolStripMenuItem";
+            this.ventanasToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.ventanasToolStripMenuItem.Text = "Ventanas";
+            // 
+            // horizontalToolStripMenuItem
+            // 
+            this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.horizontalToolStripMenuItem.Text = "Horizontal";
+            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
+            // 
+            // verticalToolStripMenuItem
+            // 
+            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.verticalToolStripMenuItem.Text = "Cascada";
+            // 
+            // sqlconexion
+            // 
+            this.sqlconexion.ConnectionString = "Data Source=JUAN-PC\\SQLEXPRESS;Initial Catalog=PROYECTO;User ID=sa;Password=1234";
+            this.sqlconexion.FireInfoMessageEventOnUserErrors = false;
             // 
             // tsbAdministrador
             // 
@@ -97,15 +138,16 @@
             this.tspCasos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tspCasos.Click += new System.EventHandler(this.tspCasos_Click);
             // 
-            // tspUsuarios
+            // tspPersonal
             // 
-            this.tspUsuarios.Image = global::WindowsFormsApplication5.Properties.Resources.preferences_desktop_theme;
-            this.tspUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tspUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tspUsuarios.Name = "tspUsuarios";
-            this.tspUsuarios.Size = new System.Drawing.Size(79, 65);
-            this.tspUsuarios.Text = "&Usuarios";
-            this.tspUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tspPersonal.Image = global::WindowsFormsApplication5.Properties.Resources.preferences_desktop_theme;
+            this.tspPersonal.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tspPersonal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspPersonal.Name = "tspPersonal";
+            this.tspPersonal.Size = new System.Drawing.Size(79, 65);
+            this.tspPersonal.Text = "&Personal";
+            this.tspPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tspPersonal.Click += new System.EventHandler(this.tspPersonal_Click);
             // 
             // tspDemandas
             // 
@@ -146,55 +188,24 @@
             this.tspCerrarSession.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspCerrarSession.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tspCerrarSession.Name = "tspCerrarSession";
-            this.tspCerrarSession.Size = new System.Drawing.Size(81, 65);
+            this.tspCerrarSession.Size = new System.Drawing.Size(79, 65);
             this.tspCerrarSession.Text = "Cerrar S&ession";
             this.tspCerrarSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // menuStrip1
+            // tspInfo
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ventanasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.MdiWindowListItem = this.ventanasToolStripMenuItem;
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(786, 24);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ventanasToolStripMenuItem
-            // 
-            this.ventanasToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.ventanasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.horizontalToolStripMenuItem,
-            this.verticalToolStripMenuItem});
-            this.ventanasToolStripMenuItem.Name = "ventanasToolStripMenuItem";
-            this.ventanasToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.ventanasToolStripMenuItem.Text = "Ventanas";
-            // 
-            // horizontalToolStripMenuItem
-            // 
-            this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
-            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.horizontalToolStripMenuItem.Text = "Horizontal";
-            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
-            // 
-            // verticalToolStripMenuItem
-            // 
-            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
-            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.verticalToolStripMenuItem.Text = "Cascada";
-            this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
-            // 
-            // sqlconexion
-            // 
-            this.sqlconexion.ConnectionString = "Data Source=JUAN-PC\\SQLEXPRESS;Initial Catalog=PROYECTO;User ID=sa;Password=1234";
-            this.sqlconexion.FireInfoMessageEventOnUserErrors = false;
+            this.tspInfo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tspInfo.Image = ((System.Drawing.Image)(resources.GetObject("tspInfo.Image")));
+            this.tspInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspInfo.Name = "tspInfo";
+            this.tspInfo.Size = new System.Drawing.Size(79, 17);
+            this.tspInfo.Text = "&Informacion";
             // 
             // frmSoftj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 542);
+            this.ClientSize = new System.Drawing.Size(786, 650);
             this.Controls.Add(this.tsMenu);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -220,7 +231,7 @@
         private System.Windows.Forms.ToolStrip tsMenu;
         private System.Windows.Forms.ToolStripButton tspClientes;
         private System.Windows.Forms.ToolStripButton tspCasos;
-        private System.Windows.Forms.ToolStripButton tspUsuarios;
+        private System.Windows.Forms.ToolStripButton tspPersonal;
         private System.Windows.Forms.ToolStripButton tspReportes;
         private System.Windows.Forms.ToolStripButton tspCerrarSession;
         private System.Windows.Forms.ToolStripButton tspSalir;
@@ -231,6 +242,7 @@
         private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
         public System.Data.SqlClient.SqlConnection sqlconexion;
+        private System.Windows.Forms.ToolStripButton tspInfo;
 
     }
 }

@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tbNuevo = new DevExpress.XtraTab.XtraTabPage();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.tbBuscar = new DevExpress.XtraTab.XtraTabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tbModificar = new DevExpress.XtraTab.XtraTabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.queryCliente = new System.Data.SqlClient.SqlCommand();
             this.dsDatos = new System.Data.DataSet();
+            this.error_info = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
-            this.tbBuscar.SuspendLayout();
             this.tbModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
             // 
             this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
             this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
-            this.xtraTabControl1.Location = new System.Drawing.Point(12, 32);
+            this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tbNuevo;
-            this.xtraTabControl1.Size = new System.Drawing.Size(790, 477);
+            this.xtraTabControl1.Size = new System.Drawing.Size(790, 497);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tbNuevo,
@@ -64,11 +65,21 @@
             // 
             // tbNuevo
             // 
+            this.tbNuevo.Controls.Add(this.btnLimpiar);
             this.tbNuevo.Controls.Add(this.btnGuardar);
             this.tbNuevo.Image = global::ABC.Properties.Resources.document_new;
             this.tbNuevo.Name = "tbNuevo";
-            this.tbNuevo.Size = new System.Drawing.Size(710, 468);
+            this.tbNuevo.Size = new System.Drawing.Size(710, 488);
             this.tbNuevo.Text = "&Nuevo";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(506, 109);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(92, 41);
+            this.btnLimpiar.TabIndex = 8;
+            this.btnLimpiar.Text = "&Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
@@ -84,28 +95,10 @@
             // 
             // tbBuscar
             // 
-            this.tbBuscar.Controls.Add(this.textBox1);
-            this.tbBuscar.Controls.Add(this.label1);
             this.tbBuscar.Image = global::ABC.Properties.Resources.system_search;
             this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(710, 468);
+            this.tbBuscar.Size = new System.Drawing.Size(710, 488);
             this.tbBuscar.Text = "&Buscar";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(86, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(393, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Buscar :";
             // 
             // tbModificar
             // 
@@ -113,7 +106,7 @@
             this.tbModificar.Controls.Add(this.label2);
             this.tbModificar.Image = global::ABC.Properties.Resources.emblem_unreadable;
             this.tbModificar.Name = "tbModificar";
-            this.tbModificar.Size = new System.Drawing.Size(710, 468);
+            this.tbModificar.Size = new System.Drawing.Size(710, 488);
             this.tbModificar.Text = "&Modificar";
             // 
             // textBox2
@@ -136,6 +129,10 @@
             // 
             this.dsDatos.DataSetName = "NewDataSet";
             // 
+            // error_info
+            // 
+            this.error_info.ContainerControl = this;
+            // 
             // frmABC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,19 +145,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);
-            this.tbBuscar.ResumeLayout(false);
-            this.tbBuscar.PerformLayout();
             this.tbModificar.ResumeLayout(false);
             this.tbModificar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         protected DevExpress.XtraTab.XtraTabControl xtraTabControl1;
@@ -170,6 +164,8 @@
         protected System.Data.SqlClient.SqlCommand queryCliente;
         public System.Data.DataSet dsDatos;
         public DevExpress.XtraTab.XtraTabPage tbBuscar;
+        protected System.Windows.Forms.Button btnLimpiar;
+        protected DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider error_info;
     }
 }
 

@@ -93,9 +93,9 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
+            this.xtraTabControl1.Location = new System.Drawing.Point(5, 12);
             this.xtraTabControl1.SelectedTabPage = this.tbNuevo;
-            this.xtraTabControl1.Size = new System.Drawing.Size(890, 539);
+            this.xtraTabControl1.Size = new System.Drawing.Size(741, 540);
             // 
             // tbNuevo
             // 
@@ -133,7 +133,7 @@
             this.tbNuevo.Controls.Add(this.label13);
             this.tbNuevo.Controls.Add(this.label10);
             this.tbNuevo.Controls.Add(this.label11);
-            this.tbNuevo.Size = new System.Drawing.Size(810, 530);
+            this.tbNuevo.Size = new System.Drawing.Size(661, 531);
             this.tbNuevo.Controls.SetChildIndex(this.label11, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label10, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label13, 0);
@@ -167,16 +167,16 @@
             this.tbNuevo.Controls.SetChildIndex(this.cbbEmpresa, 0);
             this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaNo, 0);
             this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaSi, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.rdSexo, 0);
             this.tbNuevo.Controls.SetChildIndex(this.btnGuardar, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.rdSexo, 0);
             // 
             // tbModificar
             // 
-            this.tbModificar.Size = new System.Drawing.Size(810, 530);
+            this.tbModificar.Size = new System.Drawing.Size(661, 531);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(560, 74);
+            this.btnGuardar.Location = new System.Drawing.Point(506, 27);
             this.btnGuardar.TabIndex = 34;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -184,9 +184,7 @@
             // 
             this.tbBuscar.Controls.Add(this.gcClinete);
             this.tbBuscar.Controls.Add(this.btnBuscar);
-            this.tbBuscar.Size = new System.Drawing.Size(810, 530);
-            this.tbBuscar.Controls.SetChildIndex(this.btnBuscar, 0);
-            this.tbBuscar.Controls.SetChildIndex(this.gcClinete, 0);
+            this.tbBuscar.Size = new System.Drawing.Size(661, 531);
             // 
             // label1
             // 
@@ -669,7 +667,7 @@
             this.gcClinete.Location = new System.Drawing.Point(3, 79);
             this.gcClinete.MainView = this.gvCliente;
             this.gcClinete.Name = "gcClinete";
-            this.gcClinete.Size = new System.Drawing.Size(807, 400);
+            this.gcClinete.Size = new System.Drawing.Size(648, 400);
             this.gcClinete.TabIndex = 4;
             this.gcClinete.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCliente});
@@ -685,10 +683,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 551);
+            this.ClientSize = new System.Drawing.Size(758, 564);
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Clientes";
+            this.Text = "Cliente";
             this.Load += new System.EventHandler(this.frmClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
@@ -696,7 +694,6 @@
             this.tbNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.tbBuscar.ResumeLayout(false);
-            this.tbBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorCusClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdSexo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaSi.Properties)).EndInit();
