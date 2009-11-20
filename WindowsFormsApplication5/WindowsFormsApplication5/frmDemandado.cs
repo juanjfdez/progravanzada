@@ -67,7 +67,7 @@ namespace WindowsFormsApplication5
                 if (queryCliente.ExecuteNonQuery() > 0)
                     MessageBox.Show("Empresa dada de Alta en el sistema");
             }
-
+           
         }
 
         private void frmDemandado_Load(object sender, EventArgs e)
@@ -78,6 +78,8 @@ namespace WindowsFormsApplication5
             error_info.SetError(txtDirEmp, "");
             error_info.SetError(txtNomEmp, "");
             error_info.SetError(txtTelEmp, "");
+
+           
         }
 
     }

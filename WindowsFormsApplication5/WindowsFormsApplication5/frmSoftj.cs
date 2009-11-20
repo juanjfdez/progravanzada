@@ -18,6 +18,7 @@ namespace WindowsFormsApplication5
         public frmUsuarios frmUsuarios;
         public frmDemandado frmDemandado;
         public frmPersonal frmPersonal;
+        public frmReportes frmReportes;
         public frmSoftj()
         {
             InitializeComponent();
@@ -79,6 +80,16 @@ namespace WindowsFormsApplication5
                 frmPersonal.Show();
             }
 
+        }
+
+        private void tspReportes_Click(object sender, EventArgs e)
+        {
+            if ((frmReportes == null) || (frmReportes.IsDisposed))
+            {
+                frmReportes = new frmReportes();
+                frmReportes.MdiParent = this;
+                frmReportes.Show();
+            }
         }
     }
 }

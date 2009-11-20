@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSoftj));
             this.tsMenu = new System.Windows.Forms.ToolStrip();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ventanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +62,7 @@
             this.tspInfo});
             this.tsMenu.Location = new System.Drawing.Point(0, 24);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(82, 626);
+            this.tsMenu.Size = new System.Drawing.Size(82, 677);
             this.tsMenu.TabIndex = 2;
             this.tsMenu.Text = "ts";
             // 
@@ -74,7 +73,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.MdiWindowListItem = this.ventanasToolStripMenuItem;
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(786, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(794, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -168,6 +167,7 @@
             this.tspReportes.Size = new System.Drawing.Size(79, 65);
             this.tspReportes.Text = "&Reportes";
             this.tspReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tspReportes.Click += new System.EventHandler(this.tspReportes_Click);
             // 
             // tspSalir
             // 
@@ -194,18 +194,19 @@
             // 
             // tspInfo
             // 
-            this.tspInfo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tspInfo.Image = ((System.Drawing.Image)(resources.GetObject("tspInfo.Image")));
+            this.tspInfo.Image = global::WindowsFormsApplication5.Properties.Resources.address_book_new;
+            this.tspInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tspInfo.Name = "tspInfo";
-            this.tspInfo.Size = new System.Drawing.Size(79, 17);
+            this.tspInfo.Size = new System.Drawing.Size(79, 65);
             this.tspInfo.Text = "&Informacion";
+            this.tspInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // frmSoftj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 650);
+            this.ClientSize = new System.Drawing.Size(794, 701);
             this.Controls.Add(this.tsMenu);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
