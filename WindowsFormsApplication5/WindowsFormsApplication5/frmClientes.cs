@@ -221,9 +221,11 @@ namespace WindowsFormsApplication5
             SqlDataAdapter adaptador = new SqlDataAdapter(queryCliente);
 
             //se hace consulta
-            queryCliente.CommandText = @"SELECT Nombre, Direccion, Telefono, Puesto, Salario, tipo_moneda_sal, forma_pago, Sexo, hora_in, hora_out, jefe_inmediato, puesto_jefe_inmediato, 
-            jornada_in, jornada_out, fecha_in, fecha_out, tarjeta_asis
-            FROM Cliente";
+            queryCliente.CommandText = @"SELECT     Nombre, Direccion, Telefono, Puesto, Salario, tipo_moneda_sal AS [Tipo de Moneda], forma_pago AS [Forma de Pago], Sexo, 
+                      hora_in AS [Hora de Entrada], hora_out AS [Hora de Salida], jefe_inmediato AS [Jefe Inmediato], puesto_jefe_inmediato AS [Puesto de Jefe], 
+                      jornada_in AS [Inicio de Jornada], jornada_out AS [Fin de Jornada], fecha_in AS [Fecha de Inicio], fecha_out AS [Fecha de Despido], 
+                      tarjeta_asis AS [Tarjeta de Asis.]
+                      FROM         Cliente";
   
             //limpia datos del data user
             dsDatos.Clear();
@@ -232,7 +234,7 @@ namespace WindowsFormsApplication5
             adaptador.Fill(dsDatos);
 
             //asigna datos al gridcontrol
-            //gvCliente.DataSource = dsDatos.Tables[0];
+            gcCliente.DataSource = dsDatos.Tables[0];
 
 
 

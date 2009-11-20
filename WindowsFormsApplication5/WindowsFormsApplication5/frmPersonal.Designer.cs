@@ -42,10 +42,13 @@
             this.txtDireccionEmp = new DevExpress.XtraEditors.TextEdit();
             this.txtSeguro = new DevExpress.XtraEditors.TextEdit();
             this.cbbPuesto = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.gcPersonal = new DevExpress.XtraGrid.GridControl();
+            this.gvPersonal = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
+            this.tbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdSexoEmp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomEmp.Properties)).BeginInit();
@@ -54,6 +57,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccionEmp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSeguro.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPuesto.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPersonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPersonal)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -104,6 +109,7 @@
             // 
             // tbBuscar
             // 
+            this.tbBuscar.Controls.Add(this.gcPersonal);
             this.tbBuscar.Size = new System.Drawing.Size(614, 315);
             // 
             // btnLimpiar
@@ -237,6 +243,23 @@
             this.cbbPuesto.Size = new System.Drawing.Size(190, 20);
             this.cbbPuesto.TabIndex = 43;
             // 
+            // gcPersonal
+            // 
+            this.gcPersonal.EmbeddedNavigator.Name = "";
+            this.gcPersonal.FormsUseDefaultLookAndFeel = false;
+            this.gcPersonal.Location = new System.Drawing.Point(12, 66);
+            this.gcPersonal.MainView = this.gvPersonal;
+            this.gcPersonal.Name = "gcPersonal";
+            this.gcPersonal.Size = new System.Drawing.Size(599, 231);
+            this.gcPersonal.TabIndex = 0;
+            this.gcPersonal.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvPersonal});
+            // 
+            // gvPersonal
+            // 
+            this.gvPersonal.GridControl = this.gcPersonal;
+            this.gvPersonal.Name = "gvPersonal";
+            // 
             // frmPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,6 +272,7 @@
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
+            this.tbBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdSexoEmp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomEmp.Properties)).EndInit();
@@ -257,6 +281,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccionEmp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSeguro.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPuesto.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPersonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPersonal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,5 +303,7 @@
         private DevExpress.XtraEditors.TextEdit txtTelEmp;
         private DevExpress.XtraEditors.TextEdit txtNomEmp;
         private DevExpress.XtraEditors.ComboBoxEdit cbbPuesto;
+        private DevExpress.XtraGrid.GridControl gcPersonal;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPersonal;
     }
 }
