@@ -26,3 +26,4 @@ C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsForm
 C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmDemandado.resources
 C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmCasos.resources
 C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmPersonal.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmReportes.resources
