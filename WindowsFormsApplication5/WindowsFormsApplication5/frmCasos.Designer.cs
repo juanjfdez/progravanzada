@@ -81,6 +81,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(423, 123);
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // labelControl1
             // 

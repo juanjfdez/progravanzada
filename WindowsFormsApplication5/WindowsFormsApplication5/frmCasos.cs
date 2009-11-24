@@ -15,6 +15,11 @@ namespace WindowsFormsApplication5
         {
             InitializeComponent();
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
         
     }
 }

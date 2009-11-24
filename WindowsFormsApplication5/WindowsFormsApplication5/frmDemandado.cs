@@ -55,16 +55,16 @@ namespace WindowsFormsApplication5
             if (banderademandado == true)
             {
                 //Inicia insercion
-                queryCliente.CommandText = "EXEC InsertarDemandado @Nombre,@Direccion,@Telefono";
+                query.CommandText = "EXEC InsertarDemandado @Nombre,@Direccion,@Telefono";
 
                 //parametros
-                queryCliente.Parameters.Clear();
-                queryCliente.Parameters.AddWithValue("@Nombre", txtNomEmp.Text);
-                queryCliente.Parameters.AddWithValue("@Direccion", txtDirEmp.Text);
-                queryCliente.Parameters.AddWithValue("@Telefono", txtTelEmp.Text);
+                query.Parameters.Clear();
+                query.Parameters.AddWithValue("@Nombre", txtNomEmp.Text);
+                query.Parameters.AddWithValue("@Direccion", txtDirEmp.Text);
+                query.Parameters.AddWithValue("@Telefono", txtTelEmp.Text);
 
                 //se ejecuta query
-                if (queryCliente.ExecuteNonQuery() > 0)
+                if (query.ExecuteNonQuery() > 0)
                     MessageBox.Show("Empresa dada de Alta en el sistema");
             }
            
@@ -73,13 +73,18 @@ namespace WindowsFormsApplication5
         private void frmDemandado_Load(object sender, EventArgs e)
         {
             Program.frmSoftj.AbrirCon();
-            queryCliente.Connection = Program.frmSoftj.sqlconexion;
+            query.Connection = Program.frmSoftj.sqlconexion;
 
             error_info.SetError(txtDirEmp, "");
             error_info.SetError(txtNomEmp, "");
             error_info.SetError(txtTelEmp, "");
 
            
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
         }
 
     }

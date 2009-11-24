@@ -122,35 +122,35 @@ namespace WindowsFormsApplication5
             if (bandera == true)
             {
                 //INICIO DE INSERCION
-                queryCliente.CommandText = @"EXEC InsertarCliente  
+                query.CommandText = @"EXEC InsertarCliente  
             @Nombre,@Direccion,@Telefono,@Puesto,@Salario,@Sexo,
             @Id_demandado,@hora_in, @hora_out,@jefe_inmediato,
             @tipo_moneda_sal,@forma_pago,@jornada_in,@jornada_out,@fecha_in,
             @fecha_out,@tarjeta_asis,@puesto_jefe_inmediato";
 
                 //PARAMETROS
-                queryCliente.Parameters.Clear();
-                queryCliente.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                queryCliente.Parameters.AddWithValue("@Direccion", txtDireccion.Text);
-                queryCliente.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
-                queryCliente.Parameters.AddWithValue("@Puesto", txtPuesto.Text);
-                queryCliente.Parameters.AddWithValue("@Salario", Convert.ToInt32(txtSalario.Text));
-                queryCliente.Parameters.AddWithValue("@Sexo", rdSexo.Text);
-                queryCliente.Parameters.AddWithValue("@Id_demandado", cbbEmpresa.SelectedValue);
-                queryCliente.Parameters.AddWithValue("@hora_in", cbbEntrada.Text);
-                queryCliente.Parameters.AddWithValue("@hora_out", cbbSalida.Text);
-                queryCliente.Parameters.AddWithValue("@jefe_inmediato", txtJefe.Text);
-                queryCliente.Parameters.AddWithValue("@tipo_moneda_sal", cbbTipo.Text);
-                queryCliente.Parameters.AddWithValue("@forma_pago", cbbFormPago.Text);
-                queryCliente.Parameters.AddWithValue("@jornada_in", cbbJornadaInicio.Text);
-                queryCliente.Parameters.AddWithValue("@jornada_out", cbbJornadaFinal.Text);
-                queryCliente.Parameters.AddWithValue("@fecha_in", txtFechaI.Text);
-                queryCliente.Parameters.AddWithValue("@fecha_out", txtFechaD.Text);
-                queryCliente.Parameters.AddWithValue("@puesto_jefe_inmediato", txtPuestoJefe.Text);
-                queryCliente.Parameters.AddWithValue("@tarjeta_asis", tarjeta_asis);
+                query.Parameters.Clear();
+                query.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                query.Parameters.AddWithValue("@Direccion", txtDireccion.Text);
+                query.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
+                query.Parameters.AddWithValue("@Puesto", txtPuesto.Text);
+                query.Parameters.AddWithValue("@Salario", Convert.ToInt32(txtSalario.Text));
+                query.Parameters.AddWithValue("@Sexo", rdSexo.Text);
+                query.Parameters.AddWithValue("@Id_demandado", cbbEmpresa.SelectedValue);
+                query.Parameters.AddWithValue("@hora_in", cbbEntrada.Text);
+                query.Parameters.AddWithValue("@hora_out", cbbSalida.Text);
+                query.Parameters.AddWithValue("@jefe_inmediato", txtJefe.Text);
+                query.Parameters.AddWithValue("@tipo_moneda_sal", cbbTipo.Text);
+                query.Parameters.AddWithValue("@forma_pago", cbbFormPago.Text);
+                query.Parameters.AddWithValue("@jornada_in", cbbJornadaInicio.Text);
+                query.Parameters.AddWithValue("@jornada_out", cbbJornadaFinal.Text);
+                query.Parameters.AddWithValue("@fecha_in", txtFechaI.Text);
+                query.Parameters.AddWithValue("@fecha_out", txtFechaD.Text);
+                query.Parameters.AddWithValue("@puesto_jefe_inmediato", txtPuestoJefe.Text);
+                query.Parameters.AddWithValue("@tarjeta_asis", tarjeta_asis);
 
                 //ejecuta query
-                if (queryCliente.ExecuteNonQuery() > 0)
+                if (query.ExecuteNonQuery() > 0)
                     MessageBox.Show("Cliente agregado");
             }
         }
@@ -158,7 +158,7 @@ namespace WindowsFormsApplication5
         private void frmClientes_Load(object sender, EventArgs e)
         {
             Program.frmSoftj.AbrirCon();
-            queryCliente.Connection = Program.frmSoftj.sqlconexion;
+            query.Connection = Program.frmSoftj.sqlconexion;
 
             // asignacion te errores para la insercion
             errorCusClientes.SetError(txtNombre, "");
@@ -204,9 +204,9 @@ namespace WindowsFormsApplication5
 
         private void cbbEmpresa_DropDown(object sender, EventArgs e)
         {
-            SqlDataAdapter adaptador = new SqlDataAdapter(queryCliente);
+            SqlDataAdapter adaptador = new SqlDataAdapter(query);
             //insertacion a empresa combo box
-            queryCliente.CommandText = "SELECT * FROM Demandado";
+            query.CommandText = "SELECT * FROM Demandado";
             dsDatos.Clear();
             adaptador.Fill(dsDatos);
             cbbEmpresa.DataSource = dsDatos.Tables[0];
@@ -218,10 +218,10 @@ namespace WindowsFormsApplication5
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             dsDatos.Clear();
-            SqlDataAdapter adaptador = new SqlDataAdapter(queryCliente);
+            SqlDataAdapter adaptador = new SqlDataAdapter(query);
 
             //se hace consulta
-            queryCliente.CommandText = @"SELECT     Nombre, Direccion, Telefono, Puesto, Salario, tipo_moneda_sal AS [Tipo de Moneda], forma_pago AS [Forma de Pago], Sexo, 
+            query.CommandText = @"SELECT     Nombre, Direccion, Telefono, Puesto, Salario, tipo_moneda_sal AS [Tipo de Moneda], forma_pago AS [Forma de Pago], Sexo, 
                       hora_in AS [Hora de Entrada], hora_out AS [Hora de Salida], jefe_inmediato AS [Jefe Inmediato], puesto_jefe_inmediato AS [Puesto de Jefe], 
                       jornada_in AS [Inicio de Jornada], jornada_out AS [Fin de Jornada], fecha_in AS [Fecha de Inicio], fecha_out AS [Fecha de Despido], 
                       tarjeta_asis AS [Tarjeta de Asis.]
@@ -238,6 +238,12 @@ namespace WindowsFormsApplication5
 
 
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+                         
         }
 
 

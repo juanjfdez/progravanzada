@@ -188,6 +188,10 @@
             this.tbBuscar.Controls.Add(this.btnBuscar);
             this.tbBuscar.Size = new System.Drawing.Size(661, 531);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;

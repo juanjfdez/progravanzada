@@ -106,6 +106,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(494, 18);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tbBuscar
             // 
@@ -115,6 +116,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(494, 95);
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // label1
             // 
@@ -267,6 +269,7 @@
             this.ClientSize = new System.Drawing.Size(718, 348);
             this.Name = "frmPersonal";
             this.Text = "Personal";
+            this.Load += new System.EventHandler(this.frmPersonal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);

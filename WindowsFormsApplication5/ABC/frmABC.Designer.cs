@@ -37,7 +37,7 @@
             this.tbModificar = new DevExpress.XtraTab.XtraTabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.queryCliente = new System.Data.SqlClient.SqlCommand();
+            this.query = new System.Data.SqlClient.SqlCommand();
             this.dsDatos = new System.Data.DataSet();
             this.error_info = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -80,6 +80,7 @@
             this.btnLimpiar.TabIndex = 8;
             this.btnLimpiar.Text = "&Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardar
             // 
@@ -161,7 +162,7 @@
         protected DevExpress.XtraTab.XtraTabPage tbNuevo;
         protected DevExpress.XtraTab.XtraTabPage tbModificar;
         protected System.Windows.Forms.Button btnGuardar;
-        protected System.Data.SqlClient.SqlCommand queryCliente;
+        protected System.Data.SqlClient.SqlCommand query;
         public System.Data.DataSet dsDatos;
         public DevExpress.XtraTab.XtraTabPage tbBuscar;
         protected System.Windows.Forms.Button btnLimpiar;
