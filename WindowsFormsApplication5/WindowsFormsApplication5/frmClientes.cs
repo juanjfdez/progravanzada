@@ -62,7 +62,7 @@ namespace WindowsFormsApplication5
              else
                 errorCusClientes.SetError(rdSexo,"");
                 //Empresa
-            if (cbbEmpresa.Text == "- Escojer Empresa -")
+            if ((cbbEmpresa.Text == "- Escojer Empresa -") || (cbbEmpresa.Text == ""))
             {
                 errorCusClientes.SetError(cbbEmpresa, "Por favor especifique el nombre de la Empresa");
                 bandera = false;
@@ -215,18 +215,25 @@ namespace WindowsFormsApplication5
             cbbEmpresa.ValueMember = "Id_demandado";
         }
 
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+                         
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             dsDatos.Clear();
             SqlDataAdapter adaptador = new SqlDataAdapter(query);
 
             //se hace consulta
-            query.CommandText = @"SELECT     Nombre, Direccion, Telefono, Puesto, Salario, tipo_moneda_sal AS [Tipo de Moneda], forma_pago AS [Forma de Pago], Sexo, 
-                      hora_in AS [Hora de Entrada], hora_out AS [Hora de Salida], jefe_inmediato AS [Jefe Inmediato], puesto_jefe_inmediato AS [Puesto de Jefe], 
-                      jornada_in AS [Inicio de Jornada], jornada_out AS [Fin de Jornada], fecha_in AS [Fecha de Inicio], fecha_out AS [Fecha de Despido], 
-                      tarjeta_asis AS [Tarjeta de Asis.]
-                      FROM         Cliente";
-  
+            query.CommandText = @"SELECT     Nombre, Direccion, Telefono, Puesto, Salario, tipo_moneda_sal AS [Tipo de Moneda], 
+            forma_pago AS [Forma de Pago], Sexo,hora_in AS [Hora de Entrada], hora_out AS [Hora de Salida], jefe_inmediato AS [Jefe Inmediato], 
+            puesto_jefe_inmediato AS [Puesto de Jefe],jornada_in AS [Inicio de Jornada], jornada_out AS [Fin de Jornada], 
+            fecha_in AS [Fecha de Inicio], fecha_out AS [Fecha de Despido], tarjeta_asis AS [Tarjeta de Asis.]
+            FROM         Cliente";
+
             //limpia datos del data user
             dsDatos.Clear();
 
@@ -235,15 +242,6 @@ namespace WindowsFormsApplication5
 
             //asigna datos al gridcontrol
             gcCliente.DataSource = dsDatos.Tables[0];
-
-
-
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            LimpiarControles();
-                         
         }
 
 

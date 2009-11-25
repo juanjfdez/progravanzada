@@ -63,7 +63,7 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Size = new System.Drawing.Size(694, 324);
+            this.xtraTabControl1.Size = new System.Drawing.Size(694, 332);
             // 
             // tbNuevo
             // 
@@ -111,12 +111,19 @@
             // tbBuscar
             // 
             this.tbBuscar.Controls.Add(this.gcPersonal);
-            this.tbBuscar.Size = new System.Drawing.Size(614, 315);
+            this.tbBuscar.Size = new System.Drawing.Size(614, 323);
+            this.tbBuscar.Controls.SetChildIndex(this.btnBuscar, 0);
+            this.tbBuscar.Controls.SetChildIndex(this.gcPersonal, 0);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(494, 95);
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(506, 14);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label1
             // 
@@ -249,10 +256,10 @@
             // 
             this.gcPersonal.EmbeddedNavigator.Name = "";
             this.gcPersonal.FormsUseDefaultLookAndFeel = false;
-            this.gcPersonal.Location = new System.Drawing.Point(12, 66);
+            this.gcPersonal.Location = new System.Drawing.Point(12, 72);
             this.gcPersonal.MainView = this.gvPersonal;
             this.gcPersonal.Name = "gcPersonal";
-            this.gcPersonal.Size = new System.Drawing.Size(599, 231);
+            this.gcPersonal.Size = new System.Drawing.Size(599, 248);
             this.gcPersonal.TabIndex = 0;
             this.gcPersonal.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPersonal});
@@ -266,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 348);
+            this.ClientSize = new System.Drawing.Size(719, 356);
             this.Name = "frmPersonal";
             this.Text = "Personal";
             this.Load += new System.EventHandler(this.frmPersonal_Load);

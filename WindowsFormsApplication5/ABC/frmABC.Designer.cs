@@ -34,6 +34,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.tbBuscar = new DevExpress.XtraTab.XtraTabPage();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.tbModificar = new DevExpress.XtraTab.XtraTabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
+            this.tbBuscar.SuspendLayout();
             this.tbModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
@@ -96,10 +98,20 @@
             // 
             // tbBuscar
             // 
+            this.tbBuscar.Controls.Add(this.btnBuscar);
             this.tbBuscar.Image = global::ABC.Properties.Resources.system_search;
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(710, 488);
             this.tbBuscar.Text = "&Buscar";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(581, 24);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(94, 40);
+            this.btnBuscar.TabIndex = 0;
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // tbModificar
             // 
@@ -146,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);
+            this.tbBuscar.ResumeLayout(false);
             this.tbModificar.ResumeLayout(false);
             this.tbModificar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
@@ -167,6 +180,7 @@
         public DevExpress.XtraTab.XtraTabPage tbBuscar;
         protected System.Windows.Forms.Button btnLimpiar;
         protected DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider error_info;
+        protected System.Windows.Forms.Button btnBuscar;
     }
 }
 

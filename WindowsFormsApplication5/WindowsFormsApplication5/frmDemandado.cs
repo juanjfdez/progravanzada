@@ -87,5 +87,23 @@ namespace WindowsFormsApplication5
             LimpiarControles();
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dsDatos.Clear();
+            SqlDataAdapter adaptador = new SqlDataAdapter(query);
+
+            //se hace consulta
+            query.CommandText = "SELECT Nombre, Direccion, Telefono FROM Demandado";
+
+            //limpia datos del data user
+            dsDatos.Clear();
+
+            //se llena datos en el data user
+            adaptador.Fill(dsDatos);
+
+            //asigna datos al gridcontrol
+            gcDemandado.DataSource = dsDatos.Tables[0];
+        }
+
     }
 }

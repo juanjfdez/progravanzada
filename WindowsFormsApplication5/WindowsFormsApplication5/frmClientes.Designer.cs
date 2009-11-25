@@ -74,7 +74,6 @@
             this.ckdTarjetaNo = new DevExpress.XtraEditors.CheckEdit();
             this.txtTelefono = new DevExpress.XtraEditors.TextEdit();
             this.cbbEmpresa = new System.Windows.Forms.ComboBox();
-            this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.gcCliente = new DevExpress.XtraGrid.GridControl();
             this.gvCliente = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -185,12 +184,18 @@
             // tbBuscar
             // 
             this.tbBuscar.Controls.Add(this.gcCliente);
-            this.tbBuscar.Controls.Add(this.btnBuscar);
             this.tbBuscar.Size = new System.Drawing.Size(661, 531);
+            this.tbBuscar.Controls.SetChildIndex(this.btnBuscar, 0);
+            this.tbBuscar.Controls.SetChildIndex(this.gcCliente, 0);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(538, 18);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label1
             // 
@@ -657,15 +662,6 @@
             this.cbbEmpresa.Text = "- Escojer Empresa -";
             this.cbbEmpresa.DropDown += new System.EventHandler(this.cbbEmpresa_DropDown);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(485, 14);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(107, 45);
-            this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // gcCliente
             // 
             this.gcCliente.EmbeddedNavigator.Name = "";
@@ -758,7 +754,6 @@
         private DevExpress.XtraEditors.CheckEdit ckdTarjetaNo;
         private DevExpress.XtraEditors.TextEdit txtTelefono;
         private System.Windows.Forms.ComboBox cbbEmpresa;
-        private DevExpress.XtraEditors.SimpleButton btnBuscar;
         private DevExpress.XtraGrid.GridControl gcCliente;
         private DevExpress.XtraGrid.Views.Grid.GridView gvCliente;
     }
