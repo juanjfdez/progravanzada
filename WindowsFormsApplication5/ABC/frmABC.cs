@@ -23,25 +23,29 @@ namespace ABC
         protected void LimpiarControles()
         {
 
-            for (int i = 0; i < this.Controls.Count; i++)
+            for (int i = 0; i < this.tbNuevo.Controls.Count; i++)
             {
-                if (this.Controls[i].GetType().Name.ToUpper() == "TEXTBOX")
-                    (this.Controls[i] as TextBox).Text = "";
-                if (this.Controls[i].GetType().Name.ToUpper() == "TEXTEDIT")
-                    (this.Controls[i] as TextBox).Text = "";
-                if (this.Controls[i].GetType().Name.ToUpper() == "COMBOBOX")
+                
+                if (this.tbNuevo.Controls[i].GetType().Name.ToUpper() == "TEXTBOX")
+                    (this.tbNuevo.Controls[i] as TextBox).Text = "";
+                if (this.tbNuevo.Controls[i].GetType().Name.ToUpper() == "TEXTEDIT")
+                    (this.tbNuevo.Controls[i] as DevExpress.XtraEditors.TextEdit).Text = "";
+                if (this.tbNuevo.Controls[i].GetType().Name.ToUpper() == "COMBOBOX")
                 {
-                    (this.Controls[i] as ComboBox).SelectedIndex = -1;
-                    (this.Controls[i] as ComboBox).Text = "";
+                    (this.tbNuevo.Controls[i] as ComboBox).SelectedIndex = -1;
+                    (this.tbNuevo.Controls[i] as ComboBox).Text = "";
 
                 }
-                if (this.Controls[i].GetType().Name.ToUpper() == "COMBOBOXEDIT")
+                if (this.tbNuevo.Controls[i].GetType().Name.ToUpper() == "COMBOBOXEDIT")
                 {
-                    (this.Controls[i] as ComboBox).SelectedIndex = -1;
-                    (this.Controls[i] as ComboBox).Text = "";
+                    (this.tbNuevo.Controls[i] as DevExpress.XtraEditors.ComboBoxEdit).SelectedIndex = -1;
+                    (this.tbNuevo.Controls[i] as DevExpress.XtraEditors.ComboBoxEdit).Text = "";
 
                 }
+                //MessageBox.Show(this.tbNuevo.Controls[i].GetType().ToString());
             }
+
+
         }
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
