@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,11 +50,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtPuesto = new System.Windows.Forms.TextBox();
             this.cbbEntrada = new System.Windows.Forms.ComboBox();
             this.cbbSalida = new System.Windows.Forms.ComboBox();
-            this.txtSalario = new System.Windows.Forms.TextBox();
             this.cbbTipo = new System.Windows.Forms.ComboBox();
             this.cbbFormPago = new System.Windows.Forms.ComboBox();
             this.cbbJornadaInicio = new System.Windows.Forms.ComboBox();
@@ -65,47 +61,54 @@
             this.txtFechaI = new System.Windows.Forms.DateTimePicker();
             this.txtFechaD = new System.Windows.Forms.DateTimePicker();
             this.btnEmpresaN = new DevExpress.XtraEditors.SimpleButton();
-            this.errorCusClientes = new System.Windows.Forms.ErrorProvider(this.components);
             this.label23 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.rdSexo = new DevExpress.XtraEditors.RadioGroup();
             this.ckdTarjetaSi = new DevExpress.XtraEditors.CheckEdit();
             this.ckdTarjetaNo = new DevExpress.XtraEditors.CheckEdit();
             this.txtTelefono = new DevExpress.XtraEditors.TextEdit();
-            this.cbbEmpresa = new System.Windows.Forms.ComboBox();
             this.gcCliente = new DevExpress.XtraGrid.GridControl();
             this.gvCliente = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtNombre = new DevExpress.XtraEditors.TextEdit();
+            this.txtDireccion = new DevExpress.XtraEditors.TextEdit();
+            this.txtPuesto = new DevExpress.XtraEditors.TextEdit();
+            this.cbbEmpresa = new System.Windows.Forms.ComboBox();
+            this.txtSalario = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.tbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorCusClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdSexo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaSi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPuesto.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSalario.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
             // 
             this.xtraTabControl1.Location = new System.Drawing.Point(5, 12);
-            this.xtraTabControl1.SelectedTabPage = this.tbNuevo;
             this.xtraTabControl1.Size = new System.Drawing.Size(741, 540);
             // 
             // tbNuevo
             // 
+            this.tbNuevo.Controls.Add(this.txtSalario);
+            this.tbNuevo.Controls.Add(this.cbbEmpresa);
+            this.tbNuevo.Controls.Add(this.txtPuesto);
+            this.tbNuevo.Controls.Add(this.txtDireccion);
+            this.tbNuevo.Controls.Add(this.txtNombre);
             this.tbNuevo.Controls.Add(this.rdSexo);
             this.tbNuevo.Controls.Add(this.ckdTarjetaSi);
             this.tbNuevo.Controls.Add(this.ckdTarjetaNo);
-            this.tbNuevo.Controls.Add(this.cbbEmpresa);
             this.tbNuevo.Controls.Add(this.label24);
             this.tbNuevo.Controls.Add(this.txtTelefono);
-            this.tbNuevo.Controls.Add(this.txtDireccion);
             this.tbNuevo.Controls.Add(this.label23);
             this.tbNuevo.Controls.Add(this.txtPuestoJefe);
             this.tbNuevo.Controls.Add(this.btnEmpresaN);
@@ -116,11 +119,8 @@
             this.tbNuevo.Controls.Add(this.cbbJornadaInicio);
             this.tbNuevo.Controls.Add(this.cbbFormPago);
             this.tbNuevo.Controls.Add(this.cbbTipo);
-            this.tbNuevo.Controls.Add(this.txtSalario);
             this.tbNuevo.Controls.Add(this.cbbSalida);
             this.tbNuevo.Controls.Add(this.cbbEntrada);
-            this.tbNuevo.Controls.Add(this.txtPuesto);
-            this.tbNuevo.Controls.Add(this.txtNombre);
             this.tbNuevo.Controls.Add(this.label22);
             this.tbNuevo.Controls.Add(this.label20);
             this.tbNuevo.Controls.Add(this.label21);
@@ -147,11 +147,8 @@
             this.tbNuevo.Controls.SetChildIndex(this.label21, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label20, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label22, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.txtNombre, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.txtPuesto, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbEntrada, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbSalida, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.txtSalario, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbTipo, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbFormPago, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbJornadaInicio, 0);
@@ -162,14 +159,17 @@
             this.tbNuevo.Controls.SetChildIndex(this.btnEmpresaN, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtPuestoJefe, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label23, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.txtDireccion, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtTelefono, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label24, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.cbbEmpresa, 0);
             this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaNo, 0);
             this.tbNuevo.Controls.SetChildIndex(this.ckdTarjetaSi, 0);
             this.tbNuevo.Controls.SetChildIndex(this.btnGuardar, 0);
             this.tbNuevo.Controls.SetChildIndex(this.rdSexo, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.txtNombre, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.txtDireccion, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.txtPuesto, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.cbbEmpresa, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.txtSalario, 0);
             // 
             // tbModificar
             // 
@@ -178,7 +178,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(506, 27);
-            this.btnGuardar.TabIndex = 34;
+            this.btnGuardar.TabIndex = 33;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tbBuscar
@@ -190,6 +190,7 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.TabIndex = 34;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnBuscar
@@ -393,22 +394,9 @@
             this.vScrollBar1.Size = new System.Drawing.Size(20, 468);
             this.vScrollBar1.TabIndex = 3;
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(77, 7);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(295, 20);
-            this.txtNombre.TabIndex = 13;
-            // 
-            // txtPuesto
-            // 
-            this.txtPuesto.Location = new System.Drawing.Point(77, 183);
-            this.txtPuesto.Name = "txtPuesto";
-            this.txtPuesto.Size = new System.Drawing.Size(295, 20);
-            this.txtPuesto.TabIndex = 19;
-            // 
             // cbbEntrada
             // 
+            this.cbbEntrada.BackColor = System.Drawing.Color.White;
             this.cbbEntrada.FormattingEnabled = true;
             this.cbbEntrada.Items.AddRange(new object[] {
             "1:00",
@@ -443,6 +431,7 @@
             // 
             // cbbSalida
             // 
+            this.cbbSalida.BackColor = System.Drawing.Color.White;
             this.cbbSalida.FormattingEnabled = true;
             this.cbbSalida.Items.AddRange(new object[] {
             "1:00",
@@ -475,16 +464,9 @@
             this.cbbSalida.TabIndex = 21;
             this.cbbSalida.Text = "Salida";
             // 
-            // txtSalario
-            // 
-            this.txtSalario.Location = new System.Drawing.Point(77, 263);
-            this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(100, 20);
-            this.txtSalario.TabIndex = 22;
-            this.txtSalario.Text = "Cantidad $$";
-            // 
             // cbbTipo
             // 
+            this.cbbTipo.BackColor = System.Drawing.Color.White;
             this.cbbTipo.FormattingEnabled = true;
             this.cbbTipo.Items.AddRange(new object[] {
             "m/n",
@@ -497,6 +479,7 @@
             // 
             // cbbFormPago
             // 
+            this.cbbFormPago.BackColor = System.Drawing.Color.White;
             this.cbbFormPago.FormattingEnabled = true;
             this.cbbFormPago.Items.AddRange(new object[] {
             "Efectivo",
@@ -511,6 +494,7 @@
             // 
             // cbbJornadaInicio
             // 
+            this.cbbJornadaInicio.BackColor = System.Drawing.Color.White;
             this.cbbJornadaInicio.FormattingEnabled = true;
             this.cbbJornadaInicio.Items.AddRange(new object[] {
             "Lunes",
@@ -528,6 +512,7 @@
             // 
             // cbbJornadaFinal
             // 
+            this.cbbJornadaFinal.BackColor = System.Drawing.Color.White;
             this.cbbJornadaFinal.FormattingEnabled = true;
             this.cbbJornadaFinal.Items.AddRange(new object[] {
             "Lunes",
@@ -545,6 +530,7 @@
             // 
             // txtJefe
             // 
+            this.txtJefe.BackColor = System.Drawing.Color.White;
             this.txtJefe.Location = new System.Drawing.Point(147, 350);
             this.txtJefe.Name = "txtJefe";
             this.txtJefe.Size = new System.Drawing.Size(267, 20);
@@ -552,6 +538,7 @@
             // 
             // txtPuestoJefe
             // 
+            this.txtPuestoJefe.BackColor = System.Drawing.Color.White;
             this.txtPuestoJefe.Location = new System.Drawing.Point(147, 385);
             this.txtPuestoJefe.Name = "txtPuestoJefe";
             this.txtPuestoJefe.Size = new System.Drawing.Size(295, 20);
@@ -562,14 +549,16 @@
             this.txtFechaI.Location = new System.Drawing.Point(149, 422);
             this.txtFechaI.Name = "txtFechaI";
             this.txtFechaI.Size = new System.Drawing.Size(224, 20);
-            this.txtFechaI.TabIndex = 30;
+            this.txtFechaI.TabIndex = 29;
             // 
             // txtFechaD
             // 
+            this.txtFechaD.CalendarMonthBackground = System.Drawing.Color.White;
+            this.txtFechaD.CalendarTitleForeColor = System.Drawing.Color.White;
             this.txtFechaD.Location = new System.Drawing.Point(147, 459);
             this.txtFechaD.Name = "txtFechaD";
             this.txtFechaD.Size = new System.Drawing.Size(224, 20);
-            this.txtFechaD.TabIndex = 31;
+            this.txtFechaD.TabIndex = 30;
             // 
             // btnEmpresaN
             // 
@@ -580,10 +569,6 @@
             this.btnEmpresaN.Text = "Nueva";
             this.btnEmpresaN.Click += new System.EventHandler(this.btnEmpresaN_Click);
             // 
-            // errorCusClientes
-            // 
-            this.errorCusClientes.ContainerControl = this;
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -592,13 +577,6 @@
             this.label23.Size = new System.Drawing.Size(55, 13);
             this.label23.TabIndex = 34;
             this.label23.Text = "Direccion:";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(78, 38);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(295, 20);
-            this.txtDireccion.TabIndex = 14;
             // 
             // label24
             // 
@@ -613,7 +591,7 @@
             // 
             this.rdSexo.Location = new System.Drawing.Point(77, 105);
             this.rdSexo.Name = "rdSexo";
-            this.rdSexo.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rdSexo.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.rdSexo.Properties.Appearance.Options.UseBackColor = true;
             this.rdSexo.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("M", "Masculino"),
@@ -627,40 +605,30 @@
             this.ckdTarjetaSi.Name = "ckdTarjetaSi";
             this.ckdTarjetaSi.Properties.Caption = "Si";
             this.ckdTarjetaSi.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style1;
-            this.ckdTarjetaSi.Size = new System.Drawing.Size(52, 22);
-            this.ckdTarjetaSi.TabIndex = 32;
+            this.ckdTarjetaSi.Size = new System.Drawing.Size(38, 22);
+            this.ckdTarjetaSi.TabIndex = 31;
             this.ckdTarjetaSi.CheckedChanged += new System.EventHandler(this.ckdTarjetaSi_CheckedChanged);
             // 
             // ckdTarjetaNo
             // 
-            this.ckdTarjetaNo.Location = new System.Drawing.Point(205, 496);
+            this.ckdTarjetaNo.Location = new System.Drawing.Point(214, 497);
             this.ckdTarjetaNo.Name = "ckdTarjetaNo";
             this.ckdTarjetaNo.Properties.Caption = "No";
             this.ckdTarjetaNo.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style1;
-            this.ckdTarjetaNo.Size = new System.Drawing.Size(75, 22);
-            this.ckdTarjetaNo.TabIndex = 33;
+            this.ckdTarjetaNo.Size = new System.Drawing.Size(42, 22);
+            this.ckdTarjetaNo.TabIndex = 32;
             this.ckdTarjetaNo.CheckedChanged += new System.EventHandler(this.ckdTarjetaNo_CheckedChanged);
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(77, 74);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTelefono.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTelefono.Properties.Appearance.Options.UseBackColor = true;
             this.txtTelefono.Properties.Mask.EditMask = "(999)000-00-00";
             this.txtTelefono.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtTelefono.Size = new System.Drawing.Size(296, 20);
-            this.txtTelefono.TabIndex = 37;
-            // 
-            // cbbEmpresa
-            // 
-            this.cbbEmpresa.FormattingEnabled = true;
-            this.cbbEmpresa.Location = new System.Drawing.Point(77, 146);
-            this.cbbEmpresa.Name = "cbbEmpresa";
-            this.cbbEmpresa.Size = new System.Drawing.Size(293, 21);
-            this.cbbEmpresa.TabIndex = 39;
-            this.cbbEmpresa.Text = "- Escojer Empresa -";
-            this.cbbEmpresa.DropDown += new System.EventHandler(this.cbbEmpresa_DropDown);
+            this.txtTelefono.TabIndex = 15;
             // 
             // gcCliente
             // 
@@ -680,6 +648,54 @@
             this.gvCliente.Name = "gvCliente";
             this.gvCliente.OptionsView.ColumnAutoWidth = false;
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(78, 7);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(295, 20);
+            this.txtNombre.TabIndex = 13;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(77, 38);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(295, 20);
+            this.txtDireccion.TabIndex = 14;
+            // 
+            // txtPuesto
+            // 
+            this.txtPuesto.Location = new System.Drawing.Point(77, 183);
+            this.txtPuesto.Name = "txtPuesto";
+            this.txtPuesto.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtPuesto.Properties.Appearance.Options.UseBackColor = true;
+            this.txtPuesto.Properties.Mask.EditMask = "(999)000-00-00";
+            this.txtPuesto.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.txtPuesto.Size = new System.Drawing.Size(296, 20);
+            this.txtPuesto.TabIndex = 19;
+            // 
+            // cbbEmpresa
+            // 
+            this.cbbEmpresa.BackColor = System.Drawing.Color.White;
+            this.cbbEmpresa.FormattingEnabled = true;
+            this.cbbEmpresa.Location = new System.Drawing.Point(77, 146);
+            this.cbbEmpresa.Name = "cbbEmpresa";
+            this.cbbEmpresa.Size = new System.Drawing.Size(296, 21);
+            this.cbbEmpresa.TabIndex = 39;
+            this.cbbEmpresa.Text = "- Escojer Empresa -";
+            // 
+            // txtSalario
+            // 
+            this.txtSalario.EditValue = "Cantidad $$";
+            this.txtSalario.Location = new System.Drawing.Point(77, 260);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSalario.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSalario.Properties.Mask.BeepOnError = true;
+            this.txtSalario.Properties.Mask.EditMask = "c0";
+            this.txtSalario.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtSalario.Size = new System.Drawing.Size(100, 20);
+            this.txtSalario.TabIndex = 22;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,13 +712,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.tbBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorCusClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdSexo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaSi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ckdTarjetaNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPuesto.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSalario.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -731,10 +750,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.TextBox txtPuesto;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cbbTipo;
-        private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.ComboBox cbbSalida;
         private System.Windows.Forms.ComboBox cbbEntrada;
         private System.Windows.Forms.ComboBox cbbJornadaFinal;
@@ -745,16 +761,18 @@
         private System.Windows.Forms.TextBox txtPuestoJefe;
         private System.Windows.Forms.TextBox txtJefe;
         private DevExpress.XtraEditors.SimpleButton btnEmpresaN;
-        private System.Windows.Forms.ErrorProvider errorCusClientes;
-        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private DevExpress.XtraEditors.RadioGroup rdSexo;
         private DevExpress.XtraEditors.CheckEdit ckdTarjetaSi;
         private DevExpress.XtraEditors.CheckEdit ckdTarjetaNo;
         private DevExpress.XtraEditors.TextEdit txtTelefono;
-        private System.Windows.Forms.ComboBox cbbEmpresa;
         private DevExpress.XtraGrid.GridControl gcCliente;
         private DevExpress.XtraGrid.Views.Grid.GridView gvCliente;
+        private DevExpress.XtraEditors.TextEdit txtNombre;
+        private DevExpress.XtraEditors.TextEdit txtDireccion;
+        private DevExpress.XtraEditors.TextEdit txtPuesto;
+        private System.Windows.Forms.ComboBox cbbEmpresa;
+        private DevExpress.XtraEditors.TextEdit txtSalario;
     }
 }

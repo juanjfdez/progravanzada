@@ -20,6 +20,21 @@ namespace WindowsFormsApplication5
         {
             LimpiarControles();
         }
+
+        private void frmCasos_Load(object sender, EventArgs e)
+        {
+            Program.frmSoftj.AbrirCon();
+            query.Connection = Program.frmSoftj.sqlconexion;
+
+            // asignacion te errores para la insercion
+            ErrorPersonalizadoInicio();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            // verifica que no este ningun dato en blanco
+            ErrorPersonalizadoEjecucion();
+        }
         
     }
 }

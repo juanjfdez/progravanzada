@@ -25,50 +25,8 @@ namespace WindowsFormsApplication5
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            bool bandera;
-            bandera = true;
-
             // verifica que no este ningun dato en blanco
-            //NOMBRE
-            if (txtNomEmp.Text == "")
-            {
-                error_info.SetError(txtNomEmp, "Por favor especifique el nombre del empleado");
-                bandera = false;
-            }
-            else
-                error_info.SetError(txtNomEmp, "");
-            //DIRECCION
-            if (txtDireccionEmp.Text == "")
-            {
-                error_info.SetError(txtDireccionEmp, "Por favor especifique la direccion del empleado");
-                bandera = false;
-            }
-            else
-                error_info.SetError(txtDireccionEmp, "");
-            //EDAD
-            if (txtEdad.Text == "")
-            {
-                error_info.SetError(txtEdad, "Por favor especifique la direccion del empleado");
-                bandera = false;
-            }
-            else
-                error_info.SetError(txtEdad, "");
-            //SEGURO
-            if (txtSeguro.Text == "")
-            {
-                error_info.SetError(txtSeguro, "Por favor especifique el seguro del empleado");
-                bandera = false;
-            }
-            else
-                error_info.SetError(txtSeguro, "");
-            //TELEFONO
-            if (txtTelEmp.Text == "")
-            {
-                error_info.SetError(txtTelEmp, "Por favor especifique el telefono del empleado");
-                bandera = false;
-            }
-            else
-                error_info.SetError(txtTelEmp, "");
+            ErrorPersonalizadoEjecucion();
             //PUESTO
             if ((cbbPuesto.Text == "- Elija Puesto del Empleado -")||(cbbPuesto.Text == ""))
             {
@@ -77,9 +35,16 @@ namespace WindowsFormsApplication5
             }
             else
                 error_info.SetError(cbbPuesto, "");
-
+            //Sexo
+            if (rdSexoEmp.Text == "")
+            {
+                error_info.SetError(rdSexoEmp, "Por favor especifique el sexo del cliente");
+                bandera = false;
+            }
+            else
+                error_info.SetError(rdSexoEmp, "");
             //Se inicia la insercion
-            if (bandera == true)
+            if (bandera)
             {
                 query.CommandText = @"EXEC InsertarPersonal
                 @Nombre_emp,@Telefono_emp,@Edad_emp,@Seguro_emp,@Puesto_emp,@Direccion_emp,@Sexo_emp";
@@ -106,13 +71,8 @@ namespace WindowsFormsApplication5
             Program.frmSoftj.AbrirCon();
             query.Connection = Program.frmSoftj.sqlconexion;
 
-            //set errores
-            error_info.SetError(txtNomEmp, "");
-            error_info.SetError(txtDireccionEmp, "");
-            error_info.SetError(txtEdad, "");
-            error_info.SetError(txtSeguro, "");
-            error_info.SetError(txtTelEmp, "");
-            error_info.SetError(cbbPuesto, "");
+            // asignacion te errores para la insercion
+            ErrorPersonalizadoInicio();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

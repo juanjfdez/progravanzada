@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.query = new System.Data.SqlClient.SqlCommand();
             this.dsDatos = new System.Data.DataSet();
-            this.error_info = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.error_info = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
@@ -179,8 +179,8 @@
         public System.Data.DataSet dsDatos;
         public DevExpress.XtraTab.XtraTabPage tbBuscar;
         protected System.Windows.Forms.Button btnLimpiar;
-        protected DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider error_info;
         protected System.Windows.Forms.Button btnBuscar;
+        protected System.Windows.Forms.ErrorProvider error_info;
     }
 }
 

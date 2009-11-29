@@ -78,6 +78,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(422, 27);
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tbBuscar
@@ -90,6 +91,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(422, 115);
+            this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnBuscar
@@ -126,14 +128,14 @@
             this.txtNomEmp.Location = new System.Drawing.Point(159, 38);
             this.txtNomEmp.Name = "txtNomEmp";
             this.txtNomEmp.Size = new System.Drawing.Size(169, 20);
-            this.txtNomEmp.TabIndex = 4;
+            this.txtNomEmp.TabIndex = 1;
             // 
             // txtDirEmp
             // 
             this.txtDirEmp.Location = new System.Drawing.Point(159, 91);
             this.txtDirEmp.Name = "txtDirEmp";
             this.txtDirEmp.Size = new System.Drawing.Size(169, 20);
-            this.txtDirEmp.TabIndex = 5;
+            this.txtDirEmp.TabIndex = 2;
             // 
             // txtTelEmp
             // 
@@ -142,7 +144,7 @@
             this.txtTelEmp.Properties.Mask.EditMask = "(999)000-00-00";
             this.txtTelEmp.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtTelEmp.Size = new System.Drawing.Size(169, 20);
-            this.txtTelEmp.TabIndex = 6;
+            this.txtTelEmp.TabIndex = 3;
             // 
             // gcDemandado
             // 

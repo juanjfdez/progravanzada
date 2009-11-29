@@ -21,15 +21,13 @@ namespace WindowsFormsApplication5
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            bool banderademandado;
-            banderademandado = true;
-
+            
             // verifica que no este ningun dato en blanco
                 //Nombre
             if (txtNomEmp.Text == "")
             {
                 error_info.SetError(txtNomEmp, "Por favor especifique Nombre de la Empresa");
-                banderademandado = false;
+                bandera = false;
             }
             else
                 error_info.SetError(txtNomEmp, "");
@@ -38,7 +36,7 @@ namespace WindowsFormsApplication5
             if (txtDirEmp.Text == "")
             {
                 error_info.SetError(txtDirEmp, "Por favor especifique Direccion de la Empresa");
-                banderademandado = false;
+                bandera = false;
             }
             else
                 error_info.SetError(txtDirEmp, "");
@@ -47,12 +45,14 @@ namespace WindowsFormsApplication5
             if (txtTelEmp.Text == "")
             {
                 error_info.SetError(txtTelEmp, "Por favor especifique Telefono de la Empresa");
-                banderademandado = false;
+                bandera = false;
             }
             else
                 error_info.SetError(txtTelEmp, "");
+            
+            ErrorPersonalizadoEjecucion();
 
-            if (banderademandado == true)
+            if (bandera)
             {
                 //Inicia insercion
                 query.CommandText = "EXEC InsertarDemandado @Nombre,@Direccion,@Telefono";
@@ -75,11 +75,8 @@ namespace WindowsFormsApplication5
             Program.frmSoftj.AbrirCon();
             query.Connection = Program.frmSoftj.sqlconexion;
 
-            error_info.SetError(txtDirEmp, "");
-            error_info.SetError(txtNomEmp, "");
-            error_info.SetError(txtTelEmp, "");
-
-           
+            // asignacion te errores para la insercion
+            ErrorPersonalizadoInicio();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

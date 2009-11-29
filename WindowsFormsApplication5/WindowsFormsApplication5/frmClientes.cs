@@ -22,106 +22,100 @@ namespace WindowsFormsApplication5
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            bool bandera;
-            bandera = true;
-
-            // verifica que no este ningun dato en blanco
-                //Nombre
-            if (txtNombre.Text == "")
-            {
-                errorCusClientes.SetError(txtNombre, "Por favor especifique el nombre del cliente");
-                bandera = false;
-            }
-            else
-                errorCusClientes.SetError(txtNombre, "");
-
-                //Direccion
-            if (txtDireccion.Text == "")
-            {
-                errorCusClientes.SetError(txtDireccion, "Por favor especifique la Direccion del cliente");
-                bandera = false;
-            }
-            else
-                errorCusClientes.SetError(txtNombre, "");
-            
-                //Telefono
-            if (txtTelefono.Text == "")
-            {
-                errorCusClientes.SetError(txtTelefono, "Por favor especifique el Telefono del cliente");
-                bandera = false;
-            }
-            else
-                errorCusClientes.SetError(txtTelefono, "");
-
-                //Sexo
-            if (rdSexo.Text=="")
-            {
-                errorCusClientes.SetError(rdSexo, "Por favor especifique el sexo del cliente");
-                bandera = false;
-            }
-             else
-                errorCusClientes.SetError(rdSexo,"");
+                // verifica que no este ningun dato en blanco
+            ErrorPersonalizadoEjecucion();
                 //Empresa
-            if ((cbbEmpresa.Text == "- Escojer Empresa -") || (cbbEmpresa.Text == ""))
+            if ((cbbEmpresa.Text == "- Escojer Empresa -")||(cbbEmpresa.Text == ""))
             {
-                errorCusClientes.SetError(cbbEmpresa, "Por favor especifique el nombre de la Empresa");
+                error_info.SetError(cbbEmpresa, "Por favor especifique el nombre de la Empresa");
                 bandera = false;
             }
             else
-                errorCusClientes.SetError(cbbEmpresa, "");
-
-                //Puesto
-            if (txtPuesto.Text == "")
+                error_info.SetError(cbbEmpresa, "");
+            //Entrada
+            if ((cbbEntrada.Text == "Entrada") || (cbbEntrada.Text == ""))
             {
-                errorCusClientes.SetError(txtPuesto, "Por favor especifique el puesto del Cliente");
+                error_info.SetError(cbbEntrada, "Por favor especifique horario de entrada");
                 bandera = false;
             }
             else
-                errorCusClientes.SetError(txtPuesto, "");
-
-                //Salario
-            if (txtSalario.Text == "")
+                error_info.SetError(cbbEntrada, "");
+            //Salida
+            if ((cbbSalida.Text == "Salida") || (cbbSalida.Text == ""))
             {
-                errorCusClientes.SetError(txtSalario, "Por favor especifique el Salario del cliente");
+                error_info.SetError(cbbSalida, "Por favor especifique horario de salida");
                 bandera = false;
             }
             else
-                errorCusClientes.SetError(txtSalario, "");
-
-                //Jefe
-            if (txtJefe.Text == "")
+                error_info.SetError(cbbSalida, "");
+            //Tipo de Moneda
+            if ((cbbTipo.Text == "Tipo de Moneda") || (cbbTipo.Text == ""))
             {
-                errorCusClientes.SetError(txtJefe, "Por favor especifique el nombre del Jefe Inmediato");
+                error_info.SetError(cbbTipo, "Por favor especifique el Tipo de Moneda");
                 bandera = false;
             }
             else
-                errorCusClientes.SetError(txtJefe, "");
-
-                //Puesto Jefe Inmediato
-            if (txtPuestoJefe.Text == "")
+                error_info.SetError(cbbTipo, "");
+            //Forma de Pago
+            if ((cbbFormPago.Text == "Forma de Pago") || (cbbFormPago.Text == ""))
             {
-                errorCusClientes.SetError(txtPuestoJefe, "Por favor especifique el Puesto del Jefe Inmediato");
+                error_info.SetError(cbbFormPago, "Por favor especifique Forma de Pago");
                 bandera = false;
             }
             else
-                errorCusClientes.SetError(txtPuestoJefe, "");
-
+                error_info.SetError(cbbFormPago, "");
+            //Inicio
+            if ((cbbJornadaInicio.Text == "Inicio") || (cbbJornadaInicio.Text == ""))
+            {
+                error_info.SetError(cbbJornadaInicio, "Por favor especifique el Inicio de la Jornada");
+                bandera = false;
+            }
+            else
+                error_info.SetError(cbbJornadaInicio, "");
+            //Final
+            if ((cbbJornadaFinal.Text == "Final") || (cbbJornadaFinal.Text == ""))
+            {
+                error_info.SetError(cbbJornadaFinal, "Por favor especifique el Inicio de la Jornada");
+                bandera = false;
+            }
+            else
+                error_info.SetError(cbbJornadaFinal, "");
                 //Tarjeta Asistencia
             if ((ckdTarjetaNo.Checked == false) && (ckdTarjetaSi.Checked == false))
             {
-                errorCusClientes.SetError(ckdTarjetaNo, "Por favor especifique informacion de Tarjeta de Asistencia");
-                errorCusClientes.SetError(ckdTarjetaSi, "Por favor especifique informacion de Tarjeta de Asistencia");
+                error_info.SetError(ckdTarjetaNo, "Por favor especifique informacion de Tarjeta de Asistencia");
+                error_info.SetError(ckdTarjetaSi, "Por favor especifique informacion de Tarjeta de Asistencia");
                 bandera = false;
             }
             else
             {
-                errorCusClientes.SetError(ckdTarjetaNo, "");
-                errorCusClientes.SetError(ckdTarjetaSi, "");
+                error_info.SetError(ckdTarjetaNo, "");
+                error_info.SetError(ckdTarjetaSi, "");
             }
-
-            if (bandera == true)
+                //Sexo
+            if (rdSexo.Text == "")
             {
-                //INICIO DE INSERCION
+                error_info.SetError(rdSexo, "Por favor especifique el sexo del cliente");
+                bandera = false;
+            }
+            else
+                error_info.SetError(rdSexo, "");
+                //Salario
+            if (txtSalario.Text == "Cantidad $$") 
+            {
+                error_info.SetError(txtSalario, "Por favor especifique Cantidad valida");
+                bandera = false;
+            }
+            else
+                error_info.SetError(txtSalario, "");
+            
+            
+            
+            
+            //INICIO DE INSERCION
+            if (bandera)
+            {
+                
                 query.CommandText = @"EXEC InsertarCliente  
             @Nombre,@Direccion,@Telefono,@Puesto,@Salario,@Sexo,
             @Id_demandado,@hora_in, @hora_out,@jefe_inmediato,
@@ -136,7 +130,7 @@ namespace WindowsFormsApplication5
                 query.Parameters.AddWithValue("@Puesto", txtPuesto.Text);
                 query.Parameters.AddWithValue("@Salario", Convert.ToInt32(txtSalario.Text));
                 query.Parameters.AddWithValue("@Sexo", rdSexo.Text);
-                query.Parameters.AddWithValue("@Id_demandado", cbbEmpresa.SelectedValue);
+                query.Parameters.AddWithValue("@Id_demandado", cbbEmpresa.SelectedItem);
                 query.Parameters.AddWithValue("@hora_in", cbbEntrada.Text);
                 query.Parameters.AddWithValue("@hora_out", cbbSalida.Text);
                 query.Parameters.AddWithValue("@jefe_inmediato", txtJefe.Text);
@@ -157,17 +151,12 @@ namespace WindowsFormsApplication5
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
+            //conexion abierta a base de datos
             Program.frmSoftj.AbrirCon();
             query.Connection = Program.frmSoftj.sqlconexion;
 
             // asignacion te errores para la insercion
-            errorCusClientes.SetError(txtNombre, "");
-            errorCusClientes.SetError(txtDireccion, "");
-            errorCusClientes.SetError(cbbEmpresa, "");
-            errorCusClientes.SetError(txtPuesto, "");
-            errorCusClientes.SetError(txtSalario, "");
-            errorCusClientes.SetError(txtJefe, "");
-            errorCusClientes.SetError(txtPuestoJefe, "");
+            ErrorPersonalizadoInicio();
 
             
             
@@ -243,7 +232,6 @@ namespace WindowsFormsApplication5
             //asigna datos al gridcontrol
             gcCliente.DataSource = dsDatos.Tables[0];
         }
-
 
     }
 

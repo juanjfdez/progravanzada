@@ -38,6 +38,7 @@
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
+            this.tbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTipoCaso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
@@ -73,6 +74,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(423, 41);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tbBuscar
             // 
@@ -135,11 +137,13 @@
             this.ClientSize = new System.Drawing.Size(730, 411);
             this.Name = "frmCasos";
             this.Text = "Casos";
+            this.Load += new System.EventHandler(this.frmCasos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
+            this.tbBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTipoCaso.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
