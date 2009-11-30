@@ -42,6 +42,7 @@
             this.gcCasosMod = new DevExpress.XtraGrid.GridControl();
             this.gvCasosMod = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.cbbStatusCaso = new System.Windows.Forms.ComboBox();
+            this.btnContrato = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
@@ -63,6 +64,7 @@
             // 
             // tbNuevo
             // 
+            this.tbNuevo.Controls.Add(this.btnContrato);
             this.tbNuevo.Controls.Add(this.cbbStatusCaso);
             this.tbNuevo.Controls.Add(this.labelControl5);
             this.tbNuevo.Controls.Add(this.labelControl4);
@@ -86,6 +88,7 @@
             this.tbNuevo.Controls.SetChildIndex(this.labelControl4, 0);
             this.tbNuevo.Controls.SetChildIndex(this.labelControl5, 0);
             this.tbNuevo.Controls.SetChildIndex(this.cbbStatusCaso, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.btnContrato, 0);
             // 
             // tbModificar
             // 
@@ -269,6 +272,17 @@
             this.cbbStatusCaso.TabIndex = 6;
             this.cbbStatusCaso.Text = "- Escoja status de caso -";
             // 
+            // btnContrato
+            // 
+            this.btnContrato.Enabled = false;
+            this.btnContrato.Location = new System.Drawing.Point(423, 213);
+            this.btnContrato.Name = "btnContrato";
+            this.btnContrato.Size = new System.Drawing.Size(91, 41);
+            this.btnContrato.TabIndex = 13;
+            this.btnContrato.Text = "G&enear Contrato";
+            this.btnContrato.UseVisualStyleBackColor = true;
+            this.btnContrato.Click += new System.EventHandler(this.btnContrato_Click);
+            // 
             // frmCasos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,5 +326,6 @@
         private DevExpress.XtraGrid.GridControl gcCasosMod;
         private DevExpress.XtraGrid.Views.Grid.GridView gvCasosMod;
         private System.Windows.Forms.ComboBox cbbStatusCaso;
+        private System.Windows.Forms.Button btnContrato;
     }
 }

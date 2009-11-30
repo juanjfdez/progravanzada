@@ -8,6 +8,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Word;
+using Microsoft.Office;
 
 namespace WindowsFormsApplication5
 {
@@ -90,7 +92,10 @@ namespace WindowsFormsApplication5
 
                     //ejecucion del query
                     if (query.ExecuteNonQuery() > 0)
+                    {
                         MessageBox.Show("Caso Dado de Alta");
+                        btnContrato.Enabled = true;
+                    }
                 }
                 catch (Exception errorCasos)
                 {
@@ -192,6 +197,65 @@ namespace WindowsFormsApplication5
             catch (Exception erroreliminar)
             {
                 MessageBox.Show(erroreliminar.Message, "Error");
+            }
+        }
+
+        private void btnContrato_Click(object sender, EventArgs e)
+        {
+            //OBJECT OF MISSING "NULL VALUE"
+            Object oMissing = System.Reflection.Missing.Value;
+            //OBJECTS OF FALSE AND TRUE
+            Object oTrue = true;
+            Object oFalse = false;
+            
+            //CREATING OBJECTS OF WORD AND DOCUMENT
+            Microsoft.Office.Interop.Word.Application oWord = new Microsoft.Office.Interop.Word.Application();
+            Microsoft.Office.Interop.Word.Document oWordDoc = new Document();
+            
+            
+            //SETTING THE VISIBILITY TO TRUE
+            oWord.Visible = true;
+
+            //THE LOCATION OF THE TEMPLATE FILE ON THE MACHINE
+            Object oTemplatePath = "C:\\contrato.docx";
+            //ADDING A NEW DOCUMENT FROM A TEMPLATE
+
+            oWordDoc = oWord.Documents.Add(ref oTemplatePath, ref oMissing, ref oMissing, ref oMissing);
+
+
+
+            foreach (Microsoft.Office.Interop.Word.Field myMergeField in oWordDoc.Fields)
+            {
+
+                //iTotalFields++;
+
+                Microsoft.Office.Interop.Word.Range rngFieldCode = myMergeField.Code;
+
+                String fieldText = rngFieldCode.Text;
+
+
+
+                // ONLY GETTING THE MAILMERGE FIELDS
+                if (fieldText.StartsWith(" MERGEFIELD"))
+                {
+                    // THE TEXT COMES IN THE FORMAT OF 
+                    // MERGEFIELD  MyFieldName  \\* MERGEFORMAT
+                    // THIS HAS TO BE EDITED TO GET ONLY THE FIELDNAME "MyFieldName"
+                    Int32 endMerge = fieldText.IndexOf("\\");
+                    Int32 fieldNameLength = fieldText.Length - endMerge;
+                    String fieldName = fieldText.Substring(11, endMerge - 11);
+
+                    // GIVES THE FIELDNAMES AS THE USER HAD ENTERED IN .dot FILE
+                    fieldName = fieldName.Trim();
+
+                    // **** FIELD REPLACEMENT IMPLEMENTATION GOES HERE ****//
+                    // THE PROGRAMMER CAN HAVE HIS OWN IMPLEMENTATIONS HERE
+                    if (fieldName == "MyField")
+                    {
+                        myMergeField.Select();
+                        oWord.Selection.TypeText("This Text Replaces the Field in the Template");
+                    }
+                }
             }
         }
         

@@ -21,7 +21,7 @@ namespace WindowsFormsApplication5
         }
         public void MandarCorreo(string sendfrom, string subject, string body)
         {
-            string sendto = "j.j.fdez@hotmail.com";
+            string sendto = txtPara.Text;
             System.Net.NetworkCredential credenciales = new System.Net.NetworkCredential(txtCorreo.Text, txtPass.Text);
             try
             {

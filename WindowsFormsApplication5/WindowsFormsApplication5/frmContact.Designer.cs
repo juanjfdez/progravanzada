@@ -37,6 +37,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPara = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 160);
+            this.label2.Location = new System.Drawing.Point(12, 227);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 1;
@@ -66,15 +70,15 @@
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(84, 157);
+            this.txtdescripcion.Location = new System.Drawing.Point(84, 206);
             this.txtdescripcion.Multiline = true;
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(238, 141);
+            this.txtdescripcion.Size = new System.Drawing.Size(238, 162);
             this.txtdescripcion.TabIndex = 4;
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(146, 325);
+            this.btnEnviar.Location = new System.Drawing.Point(145, 374);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(86, 36);
             this.btnEnviar.TabIndex = 5;
@@ -104,7 +108,7 @@
             // 
             this.txtCorreo.Location = new System.Drawing.Point(84, 77);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(238, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(187, 20);
             this.txtCorreo.TabIndex = 2;
             // 
             // txtPass
@@ -115,11 +119,49 @@
             this.txtPass.TabIndex = 3;
             this.txtPass.UseSystemPasswordChar = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(321, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Nota:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(299, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 26);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Correo debe de \r\nser gmail.com";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(46, 168);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Para:";
+            // 
+            // txtPara
+            // 
+            this.txtPara.Location = new System.Drawing.Point(84, 165);
+            this.txtPara.Name = "txtPara";
+            this.txtPara.Size = new System.Drawing.Size(187, 20);
+            this.txtPara.TabIndex = 10;
+            // 
             // frmContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 385);
+            this.ClientSize = new System.Drawing.Size(394, 422);
+            this.Controls.Add(this.txtPara);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label4);
@@ -147,5 +189,9 @@
         private System.Windows.Forms.Label label4;
         protected System.Windows.Forms.TextBox txtCorreo;
         protected System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        protected System.Windows.Forms.TextBox txtPara;
     }
 }
