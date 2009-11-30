@@ -67,7 +67,7 @@ namespace WindowsFormsApplication5
                 if (query.ExecuteNonQuery() > 0)
                     MessageBox.Show("Empleado Agregado");
             }
-            
+
         }
 
         private void frmPersonal_Load(object sender, EventArgs e)
@@ -99,6 +99,52 @@ namespace WindowsFormsApplication5
             gcPersonal.DataSource = dsDatos.Tables[0];
         }
 
+        private void btnBusMod_Click(object sender, EventArgs e)
+        {
+            dsDatos.Clear();
+            SqlDataAdapter adaptador = new SqlDataAdapter(query);
 
+            //Se hace la busqueda
+            query.CommandText = @"SELECT Nombre_emp as [Nombre Empleado], Telefono_emp as Telefono, Edad_emp as Edad, 
+            Seguro_emp as Seguro, Puesto_emp as Puesto, Direccion_emp as Direccion, Sexo_emp as Sexo
+            FROM Datos_Personal";
+
+            //limpia datos del data user
+            dsDatos.Clear();
+
+            //se llena datos en el data user
+            adaptador.Fill(dsDatos);
+
+            //asigna datos al gridcontrol
+            gcPersonalMod.DataSource = dsDatos.Tables[0];
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string fila1, fila2;
+            fila1 = gvPersonalMod.GetFocusedRowCellValue("Nombre Empleado").ToString();
+            fila2 = gvPersonalMod.GetFocusedRowCellValue("Direccion").ToString();
+            try
+            {
+                query.CommandText = "DELETE FROM Datos_Personal WHERE Nombre_emp=@Nombre and Direccion_emp=@Direccion";
+
+                //parametros
+                query.Parameters.Clear();
+                query.Parameters.AddWithValue("@Nombre", fila1);
+                query.Parameters.AddWithValue("@Direccion", fila2);
+                if (query.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Empleado Eliminado");
+                    btnBusMod.PerformClick();
+                }
+            }
+            catch (Exception erroreliminar)
+            {
+                MessageBox.Show(erroreliminar.Message, "Error");
+            }
+        }
     }
+
+
 }
+

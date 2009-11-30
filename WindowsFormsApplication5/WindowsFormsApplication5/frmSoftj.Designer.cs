@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.tsMenu = new System.Windows.Forms.ToolStrip();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ventanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sqlconexion = new System.Data.SqlClient.SqlConnection();
             this.tsbAdministrador = new System.Windows.Forms.ToolStripButton();
             this.tspClientes = new System.Windows.Forms.ToolStripButton();
             this.tspCasos = new System.Windows.Forms.ToolStripButton();
@@ -43,6 +38,11 @@
             this.tspSalir = new System.Windows.Forms.ToolStripButton();
             this.tspCerrarSession = new System.Windows.Forms.ToolStripButton();
             this.tspInfo = new System.Windows.Forms.ToolStripButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ventanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sqlconexion = new System.Data.SqlClient.SqlConnection();
             this.tsMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,45 +65,6 @@
             this.tsMenu.Size = new System.Drawing.Size(82, 677);
             this.tsMenu.TabIndex = 2;
             this.tsMenu.Text = "ts";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ventanasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.MdiWindowListItem = this.ventanasToolStripMenuItem;
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(794, 24);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ventanasToolStripMenuItem
-            // 
-            this.ventanasToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.ventanasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.horizontalToolStripMenuItem,
-            this.verticalToolStripMenuItem});
-            this.ventanasToolStripMenuItem.Name = "ventanasToolStripMenuItem";
-            this.ventanasToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.ventanasToolStripMenuItem.Text = "Ventanas";
-            // 
-            // horizontalToolStripMenuItem
-            // 
-            this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
-            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.horizontalToolStripMenuItem.Text = "Horizontal";
-            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
-            // 
-            // verticalToolStripMenuItem
-            // 
-            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
-            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.verticalToolStripMenuItem.Text = "Cascada";
-            // 
-            // sqlconexion
-            // 
-            this.sqlconexion.ConnectionString = "Data Source=JUAN-PC\\SQLEXPRESS;Initial Catalog=PROYECTO;User ID=sa;Password=1234";
-            this.sqlconexion.FireInfoMessageEventOnUserErrors = false;
             // 
             // tsbAdministrador
             // 
@@ -201,6 +162,46 @@
             this.tspInfo.Size = new System.Drawing.Size(79, 65);
             this.tspInfo.Text = "&Informacion";
             this.tspInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tspInfo.Click += new System.EventHandler(this.tspInfo_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ventanasToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.MdiWindowListItem = this.ventanasToolStripMenuItem;
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(794, 24);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ventanasToolStripMenuItem
+            // 
+            this.ventanasToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.ventanasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.horizontalToolStripMenuItem,
+            this.verticalToolStripMenuItem});
+            this.ventanasToolStripMenuItem.Name = "ventanasToolStripMenuItem";
+            this.ventanasToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.ventanasToolStripMenuItem.Text = "Ventanas";
+            // 
+            // horizontalToolStripMenuItem
+            // 
+            this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.horizontalToolStripMenuItem.Text = "Horizontal";
+            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
+            // 
+            // verticalToolStripMenuItem
+            // 
+            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.verticalToolStripMenuItem.Text = "Cascada";
+            // 
+            // sqlconexion
+            // 
+            this.sqlconexion.ConnectionString = "Data Source=JUAN-PC\\SQLEXPRESS;Initial Catalog=PROYECTO;User ID=sa;Password=1234";
+            this.sqlconexion.FireInfoMessageEventOnUserErrors = false;
             // 
             // frmSoftj
             // 

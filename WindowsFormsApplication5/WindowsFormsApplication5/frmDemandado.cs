@@ -102,5 +102,47 @@ namespace WindowsFormsApplication5
             gcDemandado.DataSource = dsDatos.Tables[0];
         }
 
+        private void btnBusMod_Click(object sender, EventArgs e)
+        {
+            dsDatos.Clear();
+            SqlDataAdapter adaptador = new SqlDataAdapter(query);
+
+            //se hace consulta
+            query.CommandText = "SELECT Nombre, Direccion, Telefono FROM Demandado";
+
+            //limpia datos del data user
+            dsDatos.Clear();
+
+            //se llena datos en el data user
+            adaptador.Fill(dsDatos);
+
+            //asigna datos al gridcontrol
+            gcDemandadoMod.DataSource = dsDatos.Tables[0];
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string fila1;
+            fila1 = gvDemandadoMod.GetFocusedRowCellValue("Nombre").ToString();
+            try
+            {
+                query.CommandText = "DELETE FROM Demandado WHERE Nombre=@Nombre";
+
+                //parametros
+                query.Parameters.Clear();
+                query.Parameters.AddWithValue("@Nombre", fila1);
+                if (query.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Empresa Eliminada");
+                    btnBusMod.PerformClick();
+                }
+            }
+            catch (Exception erroreliminar)
+            {
+                MessageBox.Show(erroreliminar.Message, "Error");
+            }
+            btnBusMod.PerformClick();
+        }
+
     }
 }

@@ -108,6 +108,7 @@
             // 
             this.tbModificar.Controls.Add(this.gcPersonalMod);
             this.tbModificar.Size = new System.Drawing.Size(614, 323);
+            this.tbModificar.Controls.SetChildIndex(this.btnMod, 0);
             this.tbModificar.Controls.SetChildIndex(this.btnBusMod, 0);
             this.tbModificar.Controls.SetChildIndex(this.btnEliminar, 0);
             this.tbModificar.Controls.SetChildIndex(this.gcPersonalMod, 0);
@@ -115,6 +116,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(494, 18);
+            this.btnGuardar.TabIndex = 45;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tbBuscar
@@ -127,12 +129,21 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(494, 95);
+            this.btnLimpiar.TabIndex = 46;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(506, 14);
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnBusMod
+            // 
+            this.btnBusMod.Click += new System.EventHandler(this.btnBusMod_Click);
             // 
             // label1
             // 
@@ -198,7 +209,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("M", "Masculino"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("F", "Femenino")});
             this.rdSexoEmp.Size = new System.Drawing.Size(180, 34);
-            this.rdSexoEmp.TabIndex = 17;
+            this.rdSexoEmp.TabIndex = 41;
             // 
             // label24
             // 
@@ -239,14 +250,14 @@
             this.txtDireccionEmp.Location = new System.Drawing.Point(145, 198);
             this.txtDireccionEmp.Name = "txtDireccionEmp";
             this.txtDireccionEmp.Size = new System.Drawing.Size(252, 20);
-            this.txtDireccionEmp.TabIndex = 41;
+            this.txtDireccionEmp.TabIndex = 42;
             // 
             // txtSeguro
             // 
             this.txtSeguro.Location = new System.Drawing.Point(145, 235);
             this.txtSeguro.Name = "txtSeguro";
             this.txtSeguro.Size = new System.Drawing.Size(252, 20);
-            this.txtSeguro.TabIndex = 42;
+            this.txtSeguro.TabIndex = 43;
             // 
             // cbbPuesto
             // 
@@ -259,7 +270,7 @@
             "Abogado",
             "Asistente"});
             this.cbbPuesto.Size = new System.Drawing.Size(190, 20);
-            this.cbbPuesto.TabIndex = 43;
+            this.cbbPuesto.TabIndex = 44;
             // 
             // gcPersonal
             // 
@@ -278,6 +289,7 @@
             this.gvPersonal.GridControl = this.gcPersonal;
             this.gvPersonal.Name = "gvPersonal";
             this.gvPersonal.OptionsBehavior.Editable = false;
+            this.gvPersonal.OptionsView.ColumnAutoWidth = false;
             // 
             // gcPersonalMod
             // 
@@ -295,7 +307,7 @@
             // 
             this.gvPersonalMod.GridControl = this.gcPersonalMod;
             this.gvPersonalMod.Name = "gvPersonalMod";
-            this.gvPersonalMod.OptionsBehavior.Editable = false;
+            this.gvPersonalMod.OptionsView.ColumnAutoWidth = false;
             // 
             // frmPersonal
             // 
@@ -303,6 +315,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 356);
             this.Name = "frmPersonal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal";
             this.Load += new System.EventHandler(this.frmPersonal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();

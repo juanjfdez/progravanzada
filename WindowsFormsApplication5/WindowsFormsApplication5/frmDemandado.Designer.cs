@@ -58,7 +58,7 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Size = new System.Drawing.Size(676, 239);
+            this.xtraTabControl1.Size = new System.Drawing.Size(632, 239);
             // 
             // tbNuevo
             // 
@@ -68,7 +68,7 @@
             this.tbNuevo.Controls.Add(this.labelControl3);
             this.tbNuevo.Controls.Add(this.labelControl2);
             this.tbNuevo.Controls.Add(this.labelControl1);
-            this.tbNuevo.Size = new System.Drawing.Size(596, 230);
+            this.tbNuevo.Size = new System.Drawing.Size(552, 230);
             this.tbNuevo.Controls.SetChildIndex(this.btnLimpiar, 0);
             this.tbNuevo.Controls.SetChildIndex(this.labelControl1, 0);
             this.tbNuevo.Controls.SetChildIndex(this.labelControl2, 0);
@@ -81,7 +81,7 @@
             // tbModificar
             // 
             this.tbModificar.Controls.Add(this.gcDemandadoMod);
-            this.tbModificar.Size = new System.Drawing.Size(596, 230);
+            this.tbModificar.Size = new System.Drawing.Size(552, 230);
             this.tbModificar.Controls.SetChildIndex(this.btnMod, 0);
             this.tbModificar.Controls.SetChildIndex(this.btnBusMod, 0);
             this.tbModificar.Controls.SetChildIndex(this.btnEliminar, 0);
@@ -96,7 +96,7 @@
             // tbBuscar
             // 
             this.tbBuscar.Controls.Add(this.gcDemandado);
-            this.tbBuscar.Size = new System.Drawing.Size(596, 230);
+            this.tbBuscar.Size = new System.Drawing.Size(552, 230);
             this.tbBuscar.Controls.SetChildIndex(this.btnBuscar, 0);
             this.tbBuscar.Controls.SetChildIndex(this.gcDemandado, 0);
             // 
@@ -108,16 +108,18 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(485, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(400, 12);
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(364, 12);
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnBusMod
             // 
             this.btnBusMod.Location = new System.Drawing.Point(98, 12);
+            this.btnBusMod.Click += new System.EventHandler(this.btnBusMod_Click);
             // 
             // btnMod
             // 
@@ -177,7 +179,7 @@
             this.gcDemandado.Location = new System.Drawing.Point(3, 58);
             this.gcDemandado.MainView = this.gvDemandado;
             this.gcDemandado.Name = "gcDemandado";
-            this.gcDemandado.Size = new System.Drawing.Size(590, 169);
+            this.gcDemandado.Size = new System.Drawing.Size(546, 169);
             this.gcDemandado.TabIndex = 1;
             this.gcDemandado.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDemandado});
@@ -200,7 +202,7 @@
             this.gcDemandadoMod.Location = new System.Drawing.Point(3, 58);
             this.gcDemandadoMod.MainView = this.gvDemandadoMod;
             this.gcDemandadoMod.Name = "gcDemandadoMod";
-            this.gcDemandadoMod.Size = new System.Drawing.Size(590, 169);
+            this.gcDemandadoMod.Size = new System.Drawing.Size(546, 169);
             this.gcDemandadoMod.TabIndex = 3;
             this.gcDemandadoMod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDemandadoMod});
@@ -209,14 +211,14 @@
             // 
             this.gvDemandadoMod.GridControl = this.gcDemandadoMod;
             this.gvDemandadoMod.Name = "gvDemandadoMod";
-            this.gvDemandadoMod.OptionsBehavior.Editable = false;
             // 
             // frmDemandado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 263);
+            this.ClientSize = new System.Drawing.Size(656, 263);
             this.Name = "frmDemandado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empresa Demandada";
             this.Load += new System.EventHandler(this.frmDemandado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
