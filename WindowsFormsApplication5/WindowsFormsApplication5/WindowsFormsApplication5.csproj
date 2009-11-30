@@ -88,6 +88,18 @@
       <DependentUpon>crCliente.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="crCliente2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCliente2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crCliente3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCliente3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frmCasos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +156,14 @@
     <EmbeddedResource Include="crCliente.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crCliente2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCliente2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crCliente3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCliente3.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCasos.resx">
       <DependentUpon>frmCasos.cs</DependentUpon>

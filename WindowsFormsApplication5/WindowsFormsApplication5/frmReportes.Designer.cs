@@ -34,12 +34,11 @@
             // crvReportes
             // 
             this.crvReportes.ActiveViewIndex = -1;
-            this.crvReportes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crvReportes.Location = new System.Drawing.Point(0, 0);
+            this.crvReportes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.crvReportes.Location = new System.Drawing.Point(0, 47);
             this.crvReportes.Name = "crvReportes";
             this.crvReportes.SelectionFormula = "";
-            this.crvReportes.Size = new System.Drawing.Size(502, 494);
+            this.crvReportes.Size = new System.Drawing.Size(502, 435);
             this.crvReportes.TabIndex = 0;
             this.crvReportes.ViewTimeSelectionFormula = "";
             // 
