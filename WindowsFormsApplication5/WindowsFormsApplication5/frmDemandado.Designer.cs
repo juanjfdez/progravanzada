@@ -36,9 +36,13 @@
             this.txtTelEmp = new DevExpress.XtraEditors.TextEdit();
             this.gcDemandado = new DevExpress.XtraGrid.GridControl();
             this.gvDemandado = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcDemandadoMod = new DevExpress.XtraGrid.GridControl();
+            this.gvDemandadoMod = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
+            this.tbModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.tbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
@@ -47,6 +51,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTelEmp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDemandado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDemandado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDemandadoMod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDemandadoMod)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -73,7 +80,12 @@
             // 
             // tbModificar
             // 
+            this.tbModificar.Controls.Add(this.gcDemandadoMod);
             this.tbModificar.Size = new System.Drawing.Size(596, 230);
+            this.tbModificar.Controls.SetChildIndex(this.btnMod, 0);
+            this.tbModificar.Controls.SetChildIndex(this.btnBusMod, 0);
+            this.tbModificar.Controls.SetChildIndex(this.btnEliminar, 0);
+            this.tbModificar.Controls.SetChildIndex(this.gcDemandadoMod, 0);
             // 
             // btnGuardar
             // 
@@ -98,6 +110,18 @@
             // 
             this.btnBuscar.Location = new System.Drawing.Point(485, 12);
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(364, 12);
+            // 
+            // btnBusMod
+            // 
+            this.btnBusMod.Location = new System.Drawing.Point(98, 12);
+            // 
+            // btnMod
+            // 
+            this.btnMod.Location = new System.Drawing.Point(230, 12);
             // 
             // labelControl1
             // 
@@ -162,6 +186,30 @@
             // 
             this.gvDemandado.GridControl = this.gcDemandado;
             this.gvDemandado.Name = "gvDemandado";
+            this.gvDemandado.OptionsBehavior.Editable = false;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            // 
+            // gcDemandadoMod
+            // 
+            this.gcDemandadoMod.EmbeddedNavigator.Name = "";
+            this.gcDemandadoMod.FormsUseDefaultLookAndFeel = false;
+            this.gcDemandadoMod.Location = new System.Drawing.Point(3, 58);
+            this.gcDemandadoMod.MainView = this.gvDemandadoMod;
+            this.gcDemandadoMod.Name = "gcDemandadoMod";
+            this.gcDemandadoMod.Size = new System.Drawing.Size(590, 169);
+            this.gcDemandadoMod.TabIndex = 3;
+            this.gcDemandadoMod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvDemandadoMod});
+            // 
+            // gvDemandadoMod
+            // 
+            this.gvDemandadoMod.GridControl = this.gcDemandadoMod;
+            this.gvDemandadoMod.Name = "gvDemandadoMod";
+            this.gvDemandadoMod.OptionsBehavior.Editable = false;
             // 
             // frmDemandado
             // 
@@ -175,6 +223,7 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
+            this.tbModificar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.tbBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
@@ -183,6 +232,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTelEmp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDemandado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDemandado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDemandadoMod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDemandadoMod)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +249,8 @@
         private DevExpress.XtraEditors.TextEdit txtDirEmp;
         private DevExpress.XtraGrid.GridControl gcDemandado;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDemandado;
+        private DevExpress.XtraGrid.GridControl gcDemandadoMod;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvDemandadoMod;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

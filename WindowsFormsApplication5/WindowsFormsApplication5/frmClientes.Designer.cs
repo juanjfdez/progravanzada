@@ -74,9 +74,12 @@
             this.txtPuesto = new DevExpress.XtraEditors.TextEdit();
             this.cbbEmpresa = new System.Windows.Forms.ComboBox();
             this.txtSalario = new DevExpress.XtraEditors.TextEdit();
+            this.gcClienteMod = new DevExpress.XtraGrid.GridControl();
+            this.gvClienteMod = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
+            this.tbModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.tbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
@@ -90,6 +93,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPuesto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalario.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcClienteMod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvClienteMod)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -173,7 +178,12 @@
             // 
             // tbModificar
             // 
+            this.tbModificar.Controls.Add(this.gcClienteMod);
             this.tbModificar.Size = new System.Drawing.Size(661, 531);
+            this.tbModificar.Controls.SetChildIndex(this.btnMod, 0);
+            this.tbModificar.Controls.SetChildIndex(this.btnEliminar, 0);
+            this.tbModificar.Controls.SetChildIndex(this.btnBusMod, 0);
+            this.tbModificar.Controls.SetChildIndex(this.gcClienteMod, 0);
             // 
             // btnGuardar
             // 
@@ -197,6 +207,14 @@
             // 
             this.btnBuscar.Location = new System.Drawing.Point(538, 18);
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(429, 18);
+            // 
+            // btnMod
+            // 
+            this.btnMod.Location = new System.Drawing.Point(275, 18);
             // 
             // label1
             // 
@@ -646,6 +664,7 @@
             // 
             this.gvCliente.GridControl = this.gcCliente;
             this.gvCliente.Name = "gvCliente";
+            this.gvCliente.OptionsBehavior.Editable = false;
             this.gvCliente.OptionsView.ColumnAutoWidth = false;
             // 
             // txtNombre
@@ -697,6 +716,25 @@
             this.txtSalario.Size = new System.Drawing.Size(100, 20);
             this.txtSalario.TabIndex = 22;
             // 
+            // gcClienteMod
+            // 
+            this.gcClienteMod.EmbeddedNavigator.Name = "";
+            this.gcClienteMod.FormsUseDefaultLookAndFeel = false;
+            this.gcClienteMod.Location = new System.Drawing.Point(0, 83);
+            this.gcClienteMod.MainView = this.gvClienteMod;
+            this.gcClienteMod.Name = "gcClienteMod";
+            this.gcClienteMod.Size = new System.Drawing.Size(655, 445);
+            this.gcClienteMod.TabIndex = 5;
+            this.gcClienteMod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvClienteMod});
+            // 
+            // gvClienteMod
+            // 
+            this.gvClienteMod.GridControl = this.gcClienteMod;
+            this.gvClienteMod.Name = "gvClienteMod";
+            this.gvClienteMod.OptionsBehavior.Editable = false;
+            this.gvClienteMod.OptionsView.ColumnAutoWidth = false;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -710,6 +748,7 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
+            this.tbModificar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.tbBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
@@ -723,6 +762,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPuesto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalario.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcClienteMod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvClienteMod)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -775,5 +816,7 @@
         private DevExpress.XtraEditors.TextEdit txtPuesto;
         private System.Windows.Forms.ComboBox cbbEmpresa;
         private DevExpress.XtraEditors.TextEdit txtSalario;
+        private DevExpress.XtraGrid.GridControl gcClienteMod;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvClienteMod;
     }
 }

@@ -36,11 +36,12 @@
             this.tbBuscar = new DevExpress.XtraTab.XtraTabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tbModificar = new DevExpress.XtraTab.XtraTabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnBusMod = new System.Windows.Forms.Button();
             this.query = new System.Data.SqlClient.SqlCommand();
             this.dsDatos = new System.Data.DataSet();
             this.error_info = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnMod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
@@ -110,33 +111,36 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(94, 40);
             this.btnBuscar.TabIndex = 0;
-            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.Text = "B&uscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // tbModificar
             // 
-            this.tbModificar.Controls.Add(this.textBox2);
-            this.tbModificar.Controls.Add(this.label2);
+            this.tbModificar.Controls.Add(this.btnMod);
+            this.tbModificar.Controls.Add(this.btnEliminar);
+            this.tbModificar.Controls.Add(this.btnBusMod);
             this.tbModificar.Image = global::ABC.Properties.Resources.emblem_unreadable;
             this.tbModificar.Name = "tbModificar";
             this.tbModificar.Size = new System.Drawing.Size(710, 488);
             this.tbModificar.Text = "&Modificar";
             // 
-            // textBox2
+            // btnEliminar
             // 
-            this.textBox2.Location = new System.Drawing.Point(84, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(393, 20);
-            this.textBox2.TabIndex = 5;
+            this.btnEliminar.Location = new System.Drawing.Point(379, 18);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(94, 40);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "&Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnBusMod
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Buscar :";
+            this.btnBusMod.Location = new System.Drawing.Point(107, 18);
+            this.btnBusMod.Name = "btnBusMod";
+            this.btnBusMod.Size = new System.Drawing.Size(94, 40);
+            this.btnBusMod.TabIndex = 1;
+            this.btnBusMod.Text = "Bu&scar";
+            this.btnBusMod.UseVisualStyleBackColor = true;
             // 
             // dsDatos
             // 
@@ -145,6 +149,15 @@
             // error_info
             // 
             this.error_info.ContainerControl = this;
+            // 
+            // btnMod
+            // 
+            this.btnMod.Location = new System.Drawing.Point(243, 18);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(94, 40);
+            this.btnMod.TabIndex = 3;
+            this.btnMod.Text = "&Cambiar";
+            this.btnMod.UseVisualStyleBackColor = true;
             // 
             // frmABC
             // 
@@ -160,7 +173,6 @@
             this.tbNuevo.ResumeLayout(false);
             this.tbBuscar.ResumeLayout(false);
             this.tbModificar.ResumeLayout(false);
-            this.tbModificar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
             this.ResumeLayout(false);
@@ -169,8 +181,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
         protected DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         protected DevExpress.XtraTab.XtraTabPage tbNuevo;
         protected DevExpress.XtraTab.XtraTabPage tbModificar;
@@ -181,6 +191,9 @@
         protected System.Windows.Forms.Button btnLimpiar;
         protected System.Windows.Forms.Button btnBuscar;
         protected System.Windows.Forms.ErrorProvider error_info;
+        protected System.Windows.Forms.Button btnEliminar;
+        protected System.Windows.Forms.Button btnBusMod;
+        protected System.Windows.Forms.Button btnMod;
     }
 }
 

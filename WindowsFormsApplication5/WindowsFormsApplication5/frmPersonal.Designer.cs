@@ -44,9 +44,12 @@
             this.cbbPuesto = new DevExpress.XtraEditors.ComboBoxEdit();
             this.gcPersonal = new DevExpress.XtraGrid.GridControl();
             this.gvPersonal = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcPersonalMod = new DevExpress.XtraGrid.GridControl();
+            this.gvPersonalMod = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
+            this.tbModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.tbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
@@ -59,6 +62,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbPuesto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPersonal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPersonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPersonalMod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPersonalMod)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -101,7 +106,11 @@
             // 
             // tbModificar
             // 
+            this.tbModificar.Controls.Add(this.gcPersonalMod);
             this.tbModificar.Size = new System.Drawing.Size(614, 323);
+            this.tbModificar.Controls.SetChildIndex(this.btnBusMod, 0);
+            this.tbModificar.Controls.SetChildIndex(this.btnEliminar, 0);
+            this.tbModificar.Controls.SetChildIndex(this.gcPersonalMod, 0);
             // 
             // btnGuardar
             // 
@@ -268,6 +277,25 @@
             // 
             this.gvPersonal.GridControl = this.gcPersonal;
             this.gvPersonal.Name = "gvPersonal";
+            this.gvPersonal.OptionsBehavior.Editable = false;
+            // 
+            // gcPersonalMod
+            // 
+            this.gcPersonalMod.EmbeddedNavigator.Name = "";
+            this.gcPersonalMod.FormsUseDefaultLookAndFeel = false;
+            this.gcPersonalMod.Location = new System.Drawing.Point(3, 72);
+            this.gcPersonalMod.MainView = this.gvPersonalMod;
+            this.gcPersonalMod.Name = "gcPersonalMod";
+            this.gcPersonalMod.Size = new System.Drawing.Size(608, 248);
+            this.gcPersonalMod.TabIndex = 3;
+            this.gcPersonalMod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvPersonalMod});
+            // 
+            // gvPersonalMod
+            // 
+            this.gvPersonalMod.GridControl = this.gcPersonalMod;
+            this.gvPersonalMod.Name = "gvPersonalMod";
+            this.gvPersonalMod.OptionsBehavior.Editable = false;
             // 
             // frmPersonal
             // 
@@ -281,6 +309,7 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
+            this.tbModificar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.tbBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
@@ -293,6 +322,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbPuesto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPersonal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPersonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPersonalMod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPersonalMod)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,5 +346,7 @@
         private DevExpress.XtraEditors.ComboBoxEdit cbbPuesto;
         private DevExpress.XtraGrid.GridControl gcPersonal;
         private DevExpress.XtraGrid.Views.Grid.GridView gvPersonal;
+        private DevExpress.XtraGrid.GridControl gcPersonalMod;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPersonalMod;
     }
 }

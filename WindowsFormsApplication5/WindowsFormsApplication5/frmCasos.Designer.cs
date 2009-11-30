@@ -38,15 +38,24 @@
             this.cbbAbogCaso = new System.Windows.Forms.ComboBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.gcCasos = new DevExpress.XtraGrid.GridControl();
+            this.gvCasos = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcCasosMod = new DevExpress.XtraGrid.GridControl();
+            this.gvCasosMod = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
+            this.tbModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.tbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStatusCaso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCaso.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCasos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCasos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCasosMod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCasosMod)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -81,7 +90,12 @@
             // 
             // tbModificar
             // 
+            this.tbModificar.Controls.Add(this.gcCasosMod);
             this.tbModificar.Size = new System.Drawing.Size(626, 358);
+            this.tbModificar.Controls.SetChildIndex(this.btnMod, 0);
+            this.tbModificar.Controls.SetChildIndex(this.btnEliminar, 0);
+            this.tbModificar.Controls.SetChildIndex(this.btnBusMod, 0);
+            this.tbModificar.Controls.SetChildIndex(this.gcCasosMod, 0);
             // 
             // btnGuardar
             // 
@@ -91,13 +105,32 @@
             // 
             // tbBuscar
             // 
+            this.tbBuscar.Controls.Add(this.gcCasos);
             this.tbBuscar.Size = new System.Drawing.Size(626, 358);
+            this.tbBuscar.Controls.SetChildIndex(this.btnBuscar, 0);
+            this.tbBuscar.Controls.SetChildIndex(this.gcCasos, 0);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(423, 123);
             this.btnLimpiar.TabIndex = 9;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(519, 21);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(230, 18);
+            // 
+            // btnBusMod
+            // 
+            this.btnBusMod.Location = new System.Drawing.Point(77, 18);
+            // 
+            // btnMod
+            // 
+            this.btnMod.Location = new System.Drawing.Point(375, 18);
             // 
             // labelControl1
             // 
@@ -188,6 +221,42 @@
             this.labelControl5.TabIndex = 12;
             this.labelControl5.Text = "Abogado:";
             // 
+            // gcCasos
+            // 
+            this.gcCasos.EmbeddedNavigator.Name = "";
+            this.gcCasos.FormsUseDefaultLookAndFeel = false;
+            this.gcCasos.Location = new System.Drawing.Point(3, 95);
+            this.gcCasos.MainView = this.gvCasos;
+            this.gcCasos.Name = "gcCasos";
+            this.gcCasos.Size = new System.Drawing.Size(620, 260);
+            this.gcCasos.TabIndex = 2;
+            this.gcCasos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvCasos});
+            // 
+            // gvCasos
+            // 
+            this.gvCasos.GridControl = this.gcCasos;
+            this.gvCasos.Name = "gvCasos";
+            this.gvCasos.OptionsBehavior.Editable = false;
+            // 
+            // gcCasosMod
+            // 
+            this.gcCasosMod.EmbeddedNavigator.Name = "";
+            this.gcCasosMod.FormsUseDefaultLookAndFeel = false;
+            this.gcCasosMod.Location = new System.Drawing.Point(3, 95);
+            this.gcCasosMod.MainView = this.gvCasosMod;
+            this.gcCasosMod.Name = "gcCasosMod";
+            this.gcCasosMod.Size = new System.Drawing.Size(620, 260);
+            this.gcCasosMod.TabIndex = 3;
+            this.gcCasosMod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvCasosMod});
+            // 
+            // gvCasosMod
+            // 
+            this.gvCasosMod.GridControl = this.gcCasosMod;
+            this.gvCasosMod.Name = "gvCasosMod";
+            this.gvCasosMod.OptionsBehavior.Editable = false;
+            // 
             // frmCasos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,12 +269,17 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.tbNuevo.ResumeLayout(false);
             this.tbNuevo.PerformLayout();
+            this.tbModificar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.tbBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStatusCaso.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCaso.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCasos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCasos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCasosMod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCasosMod)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,5 +296,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.ComboBox cbbAbogCaso;
         private System.Windows.Forms.ComboBox cbbClienteCaso;
+        private DevExpress.XtraGrid.GridControl gcCasos;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvCasos;
+        private DevExpress.XtraGrid.GridControl gcCasosMod;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvCasosMod;
     }
 }
