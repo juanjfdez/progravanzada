@@ -29,3 +29,4 @@ C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsForm
 C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmReportes.resources
 C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.AboutUs.resources
 C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmInformacion.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmContact.resources

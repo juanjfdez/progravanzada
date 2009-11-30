@@ -21,6 +21,7 @@ namespace WindowsFormsApplication5
         public frmReportes frmReportes;
         public frmInformacion frmInformacion;
         public AboutUs AboutUs;
+        public frmContact frmContact;
         public frmSoftj()
         {
             InitializeComponent();

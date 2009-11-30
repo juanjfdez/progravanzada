@@ -32,6 +32,8 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnTuto = new System.Windows.Forms.Button();
             this.btnRepInfo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDemInfo
@@ -71,6 +73,15 @@
             this.btnRepInfo.TabIndex = 3;
             this.btnRepInfo.Text = "&Reportar Problema";
             this.btnRepInfo.UseVisualStyleBackColor = true;
+            this.btnRepInfo.Click += new System.EventHandler(this.btnRepInfo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(388, 290);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // frmInformacion
             // 
@@ -81,8 +92,10 @@
             this.Controls.Add(this.btnTuto);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnDemInfo);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "frmInformacion";
             this.Text = "Informacion";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -93,5 +106,6 @@
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Button btnTuto;
         private System.Windows.Forms.Button btnRepInfo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

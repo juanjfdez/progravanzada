@@ -35,5 +35,15 @@ namespace WindowsFormsApplication5
                 Program.frmSoftj.frmDemandado.Show();
             }
         }
+
+        private void btnRepInfo_Click(object sender, EventArgs e)
+        {
+            if ((Program.frmSoftj.frmContact == null) || (Program.frmSoftj.frmContact.IsDisposed))
+            {
+                Program.frmSoftj.frmContact = new frmContact();
+                Program.frmSoftj.frmContact.MdiParent = Program.frmSoftj;
+                Program.frmSoftj.frmContact.Show();
+            }
+        }
     }
 }
