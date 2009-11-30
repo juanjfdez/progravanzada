@@ -81,7 +81,7 @@
             this.tbNuevo.Controls.Add(this.label4);
             this.tbNuevo.Controls.Add(this.label3);
             this.tbNuevo.Controls.Add(this.label1);
-            this.tbNuevo.Size = new System.Drawing.Size(614, 315);
+            this.tbNuevo.Size = new System.Drawing.Size(614, 323);
             this.tbNuevo.Controls.SetChildIndex(this.btnLimpiar, 0);
             this.tbNuevo.Controls.SetChildIndex(this.label1, 0);
             this.tbNuevo.Controls.SetChildIndex(this.btnGuardar, 0);
@@ -101,7 +101,7 @@
             // 
             // tbModificar
             // 
-            this.tbModificar.Size = new System.Drawing.Size(614, 315);
+            this.tbModificar.Size = new System.Drawing.Size(614, 323);
             // 
             // btnGuardar
             // 

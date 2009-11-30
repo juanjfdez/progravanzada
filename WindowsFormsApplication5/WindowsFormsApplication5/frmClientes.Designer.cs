@@ -682,6 +682,7 @@
             this.cbbEmpresa.Size = new System.Drawing.Size(296, 21);
             this.cbbEmpresa.TabIndex = 39;
             this.cbbEmpresa.Text = "- Escojer Empresa -";
+            this.cbbEmpresa.DropDown += new System.EventHandler(this.cbbEmpresa_DropDown);
             // 
             // txtSalario
             // 

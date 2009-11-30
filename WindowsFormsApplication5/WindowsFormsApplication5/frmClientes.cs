@@ -23,9 +23,8 @@ namespace WindowsFormsApplication5
         private void btnGuardar_Click(object sender, EventArgs e)
         {
                 // verifica que no este ningun dato en blanco
-            ErrorPersonalizadoEjecucion();
                 //Empresa
-            if ((cbbEmpresa.Text == "- Escojer Empresa -")||(cbbEmpresa.Text == ""))
+            if (cbbEmpresa.Text == "- Escojer Empresa -")
             {
                 error_info.SetError(cbbEmpresa, "Por favor especifique el nombre de la Empresa");
                 bandera = false;
@@ -33,7 +32,7 @@ namespace WindowsFormsApplication5
             else
                 error_info.SetError(cbbEmpresa, "");
             //Entrada
-            if ((cbbEntrada.Text == "Entrada") || (cbbEntrada.Text == ""))
+            if (cbbEntrada.Text == "Entrada")
             {
                 error_info.SetError(cbbEntrada, "Por favor especifique horario de entrada");
                 bandera = false;
@@ -41,7 +40,7 @@ namespace WindowsFormsApplication5
             else
                 error_info.SetError(cbbEntrada, "");
             //Salida
-            if ((cbbSalida.Text == "Salida") || (cbbSalida.Text == ""))
+            if (cbbSalida.Text == "Salida") 
             {
                 error_info.SetError(cbbSalida, "Por favor especifique horario de salida");
                 bandera = false;
@@ -49,7 +48,7 @@ namespace WindowsFormsApplication5
             else
                 error_info.SetError(cbbSalida, "");
             //Tipo de Moneda
-            if ((cbbTipo.Text == "Tipo de Moneda") || (cbbTipo.Text == ""))
+            if (cbbTipo.Text == "Tipo de Moneda") 
             {
                 error_info.SetError(cbbTipo, "Por favor especifique el Tipo de Moneda");
                 bandera = false;
@@ -57,7 +56,7 @@ namespace WindowsFormsApplication5
             else
                 error_info.SetError(cbbTipo, "");
             //Forma de Pago
-            if ((cbbFormPago.Text == "Forma de Pago") || (cbbFormPago.Text == ""))
+            if (cbbFormPago.Text == "Forma de Pago") 
             {
                 error_info.SetError(cbbFormPago, "Por favor especifique Forma de Pago");
                 bandera = false;
@@ -65,7 +64,7 @@ namespace WindowsFormsApplication5
             else
                 error_info.SetError(cbbFormPago, "");
             //Inicio
-            if ((cbbJornadaInicio.Text == "Inicio") || (cbbJornadaInicio.Text == ""))
+            if (cbbJornadaInicio.Text == "Inicio") 
             {
                 error_info.SetError(cbbJornadaInicio, "Por favor especifique el Inicio de la Jornada");
                 bandera = false;
@@ -73,7 +72,7 @@ namespace WindowsFormsApplication5
             else
                 error_info.SetError(cbbJornadaInicio, "");
             //Final
-            if ((cbbJornadaFinal.Text == "Final") || (cbbJornadaFinal.Text == ""))
+            if (cbbJornadaFinal.Text == "Final") 
             {
                 error_info.SetError(cbbJornadaFinal, "Por favor especifique el Inicio de la Jornada");
                 bandera = false;
@@ -108,8 +107,8 @@ namespace WindowsFormsApplication5
             }
             else
                 error_info.SetError(txtSalario, "");
-            
-            
+            //para cuando no tiene nada escrito
+            ErrorPersonalizadoEjecucion();
             
             
             //INICIO DE INSERCION
@@ -204,7 +203,6 @@ namespace WindowsFormsApplication5
             cbbEmpresa.ValueMember = "Id_demandado";
         }
 
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarControles();
@@ -232,6 +230,8 @@ namespace WindowsFormsApplication5
             //asigna datos al gridcontrol
             gcCliente.DataSource = dsDatos.Tables[0];
         }
+
+        
 
     }
 

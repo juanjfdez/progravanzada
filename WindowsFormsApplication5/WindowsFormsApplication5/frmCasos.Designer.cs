@@ -31,18 +31,22 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTipoCaso = new DevExpress.XtraEditors.TextEdit();
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
             this.txtStatusCaso = new DevExpress.XtraEditors.TextEdit();
+            this.cbbTipoCaso = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbClienteCaso = new System.Windows.Forms.ComboBox();
+            this.cbbAbogCaso = new System.Windows.Forms.ComboBox();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.tbBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTipoCaso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStatusCaso.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCaso.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -51,9 +55,13 @@
             // 
             // tbNuevo
             // 
+            this.tbNuevo.Controls.Add(this.labelControl5);
+            this.tbNuevo.Controls.Add(this.labelControl4);
+            this.tbNuevo.Controls.Add(this.cbbAbogCaso);
+            this.tbNuevo.Controls.Add(this.cbbClienteCaso);
+            this.tbNuevo.Controls.Add(this.cbbTipoCaso);
             this.tbNuevo.Controls.Add(this.txtStatusCaso);
             this.tbNuevo.Controls.Add(this.txtDescripcion);
-            this.tbNuevo.Controls.Add(this.txtTipoCaso);
             this.tbNuevo.Controls.Add(this.labelControl3);
             this.tbNuevo.Controls.Add(this.labelControl2);
             this.tbNuevo.Controls.Add(this.labelControl1);
@@ -63,9 +71,13 @@
             this.tbNuevo.Controls.SetChildIndex(this.labelControl2, 0);
             this.tbNuevo.Controls.SetChildIndex(this.btnGuardar, 0);
             this.tbNuevo.Controls.SetChildIndex(this.labelControl3, 0);
-            this.tbNuevo.Controls.SetChildIndex(this.txtTipoCaso, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtDescripcion, 0);
             this.tbNuevo.Controls.SetChildIndex(this.txtStatusCaso, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.cbbTipoCaso, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.cbbClienteCaso, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.cbbAbogCaso, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.labelControl4, 0);
+            this.tbNuevo.Controls.SetChildIndex(this.labelControl5, 0);
             // 
             // tbModificar
             // 
@@ -74,6 +86,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(423, 41);
+            this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tbBuscar
@@ -83,6 +96,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(423, 123);
+            this.btnLimpiar.TabIndex = 9;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // labelControl1
@@ -95,7 +109,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(60, 151);
+            this.labelControl2.Location = new System.Drawing.Point(60, 137);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(58, 13);
             this.labelControl2.TabIndex = 2;
@@ -103,32 +117,76 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(60, 222);
+            this.labelControl3.Location = new System.Drawing.Point(60, 195);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(79, 13);
             this.labelControl3.TabIndex = 3;
             this.labelControl3.Text = "Status del Caso:";
             // 
-            // txtTipoCaso
-            // 
-            this.txtTipoCaso.Location = new System.Drawing.Point(162, 81);
-            this.txtTipoCaso.Name = "txtTipoCaso";
-            this.txtTipoCaso.Size = new System.Drawing.Size(100, 20);
-            this.txtTipoCaso.TabIndex = 4;
-            // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(162, 148);
+            this.txtDescripcion.Location = new System.Drawing.Point(162, 134);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(223, 20);
             this.txtDescripcion.TabIndex = 5;
             // 
             // txtStatusCaso
             // 
-            this.txtStatusCaso.Location = new System.Drawing.Point(162, 219);
+            this.txtStatusCaso.Location = new System.Drawing.Point(162, 192);
             this.txtStatusCaso.Name = "txtStatusCaso";
             this.txtStatusCaso.Size = new System.Drawing.Size(100, 20);
             this.txtStatusCaso.TabIndex = 6;
+            // 
+            // cbbTipoCaso
+            // 
+            this.cbbTipoCaso.EditValue = "- Escoja tipo de Caso -";
+            this.cbbTipoCaso.Location = new System.Drawing.Point(162, 81);
+            this.cbbTipoCaso.Name = "cbbTipoCaso";
+            this.cbbTipoCaso.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbTipoCaso.Properties.Items.AddRange(new object[] {
+            "Despidos Injustificado",
+            "Recisiones laborales",
+            "Demenda de derechos de prestaciones",
+            "Huelga"});
+            this.cbbTipoCaso.Size = new System.Drawing.Size(223, 20);
+            this.cbbTipoCaso.TabIndex = 4;
+            // 
+            // cbbClienteCaso
+            // 
+            this.cbbClienteCaso.BackColor = System.Drawing.Color.White;
+            this.cbbClienteCaso.FormattingEnabled = true;
+            this.cbbClienteCaso.Location = new System.Drawing.Point(162, 242);
+            this.cbbClienteCaso.Name = "cbbClienteCaso";
+            this.cbbClienteCaso.Size = new System.Drawing.Size(223, 21);
+            this.cbbClienteCaso.TabIndex = 7;
+            this.cbbClienteCaso.DropDown += new System.EventHandler(this.cbbClienteCaso_DropDown);
+            // 
+            // cbbAbogCaso
+            // 
+            this.cbbAbogCaso.BackColor = System.Drawing.Color.White;
+            this.cbbAbogCaso.FormattingEnabled = true;
+            this.cbbAbogCaso.Location = new System.Drawing.Point(162, 298);
+            this.cbbAbogCaso.Name = "cbbAbogCaso";
+            this.cbbAbogCaso.Size = new System.Drawing.Size(223, 21);
+            this.cbbAbogCaso.TabIndex = 10;
+            this.cbbAbogCaso.DropDown += new System.EventHandler(this.cbbAbogCaso_DropDown);
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(60, 245);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(37, 13);
+            this.labelControl4.TabIndex = 11;
+            this.labelControl4.Text = "Cliente:";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(60, 301);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(47, 13);
+            this.labelControl5.TabIndex = 12;
+            this.labelControl5.Text = "Abogado:";
             // 
             // frmCasos
             // 
@@ -145,9 +203,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.tbBuscar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.error_info)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTipoCaso.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStatusCaso.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCaso.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,6 +217,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtStatusCaso;
         private DevExpress.XtraEditors.TextEdit txtDescripcion;
-        private DevExpress.XtraEditors.TextEdit txtTipoCaso;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbTipoCaso;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.ComboBox cbbAbogCaso;
+        private System.Windows.Forms.ComboBox cbbClienteCaso;
     }
 }

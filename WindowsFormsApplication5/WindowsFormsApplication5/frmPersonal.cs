@@ -26,9 +26,8 @@ namespace WindowsFormsApplication5
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             // verifica que no este ningun dato en blanco
-            ErrorPersonalizadoEjecucion();
             //PUESTO
-            if ((cbbPuesto.Text == "- Elija Puesto del Empleado -")||(cbbPuesto.Text == ""))
+            if (cbbPuesto.Text == "- Elija Puesto del Empleado -")
             {
                 error_info.SetError(cbbPuesto, "Por favor especifique el puesto del empleado");
                 bandera = false;
@@ -43,6 +42,11 @@ namespace WindowsFormsApplication5
             }
             else
                 error_info.SetError(rdSexoEmp, "");
+
+            //para cuando no tiene nada escrito
+            ErrorPersonalizadoEjecucion();
+
+
             //Se inicia la insercion
             if (bandera)
             {
