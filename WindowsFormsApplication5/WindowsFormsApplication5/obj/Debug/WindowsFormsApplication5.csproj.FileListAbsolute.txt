@@ -47,3 +47,4 @@ C:\Documents and Settings\Administrador\Escritorio\WindowsFormsApplication5\Wind
 C:\Documents and Settings\Administrador\Escritorio\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.pdb
 C:\Documents and Settings\Administrador\Escritorio\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ABC.exe
 C:\Documents and Settings\Administrador\Escritorio\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ABC.pdb
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmInicializacion.resources

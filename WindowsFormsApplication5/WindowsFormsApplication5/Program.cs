@@ -7,6 +7,7 @@ namespace WindowsFormsApplication5
 {
     static class Program
     {
+        
         // se declara variable de forma principal
         public static frmSoftj frmSoftj;
         /// <summary>

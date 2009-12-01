@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace WindowsFormsApplication5
 {
@@ -21,9 +22,22 @@ namespace WindowsFormsApplication5
         public frmInformacion frmInformacion;
         public AboutUs AboutUs;
         public frmContact frmContact;
+        public frmInicializacion frmInicializacion;
         public frmSoftj()
         {
+            Thread th = new Thread(new ThreadStart(DoSplash));
+            th.Start();
+            Thread.Sleep(3000);
+            th.Abort();
+            Thread.Sleep(1000);
             InitializeComponent();
+        }
+        private void DoSplash()
+        {
+
+            frmInicializacion sp = new frmInicializacion();
+            sp.ShowDialog();
+
         }
         public Boolean AbrirCon()
         {

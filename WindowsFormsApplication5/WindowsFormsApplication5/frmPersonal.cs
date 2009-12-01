@@ -16,6 +16,7 @@ namespace WindowsFormsApplication5
         public frmPersonal()
         {
             InitializeComponent();
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
