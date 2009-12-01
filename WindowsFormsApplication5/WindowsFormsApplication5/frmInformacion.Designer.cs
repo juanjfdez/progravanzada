@@ -64,6 +64,7 @@
             this.btnTuto.TabIndex = 2;
             this.btnTuto.Text = "&Ayuda Gral";
             this.btnTuto.UseVisualStyleBackColor = true;
+            this.btnTuto.Click += new System.EventHandler(this.btnTuto_Click);
             // 
             // btnRepInfo
             // 

@@ -25,7 +25,7 @@ namespace WindowsFormsApplication5
         {
             // verifica que no este ningun dato en blanco
             //Empresa
-            if (cbbEmpresa.Text == "- Escojer Empresa -")
+            if (cbbEmpresa.Text == "- Escoger Empresa -")
             {
                 error_info.SetError(cbbEmpresa, "Por favor especifique el nombre de la Empresa");
                 bandera = false;

@@ -20,6 +20,7 @@ namespace WindowsFormsApplication5
             Application.SetCompatibleTextRenderingDefault(false);
             // Instancio la variable del formulario
             frmSoftj = new frmSoftj();
+            
             // Lo mando correr
             Application.Run(frmSoftj);
         }

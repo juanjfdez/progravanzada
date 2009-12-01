@@ -42,7 +42,6 @@
             this.ventanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sqlconexion = new System.Data.SqlClient.SqlConnection();
             this.tsMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +67,7 @@
             // 
             // tsbAdministrador
             // 
+            this.tsbAdministrador.Enabled = false;
             this.tsbAdministrador.Image = global::WindowsFormsApplication5.Properties.Resources.Administrator_icon;
             this.tsbAdministrador.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbAdministrador.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -75,6 +75,7 @@
             this.tsbAdministrador.Size = new System.Drawing.Size(79, 65);
             this.tsbAdministrador.Text = "&Administrador";
             this.tsbAdministrador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbAdministrador.Click += new System.EventHandler(this.tsbAdministrador_Click);
             // 
             // tspClientes
             // 
@@ -118,6 +119,7 @@
             this.tspDemandas.Size = new System.Drawing.Size(79, 65);
             this.tspDemandas.Text = "&Demandas";
             this.tspDemandas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tspDemandas.Click += new System.EventHandler(this.tspDemandas_Click);
             // 
             // tspReportes
             // 
@@ -152,6 +154,7 @@
             this.tspCerrarSession.Size = new System.Drawing.Size(79, 65);
             this.tspCerrarSession.Text = "Cerrar S&ession";
             this.tspCerrarSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tspCerrarSession.Click += new System.EventHandler(this.tspCerrarSession_Click);
             // 
             // tspInfo
             // 
@@ -198,11 +201,6 @@
             this.verticalToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.verticalToolStripMenuItem.Text = "Cascada";
             // 
-            // sqlconexion
-            // 
-            this.sqlconexion.ConnectionString = "Data Source=JUAN-PC\\SQLEXPRESS;Initial Catalog=PROYECTO;User ID=sa;Password=1234";
-            this.sqlconexion.FireInfoMessageEventOnUserErrors = false;
-            // 
             // frmSoftj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,7 +228,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip tsMenu;
         private System.Windows.Forms.ToolStripButton tspClientes;
         private System.Windows.Forms.ToolStripButton tspCasos;
         private System.Windows.Forms.ToolStripButton tspPersonal;
@@ -238,13 +235,13 @@
         private System.Windows.Forms.ToolStripButton tspCerrarSession;
         private System.Windows.Forms.ToolStripButton tspSalir;
         private System.Windows.Forms.ToolStripButton tspDemandas;
-        private System.Windows.Forms.ToolStripButton tsbAdministrador;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ventanasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
-        public System.Data.SqlClient.SqlConnection sqlconexion;
         private System.Windows.Forms.ToolStripButton tspInfo;
+        public System.Windows.Forms.ToolStrip tsMenu;
+        public System.Windows.Forms.ToolStripButton tsbAdministrador;
 
     }
 }

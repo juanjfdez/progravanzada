@@ -45,5 +45,10 @@ namespace WindowsFormsApplication5
                 Program.frmSoftj.frmContact.Show();
             }
         }
+
+        private void btnTuto_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("C:\\Manual de Usuario.pdf");
+        }
     }
 }

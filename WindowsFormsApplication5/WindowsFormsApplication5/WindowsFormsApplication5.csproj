@@ -100,6 +100,18 @@
       <DependentUpon>crCliente3.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="frmAbogado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbogado.Designer.cs">
+      <DependentUpon>frmAbogado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCasos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +136,12 @@
     <Compile Include="frmDemandado.Designer.cs">
       <DependentUpon>frmDemandado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDemandas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDemandas.Designer.cs">
+      <DependentUpon>frmDemandas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInformacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +154,23 @@
     <Compile Include="frmInicializacion.Designer.cs">
       <DependentUpon>frmInicializacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPersonal.Designer.cs">
       <DependentUpon>frmPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonal2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonal2.Designer.cs">
+      <DependentUpon>frmPersonal2.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReportes.cs">
       <SubType>Form</SubType>
@@ -171,6 +201,12 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCliente3.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAbogado.resx">
+      <DependentUpon>frmAbogado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCasos.resx">
       <DependentUpon>frmCasos.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,14 +219,23 @@
     <EmbeddedResource Include="frmDemandado.resx">
       <DependentUpon>frmDemandado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDemandas.resx">
+      <DependentUpon>frmDemandas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInformacion.resx">
       <DependentUpon>frmInformacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicializacion.resx">
       <DependentUpon>frmInicializacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPersonal.resx">
       <DependentUpon>frmPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonal2.resx">
+      <DependentUpon>frmPersonal2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>

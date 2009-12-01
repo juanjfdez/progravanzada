@@ -48,3 +48,8 @@ C:\Documents and Settings\Administrador\Escritorio\WindowsFormsApplication5\Wind
 C:\Documents and Settings\Administrador\Escritorio\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ABC.exe
 C:\Documents and Settings\Administrador\Escritorio\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\ABC.pdb
 C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmInicializacion.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmDemandas.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmAdmin.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmPersonal2.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmAbogado.resources
+C:\Documents and Settings\Administrador\Mis documentos\progravanzada\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.frmLogin.resources

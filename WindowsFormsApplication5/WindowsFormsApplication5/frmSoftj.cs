@@ -14,23 +14,34 @@ namespace WindowsFormsApplication5
 {
     public partial class frmSoftj : Form
     {
+        //conexion 
+        public SqlConnection sqlconexion = new SqlConnection();
+        
         public frmClientes frmClientes;
         public frmCasos frmCasos;
         public frmDemandado frmDemandado;
         public frmPersonal frmPersonal;
+        public frmPersonal2 frmPersonal2;
         public frmReportes frmReportes;
         public frmInformacion frmInformacion;
         public AboutUs AboutUs;
         public frmContact frmContact;
         public frmInicializacion frmInicializacion;
+        public frmDemandas frmDemandas;
+        public frmAbogado frmAbogado;
+        public frmAdmin frmAdmin;
+        public frmLogin frmLogin;
         public frmSoftj()
         {
             Thread th = new Thread(new ThreadStart(DoSplash));
             th.Start();
-            Thread.Sleep(3000);
+            Thread.Sleep(4000);
             th.Abort();
             Thread.Sleep(1000);
             InitializeComponent();
+            sqlconexion.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=PROYECTO;Integrated Security=True";
+            frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
         }
         private void DoSplash()
         {
@@ -85,15 +96,19 @@ namespace WindowsFormsApplication5
         private void frmSoftj_Load(object sender, EventArgs e)
         {
             AbrirCon();
+            if (frmLogin.usuario == "administrador")
+                tsbAdministrador.Enabled = true;
+            else
+                tsbAdministrador.Enabled = false;
         }
 
         private void tspPersonal_Click(object sender, EventArgs e)
         {
-            if ((frmPersonal == null) || (frmPersonal.IsDisposed))
+            if ((frmPersonal2 == null) || (frmPersonal2.IsDisposed))
             {
-                frmPersonal = new frmPersonal();
-                frmPersonal.MdiParent = this;
-                frmPersonal.Show();
+                frmPersonal2 = new frmPersonal2();
+                frmPersonal2.MdiParent = this;
+                frmPersonal2.Show();
             }
 
         }
@@ -117,5 +132,35 @@ namespace WindowsFormsApplication5
                 frmInformacion.Show();
             }
         }
+
+        private void tspDemandas_Click(object sender, EventArgs e)
+        {
+            if ((frmAdmin == null) || (frmDemandas.IsDisposed))
+            {
+                frmDemandas = new frmDemandas();
+                frmDemandas.MdiParent = this;
+                frmDemandas.Show();
+            }
+        }
+
+        private void tsbAdministrador_Click(object sender, EventArgs e)
+        {
+            if ((frmAdmin == null) || (frmAdmin.IsDisposed))
+            {
+                frmAdmin = new frmAdmin();
+                frmAdmin.MdiParent = this;
+                frmAdmin.Show();
+            }
+        }
+
+        private void tspCerrarSession_Click(object sender, EventArgs e)
+        {
+            frmLogin.ShowDialog();
+            if (frmLogin.usuario == "administrador")
+                tsbAdministrador.Enabled = true;
+            else
+                tsbAdministrador.Enabled = false;
+        }
+
     }
 }
