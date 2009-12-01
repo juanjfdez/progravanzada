@@ -120,30 +120,7 @@ namespace WindowsFormsApplication5
             gcPersonalMod.DataSource = dsDatos.Tables[0];
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            string fila1, fila2;
-            fila1 = gvPersonalMod.GetFocusedRowCellValue("Nombre Empleado").ToString();
-            fila2 = gvPersonalMod.GetFocusedRowCellValue("Direccion").ToString();
-            try
-            {
-                query.CommandText = "DELETE FROM Datos_Personal WHERE Nombre_emp=@Nombre and Direccion_emp=@Direccion";
-
-                //parametros
-                query.Parameters.Clear();
-                query.Parameters.AddWithValue("@Nombre", fila1);
-                query.Parameters.AddWithValue("@Direccion", fila2);
-                if (query.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Empleado Eliminado");
-                    btnBusMod.PerformClick();
-                }
-            }
-            catch (Exception erroreliminar)
-            {
-                MessageBox.Show(erroreliminar.Message, "Error");
-            }
-        }
+        
     }
 
 

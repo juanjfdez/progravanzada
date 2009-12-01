@@ -120,30 +120,7 @@ namespace WindowsFormsApplication5
             gcDemandadoMod.DataSource = dsDatos.Tables[0];
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            string fila1;
-            fila1 = gvDemandadoMod.GetFocusedRowCellValue("Nombre").ToString();
-            try
-            {
-                query.CommandText = "DELETE FROM Demandado WHERE Nombre=@Nombre";
-
-                //parametros
-                query.Parameters.Clear();
-                query.Parameters.AddWithValue("@Nombre", fila1);
-                if (query.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Empresa Eliminada");
-                    btnBusMod.PerformClick();
-                }
-            }
-            catch (Exception erroreliminar)
-            {
-                MessageBox.Show(erroreliminar.Message, "Error");
-            }
-            btnBusMod.PerformClick();
-        }
-
+        
         private void gvDemandadoMod_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             MessageBox.Show(gvDemandadoMod.FocusedColumn.FieldName.ToString());

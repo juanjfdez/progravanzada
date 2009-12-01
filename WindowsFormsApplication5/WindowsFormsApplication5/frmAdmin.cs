@@ -23,7 +23,8 @@ namespace WindowsFormsApplication5
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            gvAdmin.ClearColumnErrors();
+            gcAdmin.DataSource = null;
+            
             dsDatos.Clear();
             SqlDataAdapter adaptador = new SqlDataAdapter(query);
 
@@ -39,26 +40,126 @@ namespace WindowsFormsApplication5
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (cbbTablas.Text == "Cliente")
+            if (tabla == "Cliente")
             {
+                string fila1, fila2;
+                try
+                {
+                fila1 = gvAdmin.GetFocusedRowCellValue("Nombre").ToString();
+                fila2 = gvAdmin.GetFocusedRowCellValue("Direccion").ToString();
+                
+                    query.CommandText = "DELETE FROM Cliente WHERE Nombre=@Nombre and Direccion=@Direccion";
 
+                    //parametros
+                    query.Parameters.Clear();
+                    query.Parameters.AddWithValue("@Nombre", fila1);
+                    query.Parameters.AddWithValue("@Direccion", fila2);
+                    if (query.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Cliente Eliminado");
+                    }
+                    btnBuscar.PerformClick();
+                }
+                catch (Exception erroreliminar)
+                {
+                    MessageBox.Show(erroreliminar.Message, "Error");
+                }
             }
-            else if (cbbTablas.Text == "Casos")
+            else if (tabla == "Casos")
             {
+                string fila = "";
+                try
+                {
+                fila = gvAdmin.GetFocusedRowCellValue("Numero Caso").ToString();
+                
+                    query.CommandText = "DELETE FROM Casos WHERE id_caso=@id_caso";
 
+                    //parametros
+                    query.Parameters.Clear();
+                    query.Parameters.AddWithValue("@id_caso", fila);
+                    if (query.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Caso Eliminado");
+                    }
+                    btnBuscar.PerformClick();
+                }
+                catch (Exception erroreliminar)
+                {
+                    MessageBox.Show(erroreliminar.Message, "Error");
+                }
             }
-            else if (cbbTablas.Text == "Personal")
+            else if (tabla == "Personal")
             {
+                string fila1, fila2;
+                try
+                {
+                fila1 = gvAdmin.GetFocusedRowCellValue("Nombre Empleado").ToString();
+                fila2 = gvAdmin.GetFocusedRowCellValue("Direccion").ToString();
+                
+                    query.CommandText = "DELETE FROM Datos_Personal WHERE Nombre_emp=@Nombre and Direccion_emp=@Direccion";
 
+                    //parametros
+                    query.Parameters.Clear();
+                    query.Parameters.AddWithValue("@Nombre", fila1);
+                    query.Parameters.AddWithValue("@Direccion", fila2);
+                    if (query.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Empleado Eliminado");
+                    }
+                    btnBuscar.PerformClick();
+                }
+                catch (Exception erroreliminar)
+                {
+                    MessageBox.Show(erroreliminar.Message, "Error");
+                }
             }
             else if (cbbTablas.Text == "Demandado")
             {
+                string fila1;
+                try
+                {
+                fila1 = gvAdmin.GetFocusedRowCellValue("Nombre").ToString();
+               
+                    query.CommandText = "DELETE FROM Demandado WHERE Nombre=@Nombre";
 
+                    //parametros
+                    query.Parameters.Clear();
+                    query.Parameters.AddWithValue("@Nombre", fila1);
+                    if (query.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Empresa Eliminada");
+                    }
+                    btnBuscar.PerformClick();
+                }
+                catch (Exception erroreliminar)
+                {
+                    MessageBox.Show(erroreliminar.Message, "Error");
+                }
             }
             else if (cbbTablas.Text == "Abogado")
             {
+                string fila1;
+                try
+                {
+                    fila1 = gvAdmin.GetFocusedRowCellValue("id_abogado").ToString();
 
+                    query.CommandText = "DELETE FROM Abogado WHERE id_abogado=@id_abogado";
+
+                    //parametros
+                    query.Parameters.Clear();
+                    query.Parameters.AddWithValue("@id_abogado", fila1);
+                    if (query.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Empresa Eliminada");
+                    }
+                    btnBuscar.PerformClick();
+                }
+                catch (Exception erroreliminar)
+                {
+                    MessageBox.Show(erroreliminar.Message, "Error");
+                }
             }
+
             else if ((cbbTablas.Text == "") || (cbbTablas.Text == "- Elegir Tabla -"))
             {
                 MessageBox.Show("Escoger Tabla");
@@ -106,6 +207,12 @@ namespace WindowsFormsApplication5
                         break;
                     }
             }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            gcAdmin.DataSource = null;
+            gvAdmin.Columns.Clear();
         }
     }
 }

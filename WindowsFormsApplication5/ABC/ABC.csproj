@@ -70,11 +70,20 @@
     <Compile Include="frmABC.Designer.cs">
       <DependentUpon>frmABC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mod.Designer.cs">
+      <DependentUpon>Mod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmABC.resx">
       <DependentUpon>frmABC.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mod.resx">
+      <DependentUpon>Mod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

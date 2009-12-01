@@ -77,7 +77,6 @@
             this.tbModificar.Controls.Add(this.gcAbogMod);
             this.tbModificar.Size = new System.Drawing.Size(454, 197);
             this.tbModificar.Controls.SetChildIndex(this.btnBusMod, 0);
-            this.tbModificar.Controls.SetChildIndex(this.btnEliminar, 0);
             this.tbModificar.Controls.SetChildIndex(this.btnMod, 0);
             this.tbModificar.Controls.SetChildIndex(this.gcAbogMod, 0);
             // 
@@ -102,10 +101,6 @@
             // 
             this.btnBuscar.Location = new System.Drawing.Point(333, 3);
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(322, 18);
             // 
             // btnBusMod
             // 

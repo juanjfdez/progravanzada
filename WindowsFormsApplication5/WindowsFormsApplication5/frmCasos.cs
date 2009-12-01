@@ -177,29 +177,7 @@ namespace WindowsFormsApplication5
             gcCasosMod.DataSource = dsDatos.Tables["ModCaso"];
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            string fila = "";
-            fila = gvCasosMod.GetFocusedRowCellValue("Numero Caso").ToString();
-            try
-            {
-                query.CommandText = "DELETE FROM Casos WHERE id_caso=@id_caso";
-
-                //parametros
-                query.Parameters.Clear();
-                query.Parameters.AddWithValue("@id_caso", fila);
-                if (query.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Caso Eliminado");
-                    btnBusMod.PerformClick();
-                }
-            }
-            catch (Exception erroreliminar)
-            {
-                MessageBox.Show(erroreliminar.Message, "Error");
-            }
-        }
-
+       
         private void btnContrato_Click(object sender, EventArgs e)
         {
             //OBJECT OF MISSING "NULL VALUE"

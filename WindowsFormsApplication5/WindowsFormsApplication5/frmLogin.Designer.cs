@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.sqlusuario = new System.Data.SqlClient.SqlConnection();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -43,7 +45,7 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(105, 25);
+            this.txtUser.Location = new System.Drawing.Point(105, 48);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(118, 20);
             this.txtUser.TabIndex = 0;
@@ -58,7 +60,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(250, 28);
+            this.btnAceptar.Location = new System.Drawing.Point(250, 40);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 28);
             this.btnAceptar.TabIndex = 2;
@@ -67,7 +69,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(250, 84);
+            this.btnCancelar.Location = new System.Drawing.Point(250, 99);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 28);
             this.btnCancelar.TabIndex = 3;
@@ -77,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 28);
+            this.label1.Location = new System.Drawing.Point(47, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 4;
@@ -95,18 +97,35 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(87, 139);
+            this.pictureBox1.Location = new System.Drawing.Point(87, 130);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(152, 127);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.ForeColor = System.Drawing.Color.Red;
+            this.lblUsuario.Location = new System.Drawing.Point(124, 9);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(81, 13);
+            this.lblUsuario.TabIndex = 7;
+            this.lblUsuario.Text = "Dato Incorrecto";
+            this.lblUsuario.Visible = false;
+            // 
+            // sqlusuario
+            // 
+            this.sqlusuario.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=PROYECTO;Integrated Security=True";
+            this.sqlusuario.FireInfoMessageEventOnUserErrors = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 278);
+            this.ClientSize = new System.Drawing.Size(342, 269);
             this.ControlBox = false;
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,6 +136,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -134,5 +154,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Data.SqlClient.SqlConnection sqlusuario;
     }
 }

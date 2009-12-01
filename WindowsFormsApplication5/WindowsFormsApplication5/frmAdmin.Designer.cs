@@ -33,6 +33,7 @@
             this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.btnEliminar = new DevExpress.XtraEditors.SimpleButton();
             this.cbbTablas = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnLimpiar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gcAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTablas.Properties)).BeginInit();
@@ -58,7 +59,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(390, 22);
+            this.btnBuscar.Location = new System.Drawing.Point(311, 22);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(85, 37);
             this.btnBuscar.TabIndex = 1;
@@ -91,11 +92,21 @@
             this.cbbTablas.TabIndex = 3;
             this.cbbTablas.SelectedIndexChanged += new System.EventHandler(this.cbbTablas_SelectedIndexChanged);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(415, 22);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(85, 37);
+            this.btnLimpiar.TabIndex = 4;
+            this.btnLimpiar.Text = "&Limpiar";
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 369);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.cbbTablas);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
@@ -118,5 +129,6 @@
         private DevExpress.XtraEditors.SimpleButton btnBuscar;
         private DevExpress.XtraEditors.SimpleButton btnEliminar;
         private DevExpress.XtraEditors.ComboBoxEdit cbbTablas;
+        private DevExpress.XtraEditors.SimpleButton btnLimpiar;
     }
 }

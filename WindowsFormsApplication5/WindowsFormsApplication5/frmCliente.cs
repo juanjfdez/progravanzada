@@ -250,30 +250,7 @@ namespace WindowsFormsApplication5
             //asigna datos al gridcontrol
             gcClienteMod.DataSource = dsDatos.Tables["ModCliente"];
         }
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            string fila1, fila2;
-            fila1 = gvClienteMod.GetFocusedRowCellValue("Nombre").ToString();
-            fila2 = gvClienteMod.GetFocusedRowCellValue("Direccion").ToString();
-            try
-            {
-                query.CommandText = "DELETE FROM Cliente WHERE Nombre=@Nombre and Direccion=@Direccion";
-
-                //parametros
-                query.Parameters.Clear();
-                query.Parameters.AddWithValue("@Nombre", fila1);
-                query.Parameters.AddWithValue("@Direccion", fila2);
-                if (query.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Cliente Eliminado");
-                    btnBusMod.PerformClick();
-                }
-            }
-            catch (Exception erroreliminar)
-            {
-                MessageBox.Show(erroreliminar.Message, "Error");
-            }
-        }
+        
 
         private void btnEmpresaN_Click(object sender, EventArgs e)
         {

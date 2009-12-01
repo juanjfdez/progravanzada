@@ -36,12 +36,11 @@
             this.tbBuscar = new DevExpress.XtraTab.XtraTabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tbModificar = new DevExpress.XtraTab.XtraTabPage();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
             this.btnBusMod = new System.Windows.Forms.Button();
             this.query = new System.Data.SqlClient.SqlCommand();
             this.dsDatos = new System.Data.DataSet();
             this.error_info = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnMod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbNuevo.SuspendLayout();
@@ -117,21 +116,20 @@
             // tbModificar
             // 
             this.tbModificar.Controls.Add(this.btnMod);
-            this.tbModificar.Controls.Add(this.btnEliminar);
             this.tbModificar.Controls.Add(this.btnBusMod);
             this.tbModificar.Image = global::ABC.Properties.Resources.emblem_unreadable;
             this.tbModificar.Name = "tbModificar";
             this.tbModificar.Size = new System.Drawing.Size(710, 488);
             this.tbModificar.Text = "&Modificar";
             // 
-            // btnEliminar
+            // btnMod
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(379, 18);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(94, 40);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "&Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnMod.Location = new System.Drawing.Point(243, 18);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(94, 40);
+            this.btnMod.TabIndex = 3;
+            this.btnMod.Text = "&Cambiar";
+            this.btnMod.UseVisualStyleBackColor = true;
             // 
             // btnBusMod
             // 
@@ -149,15 +147,6 @@
             // error_info
             // 
             this.error_info.ContainerControl = this;
-            // 
-            // btnMod
-            // 
-            this.btnMod.Location = new System.Drawing.Point(243, 18);
-            this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(94, 40);
-            this.btnMod.TabIndex = 3;
-            this.btnMod.Text = "&Cambiar";
-            this.btnMod.UseVisualStyleBackColor = true;
             // 
             // frmABC
             // 
@@ -191,7 +180,6 @@
         protected System.Windows.Forms.Button btnLimpiar;
         protected System.Windows.Forms.Button btnBuscar;
         protected System.Windows.Forms.ErrorProvider error_info;
-        protected System.Windows.Forms.Button btnEliminar;
         protected System.Windows.Forms.Button btnBusMod;
         protected System.Windows.Forms.Button btnMod;
     }
