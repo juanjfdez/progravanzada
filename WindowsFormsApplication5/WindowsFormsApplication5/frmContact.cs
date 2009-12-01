@@ -48,8 +48,13 @@ namespace WindowsFormsApplication5
         }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
+            
             MandarCorreo(txtCorreo.Text, txtNomContact.Text, txtdescripcion.Text);
             MessageBox.Show("Mensaje Enviado");
+        }
+
+        private void frmContact_Load(object sender, EventArgs e)
+        {
         }
     }
 }

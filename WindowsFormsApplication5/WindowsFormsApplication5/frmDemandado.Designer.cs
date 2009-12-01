@@ -211,6 +211,7 @@
             // 
             this.gvDemandadoMod.GridControl = this.gcDemandadoMod;
             this.gvDemandadoMod.Name = "gvDemandadoMod";
+            this.gvDemandadoMod.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvDemandadoMod_CellValueChanged);
             // 
             // frmDemandado
             // 

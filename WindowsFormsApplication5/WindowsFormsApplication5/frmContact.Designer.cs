@@ -30,17 +30,21 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNomContact = new System.Windows.Forms.TextBox();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPara = new System.Windows.Forms.TextBox();
+            this.txtNomContact = new DevExpress.XtraEditors.TextEdit();
+            this.txtCorreo = new DevExpress.XtraEditors.TextEdit();
+            this.txtPass = new DevExpress.XtraEditors.TextEdit();
+            this.txtPara = new DevExpress.XtraEditors.TextEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNomContact.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPara.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,15 +65,9 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Descripcion:";
             // 
-            // txtNomContact
-            // 
-            this.txtNomContact.Location = new System.Drawing.Point(84, 33);
-            this.txtNomContact.Name = "txtNomContact";
-            this.txtNomContact.Size = new System.Drawing.Size(161, 20);
-            this.txtNomContact.TabIndex = 1;
-            // 
             // txtdescripcion
             // 
+            this.txtdescripcion.BackColor = System.Drawing.Color.White;
             this.txtdescripcion.Location = new System.Drawing.Point(84, 206);
             this.txtdescripcion.Multiline = true;
             this.txtdescripcion.Name = "txtdescripcion";
@@ -104,21 +102,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Contraseña:";
             // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(84, 77);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(187, 20);
-            this.txtCorreo.TabIndex = 2;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(84, 117);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(161, 20);
-            this.txtPass.TabIndex = 3;
-            this.txtPass.UseSystemPasswordChar = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -133,9 +116,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(299, 77);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 26);
+            this.label6.Size = new System.Drawing.Size(82, 39);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Correo debe de \r\nser gmail.com";
+            this.label6.Text = "Correo de envio\r\ndebe de\r\nser gmail.com";
             // 
             // label7
             // 
@@ -146,12 +129,37 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Para:";
             // 
+            // txtNomContact
+            // 
+            this.txtNomContact.Location = new System.Drawing.Point(84, 33);
+            this.txtNomContact.Name = "txtNomContact";
+            this.txtNomContact.Size = new System.Drawing.Size(161, 20);
+            this.txtNomContact.TabIndex = 11;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(84, 77);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Properties.Mask.EditMask = ".+@gmail.+";
+            this.txtCorreo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtCorreo.Properties.Mask.PlaceHolder = '.';
+            this.txtCorreo.Size = new System.Drawing.Size(187, 20);
+            this.txtCorreo.TabIndex = 12;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(84, 117);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Properties.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(122, 20);
+            this.txtPass.TabIndex = 13;
+            // 
             // txtPara
             // 
             this.txtPara.Location = new System.Drawing.Point(84, 165);
             this.txtPara.Name = "txtPara";
-            this.txtPara.Size = new System.Drawing.Size(187, 20);
-            this.txtPara.TabIndex = 10;
+            this.txtPara.Size = new System.Drawing.Size(161, 20);
+            this.txtPara.TabIndex = 14;
             // 
             // frmContact
             // 
@@ -159,20 +167,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 422);
             this.Controls.Add(this.txtPara);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtNomContact);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtdescripcion);
-            this.Controls.Add(this.txtNomContact);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmContact";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contacto Tecnico";
+            this.Load += new System.EventHandler(this.frmContact_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.txtNomContact.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPara.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,16 +196,16 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNomContact;
         private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        protected System.Windows.Forms.TextBox txtCorreo;
-        protected System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        protected System.Windows.Forms.TextBox txtPara;
+        private DevExpress.XtraEditors.TextEdit txtNomContact;
+        private DevExpress.XtraEditors.TextEdit txtCorreo;
+        private DevExpress.XtraEditors.TextEdit txtPass;
+        private DevExpress.XtraEditors.TextEdit txtPara;
     }
 }

@@ -144,5 +144,12 @@ namespace WindowsFormsApplication5
             btnBusMod.PerformClick();
         }
 
+        private void gvDemandadoMod_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            MessageBox.Show(gvDemandadoMod.FocusedColumn.FieldName.ToString());
+            MessageBox.Show(gvDemandadoMod.FocusedRowHandle.ToString());
+            MessageBox.Show(gvDemandadoMod.EditingValue.ToString());           
+        }
+
     }
 }
